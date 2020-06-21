@@ -1,3 +1,4 @@
+
 :root {
     --background-color: #89C7CC;
     --main-font-color: #000000;
@@ -9,9 +10,12 @@
 
   }
   
+  *{
+    box-sizing: border-box;
+  }
+
   body {
-      box-sizing: border-box;
       margin: 0;
       background-color: var(--background-color); 
 
-  }            
+  }   
