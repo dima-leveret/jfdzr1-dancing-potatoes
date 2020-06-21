@@ -1,0 +1,35 @@
+
+.header__slider{
+    width: 100%;
+    height: 80vh;
+    background: url(https://cdn11.bigcommerce.com/s-u7yn5f7nmq/images/stencil/1280x1280/products/493/3906/68307_life_2018_web_6__95776.1541639234.jpg?c=2&imbypass=on) top 30% center no-repeat; 
+    background-size: cover;
+}
+
+.header__slider__title{
+    height: 100%;
+    width: 100%;
+    font-size: 60px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header__text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    
+}
+
+.header__text__welcome{
+    font-size: 22px;
+}
