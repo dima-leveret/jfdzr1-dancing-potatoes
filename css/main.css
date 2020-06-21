@@ -1,0 +1,21 @@
+
+:root {
+    --background-color: #89C7CC;
+    --main-font-color: #000000;
+    --second-font-color: #ffffff;
+    --dark-blue-color: #04738D;
+    --yelow-color: #F1B71C;
+    --red-color: #D61F2A;
+    --brown-color: #560F0F;
+
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+
+  body {
+      margin: 0;
+      background-color: var(--background-color); 
+
+  }   
