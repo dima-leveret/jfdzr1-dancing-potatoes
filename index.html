@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/hero-section.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/functions.css">
+    <link rel="stylesheet" href="./css/functions.css">	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(document).on('click', 'a', function(event){
+	    event.preventDefault();
+	    $('body').animate({
+	        scrollTop: $($.attr(this, 'href')).offset().top
+	    }, 800);
+	});
+</script>
     <title>Wiosło</title>
     <link rel="stylesheet" href=
 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
