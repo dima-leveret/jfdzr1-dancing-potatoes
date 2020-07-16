@@ -1,0 +1,153 @@
+
+.premiera
+{
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    background-color: #F1B71C;
+    overflow: hidden;
+}
+
+.premiera__container
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    overflow: hidden;
+    transform: translateY(541px);
+    transition: .5s;
+}
+.premiera__container:hover
+{
+    transform: translateY(511px);
+}
+
+.premiera__container__form:checked ~ .premiera__container
+{
+    transform: translateY(0);
+}
+
+.premiera__container__box
+{
+    padding: 30px;
+    border: 4px solid #560F0F;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.premiera__container__form
+{
+    background: #560F0F;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 25px;
+    padding: 10px 0;
+    border-radius: 15px 15px 0 0;
+    width: 80%;
+    cursor: pointer;
+}
+
+.premiera__container__form[type="checkbox"]
+{
+    display: none;
+}
+
+.premiera__container__inputBox
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px;
+}
+
+.inputBox__text
+{
+    font-size: 20px;
+    color: #4e4a4a;
+    line-height: 55px;
+}
+
+.userInput
+{
+    height: 40px;
+    font-size: 15px;
+    color: #575454;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #a5a5a5;
+}
+
+textarea.userInput
+{
+    width: auto;
+    height: 100px; 
+    padding: 10px;
+    resize: none;
+}
+
+.premiera__container__buttom
+{
+    background: #560F0F;
+    color: white;
+    width: 45%;
+    height: 35px;
+    font-size: 16px;
+    border: none;
+    margin-top: 30px;
+    align-self: flex-end;
+    cursor: pointer;
+
+}
+
+.premiera__container__buttom:hover
+{
+    background: #560f0f80;
+}
+
+.premiera__text
+{
+    width: 350px;
+    display: flex;
+}
+
+.title
+{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    
+}
+
+.informacja
+{
+    text-align: justify;
+    align-self: flex-end;
+}
+
+@media all and (max-width: 1000px)
+
+{
+    .premiera
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .premiera__container
+    {
+        transform: none;
+    }
+
+    .premiera__container:hover
+    {
+        transform: none;
+    }
+}
+
+
+
