@@ -17,10 +17,8 @@
   }
 
   body {
-      margin: 0;
       background-color: var(--second-font-color); 
       font-family: 'Lato', sans-serif;
-
   }   
 
 .more-about-product-section__wrapper{
