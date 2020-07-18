@@ -8,16 +8,36 @@
     <link rel="stylesheet" href="./css/hero-section.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/functions.css">	
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
     <title>Wiosło</title>
-    <link rel="stylesheet" href=
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-</link>
 </head>
 <body>
+    <nav>
+        <div class="nav__container">
+            <a href="#premiera">Zapis na premierę</a>
+            <a href="#funkcje">Planowane funkcje aplikacji</a>
+            <a href="#dodatkoweInformacje">Dodatkowe informacje o aplikacji</a>
+            <a href="#zespol">Informacje o zespole</a>
+            <a href="#contact">Kontakt</a>
+        </div>
+    </nav>
 
 
-    <section id="functions">
+    <header class="header">
+      <div class="header__slider">
+        <p class="header__slider__title">Szukasz sprzętu wodnego ?</p>
+        <div class="header__text">
+          <p class="header__text__welcome">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+            distinctio, earum suscipit veniam sit molestias praesentium id in
+            iste quo!
+          </p>
+        </div>
+      </div>
+    </header>
+  
+      <section id="functions">
         <div class="functions__container">
         <h1 class="functions__title">Co potrafi WIOSŁO?</h1>
          <div class="functions__list">
@@ -31,6 +51,48 @@
         </div>
         </div>
      </section>
- 
-</body>
+
+    <section class="more-about-product-section__wrapper">
+        <h1 class="more-about-product-section__header">Jak to działa?</h1>
+      <div class="more-about-product-desc__wrapper">
+        <div class="more-about-product-desc-text__wrapper">
+          <img src="./assets/icons/place.png" alt="place icon" class="more-about-product-desc-image"/>
+          <h2 class="more-about-product-desc-header"><span>Szukasz wypożyczalni?</span> <span>Pomożemy!</span></h2>
+          <p class="more-about-product-desc-paragraph">
+            Biwakowanie przy ognisku Ci się znudziło? Szukasz wodnych atrakcji?
+            U nas znajdziesz wszystkie wypożyczalnie sprzętów wodnych w Twojej
+            okolicy. Nie czekaj, zarejestruj się!
+          </p>
+        </div>
+        <div class="more-about-product-desc-text__wrapper">
+          <img src="./assets/icons/kayak.png" alt="kayak icon"  class="more-about-product-desc-image"/>
+          <h2 class="more-about-product-desc-header"><span>Rezerwacja łódki</span> <span>w 1 minutę!</span></h2>
+          <p class="more-about-product-desc-paragraph">
+            Nie wiesz na czym chcesz pływać? Albo wiesz doskonale, ale nie chcesz tracić czasu na zbędne formalności? Z nami zarezerwujesz wymarzony sprzęt szybciej niż zaparzy się kawa!
+          </p>
+        </div>
+        <div class="more-about-product-desc-text__wrapper">
+          <img src="./assets/icons/search.png" alt="search icon"  class="more-about-product-desc-image"/>
+          <h2 class="more-about-product-desc-header"><span>Nie umiesz pływać?</span> <span>Żaden problem!</span></h2>
+          <p class="more-about-product-desc-paragraph">
+            To Twój pierwszy raz? Nie wiesz od czego zacząć? Powiemy Ci jak dobrze trzymać wiosło! Sprawdź nasze poradniki pływania pisane przez profesjonalnych trenerów.
+          </p>
+        </div>
+        <div class="more-about-product-desc-text__wrapper">
+          <img src="./assets/icons/map.png" alt="map icon"  class="more-about-product-desc-image"/>
+          <h2 class="more-about-product-desc-header"><span>Pokażemy Ci jak</span> <span>wrócić!</span></h2>
+          <p class="more-about-product-desc-paragraph"> 
+            Nie jesteś mistrzem w orientacji w terenie? Z "Wiosłem" możesz zawsze czuć się bezpiecznie. Udostępnimy Ci mapy wód offline, które doprowadzą Cię do bazy.
+          </p>
+        </div>
+      </div>
+
+      <img
+        src="./assets/images/more-about-product-section-illustration.svg"
+        alt="product foto"
+        class="more-about-product-image"
+      />
+    </section>
+    
+  </body>
 </html>
