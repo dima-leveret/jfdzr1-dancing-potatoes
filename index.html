@@ -1,36 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/hero-section.css">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/hero-section.css" />
     <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/slider.css">
+
     <title>Wiosło</title>
 </head>
+
 <body>
+    <section class="opening-page">
+        <nav id="nav" class="nav">
+            <div class="nav__container">
+                <img id="logo" class="logo" src="./images/logo_wioslo-min_white.png" alt="wioslo-logo-image">
 
-    <nav>
+                <div id="nav-menu" class="nav-menu">
+                    <a id="nav-menu-premiere" class="nav-menu-premiere" href="#premiere">Premiera</a>
+                    <a id="nav-menu-function" class="nav-menu-function" href="#function">Funkcje aplikacji</a>
+                    <a id="nav-menu-info" class="nav-menu-info" href="#info">Info</a>
+                    <a id="nav-menu-team" class="nav-menu-team" href="#team">Zespół</a>
+                    <a id="nav-menu-contact" class="nav-menu-contact" href="#contact">Kontakt</a>
+                </div>
+            </div>
+        </nav>
 
-        <div class="nav__container">
-            <a href="#premiera">Zapis na premierę</a>
-            <a href="#funkcje">Planowane funkcje aplikacji</a>
-            <a href="#dodatkoweInformacje">Dodatkowe informacje o aplikacji</a>
-            <a href="#zespol">Informacje o zespole</a>
-            <a href="#contact">Kontakt</a>
-        </div>
+        <header id="header" class="header">
+            <div class="header__container">
+                <section class="header">
+                    <div class="slider">
+                        <div class="slide active" style="background-image: url('./images/slider-img-1.jpg')">
+                            <div class="container">
+                                <div class="caption">
+                                    <h1>Spływy kajakowe</h1>
+                                    <p>Porównaj ceny wypożyczalni.</p>
+                                    <a href="">Sprawdź ofertę</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide"
+                            style="background-image: url('./images/slider-img-2.jpg')">
+                            <div class="container">
+                                <div class="caption">
+                                    <h1>1 min</h1>
+                                    <p>Dokładnie tyle zajmie rezerwacja.</p>
+                                    <a href="">Rezerwuj</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide"
+                            style="background-image: url('./images/slider-img-3.jpg')">
+                            <div class="container">
+                                <div class="caption">
+                                    <h1>Impreza okolicznościowa?</h1>
+                                    <p>Pomożemy Ci w organizacji !</p>
+                                    <a href="">Kontakt</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide"
+                            style="background-image: url('./images/slider-img-4.jpg')">
+                            <div class="container">
+                                <div class="caption">
+                                    <h1>Bądź na bieżąco</h1>
+                                    <p>Zapisz się na premierę i otrzymuj najlepsze oferty</p>
+                                    <a href="">Zapisz się</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    </nav>
+                    <!-- controls  -->
+                    <div class="controls">
+                        <div class="prev"><</div>
+                                <div class="next">></div>
+                        </div>
 
-    <header class="header">
-        <div class="header__slider">
-            <p class="header__slider__title">Szukasz sprzętu wodnego ?</p>
-            <div class="header__text">
-                <p class="header__text__welcome">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid distinctio, earum suscipit veniam sit molestias praesentium id in iste quo!</p>
-            </div>            
-        </div>
-    </header>
+                        <!-- indicators -->
+                        <div class="indicator">
+                        </div>
 
+                </section>
+            </div>
+        </header>
+    </section>
+
+    <script src="./js/header-slider.js"></script>
 </body>
+
 </html>
