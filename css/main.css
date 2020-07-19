@@ -7,6 +7,7 @@
     --yelow-color: #F1B71C;
     --red-color: #D61F2A;
     --brown-color: #560F0F;
+    --nav-menu-height: 60px;
 
   }
   
@@ -14,11 +15,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
   }
+
+   [class$="container"]{
+    max-width: 1200px;
+    margin: 0 auto;
+  } 
 
   body {
       background-color: var(--second-font-color); 
       font-family: 'Lato', sans-serif;
+      background-color: white;
   }   
 
 

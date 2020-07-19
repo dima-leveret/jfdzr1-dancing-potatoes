@@ -1,53 +1,81 @@
-nav{
-    box-sizing: border-box;
-    border-top: -600px;
-    background-color: #89C7CC;
+.nav{
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  height: var(--nav-menu-height);
 }
 
-nav:hover{
-    top:0;
-    transition: all .5s;
-}
-
-nav .nav__container{
+.nav__container{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #89C7CC;
-    padding: 10px;
-    margin: 0 auto;
-    min-width: 400px;
-    max-width: 1200px;
-    
+    flex-direction: row;
+    justify-content: space-between;
+    height: inherit;
 }
 
-@media screen and (min-width: 768px){
-nav .nav__container{
-    flex-direction: row; 
-}
+.nav-menu{
+    width: 100%;
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Montserrat;
+    width: 600px;
 }
 
-nav .nav__container a{
-    text-decoration: none;
-    padding: 10px;
-    margin: 20px;
-    background-color:darkgrey;
-    color: white;
-    font-weight: 550;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-transform: uppercase;
-    border-radius: 8px;
+.logo{
+    height: 12vh;
+}
+
+.nav-menu a{
     text-align: center;
-    box-shadow: 2px 2px 10px #1f2420;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    transition: 0.2s ease;
+    color: black;    
+    padding: 10px 0;
+    margin: 0 10px;
 }
 
-nav .nav__container a:hover{
-background-color: #709DB1;
-    color: black;
-}
+#nav-menu a:hover {
+    border-bottom: 4px solid black;
+    padding: 6px 0;
+  }
 
-@media screen and (min-width: 768px){
-    nav .nav__container a{
-    margin: 5px;
-}
+
+@media (max-width: 760px){
+
+    .nav{
+        position: relative;
+    }
+
+    .nav__container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-menu a{
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 3px;
+        font-family: 'Montserrat', sans-serif;
+        text-decoration: none;
+        transition: 0.2s ease;
+        color: white;    
+        flex-flow: column;
+    }
+
+    .nav-menu{
+        display: flex;  
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: Montserrat;
+        width: 100vw;
+        background-color: black;
+        opacity: 70%;
+    }
 }
