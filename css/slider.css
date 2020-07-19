@@ -4,11 +4,6 @@ body{
 	overflow-x: hidden;
 }
 
-*{
-	box-sizing: border-box;
-}
-
-
 .header{
 	height: 70vh;
 	overflow:hidden;
@@ -41,7 +36,11 @@ body{
 }
 .container{
 	max-width: 1170px;
-	margin:auto;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
 	
 }
 
@@ -50,11 +49,15 @@ body{
 }
 .header .caption{
 	width:50%;
+	background-color: white;
+	opacity: 80%;
+	border-radius: 10px;
 }
 .header .caption h1{
 	font-size:42px;
-	color:#ffffff;
+	color: black;
 	margin:0;
+	opacity: 100%;
 }
 .header .slide.active .caption h1{
 	opacity:0;
@@ -64,7 +67,7 @@ body{
 .header .caption p{
 	font-size: 18px;
 	margin:15px 0 30px;
-	color:#ffffff;
+	color: black;
 }
 .header .slide.active .caption p{
 	opacity:0;
@@ -156,10 +159,16 @@ body{
 }
 
 /*responsive*/
-@media(max-width: 767px){
+@media(max-width: 769px){
 	.controls{
 		display: none;
 	}
 
-	
+	.header .caption{
+		width:100%;
+		background-color: white;
+		opacity: 80%;
+		border-radius: 10px;
+		text-align: center;
+	}
 }
