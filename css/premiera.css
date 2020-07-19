@@ -1,0 +1,161 @@
+
+
+.premiera
+{
+    
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: 150px auto;
+    background: url('/img/wave2-potatoes.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.premiera__container
+{
+    /* max-width: 1200px; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    
+}
+
+@media all and (max-width: 500px)
+{
+    .premiera__container
+    {
+        width: 350px;
+    }
+}
+
+
+.premiera__container__box
+{
+    padding: 30px;
+    border: 4px solid #015968;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.premiera__container__form
+{
+    background: #015968;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+    padding: 10px 0;
+    border-radius: 15px 15px 0 0;
+    width: 80%;
+}
+
+
+.premiera__container__inputBox
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px;
+}
+
+.inputBox__text
+{
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    color: black;
+    line-height: 55px;
+}
+
+.userInput
+{
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    color: #575454;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #a5a5a5;
+}
+
+textarea.userInput
+{
+    width: auto;
+    height: 100px; 
+    padding: 10px;
+    resize: none;
+}
+
+.premiera__container__buttom
+{
+    background: #015968;
+    color: white;
+    width: 45%;
+    height: 35px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    border: none;
+    margin-top: 30px;
+    align-self: flex-end;
+    cursor: pointer;
+
+}
+
+.premiera__container__buttom:hover
+{
+    background: #015968b2;
+}
+
+.premiera__text
+{
+    
+    display: flex;
+}
+
+.title
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    
+}
+
+.informacja
+{
+    text-align: justify;
+    align-self: flex-end;
+    margin: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+/* @media all and (max-width: 1000px)
+
+{
+    .premiera
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .premiera__container
+    {
+        transform: none;
+    }
+
+    .premiera__container:hover
+    {
+        transform: none;
+    }
+} */
+
+
+

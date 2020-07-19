@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/functions.css">	
     <link rel="stylesheet" href="./css/hero-section.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/functions.css">	
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
+    <link rel="stylesheet" href="./css/premiera.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+
     <title>Wiosło</title>
 </head>
 <body>
+
     <nav>
         <div class="nav__container">
             <a href="#premiera">Zapis na premierę</a>
-            <a href="#funkcje">Planowane funkcje aplikacji</a>
-            <a href="#dodatkoweInformacje">Dodatkowe informacje o aplikacji</a>
+            <a href="#functions">Planowane funkcje aplikacji</a>
+            <a href="#more-about-product-section__wrapper">Dodatkowe informacje o aplikacji</a>
             <a href="#zespol">Informacje o zespole</a>
             <a href="#contact">Kontakt</a>
         </div>
@@ -43,10 +47,9 @@
          <div class="functions__list">
              <div class="functions__list-contain">
              <figure class="functions-list-part"><img src="./images/place.svg"><figcaption>Znajdzie najbliższe wypożyczalnie</figcaption></figure>
-             <figure class="functions-list-part"><img src="./images/kayak.svg"></i><figcaption>Zarezerwuje Ci łódkę</figcaption></figure>
-             <figure class="functions-list-part"><img src="./images/search.svg"></i><figcaption>Podpowie Ci jak pływać</figcaption></figure>
-             <figure class="functions-list-part"><img src="./images/map.svg"></i><figcaption>Znajdzie drogę do bazy</figcaption></figure>
-         </ul>
+             <figure class="functions-list-part"><img src="./images/kayak.svg"><figcaption>Zarezerwuje Ci łódkę</figcaption></figure>
+             <figure class="functions-list-part"><img src="./images/search.svg"><figcaption>Podpowie Ci jak pływać</figcaption></figure>
+             <figure class="functions-list-part"><img src="./images/map.svg"><figcaption>Znajdzie drogę do bazy</figcaption></figure>
         </div>
         </div>
         </div>
@@ -93,6 +96,40 @@
         class="more-about-product-image"
       />
     </section>
+
+    <div class="premiera">
+        <div class="premiera__text">
+            <h2 class="title">
+                bądź pierwszy <br> <br> zapisz się na premierę
+            </h2>
+        </div>
+        
+        <div class="premiera__container">
+            <label class="premiera__container__form">Zapis na premierę</label>
+            <form class="premiera__container__box">
+                <div class="premiera__container__inputBox">
+                    <label class="inputBox__text">Imię</label>
+                    <input type="text" class="userInput" required>
+                </div>
+                <div class="premiera__container__inputBox">
+                    <label class="inputBox__text">Mail</label>
+                    <input type="email" class="userInput" required>
+                </div>
+                <div class="premiera__container__inputBox">
+                    <label class="inputBox__text">Komentarz</label>
+                    <textarea name="message" class="userInput"></textarea>
+                </div>
+                <button type="submit" class="premiera__container__buttom">
+                    WYŚLIJ
+                </button>
+            </form>
+        </div>
+        <div class="premiera__text">
+            <h3 class="informacja">
+                Wysłany zostanie tylko jeden mail z informacją o premierze.  Zapewniamy bezpieczeństwo danych.
+            </h3>            
+        </div>
+    </div>
     
   </body>
 </html>
