@@ -10,6 +10,8 @@ body{
 	position: relative;
 }
 
+
+
 .header .slide{
 	position: absolute;
 	left:0;
@@ -26,37 +28,38 @@ body{
 .header .slide.active{
 	display: flex;
 }
-@keyframes slide{
+/* @keyframes slide{
 	0%{
-		transform:scale(1.1);
+		transform:translateX(0vw);
 	}
 	100%{
-		transform: scale(1);
+		transform: translateX(100vw);
 	}
-}
+} */
 .container{
-	max-width: 1170px;
-	margin: auto;
+	max-width: 700px;
+	width: 100%;
+	margin: 0;
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	
 }
 
 .header .container{
 	 flex-grow: 1;
 }
 .header .caption{
-	width:50%;
+	width:100%;
 	background-color: white;
 	opacity: 80%;
 	border-radius: 10px;
 }
+
 .header .caption h1{
 	font-size:42px;
 	color: black;
-	margin:0;
+	margin:15px 30px;
 	opacity: 100%;
 }
 .header .slide.active .caption h1{
@@ -66,7 +69,7 @@ body{
 }
 .header .caption p{
 	font-size: 18px;
-	margin:15px 0 30px;
+	margin:15px 30px;
 	color: black;
 }
 .header .slide.active .caption p{
@@ -81,6 +84,8 @@ body{
  text-decoration: none;
  color: white;
  border: 4px solid transparent;
+ border-radius: 10px;
+ margin: 15px 30px;
 
 }
 
@@ -95,6 +100,7 @@ body{
 	color: black;
 	transition: 0.5s;
 	border: 4px #F1B71C solid;
+	border-radius: 10px;
    }
 
 @keyframes captionText{
@@ -158,10 +164,9 @@ body{
  background-color: #89C7CC;
 }
 
-/*responsive*/
 @media(max-width: 769px){
-	.controls{
-		display: none;
+	.header .indicator{
+		bottom:0px;
 	}
 
 	.header .caption{

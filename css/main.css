@@ -7,7 +7,7 @@
     --yelow-color: #F1B71C;
     --red-color: #D61F2A;
     --brown-color: #560F0F;
-    --nav-menu-height: 60px;
+    --nav-menu-height: 70px;
 
   }
   
@@ -16,12 +16,9 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    scroll-margin: var(--nav-menu-height);
+    border: 1px red solid;
   }
-
-   [class$="container"]{
-    max-width: 1200px;
-    margin: 0 auto;
-  } 
 
   body {
       background-color: var(--second-font-color); 
