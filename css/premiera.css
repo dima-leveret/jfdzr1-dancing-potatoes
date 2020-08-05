@@ -1,15 +1,12 @@
-
-
 .premiera
 {
-    
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    margin: 150px auto;
+    margin: 50px auto;
     background: url('/img/wave2-potatoes.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,7 +14,7 @@
 
 .premiera__container
 {
-    /* max-width: 1200px; */
+    max-width: 1200px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -137,7 +134,7 @@ textarea.userInput
     font-weight: 400;
 }
 
-/* @media all and (max-width: 1000px)
+@media all and (max-width: 1000px)
 
 {
     .premiera
@@ -155,7 +152,7 @@ textarea.userInput
     {
         transform: none;
     }
-} */
+}
 
 
 
