@@ -33,12 +33,11 @@
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-    transition: 0.2s ease;
     color: black;  
     margin: 0;
     padding: 0;
     width: 10%;
-    height: 50%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,14 +49,13 @@
     height: 100%;
 }
 
-
-
 #nav-menu a:hover {
     border-bottom: 4px solid black;
+    transition: 0.2s ease;
   }
 
 
-@media (max-width: 720px){
+@media (max-width: 769px){
 
     .nav__container{
         display: flex;
@@ -77,8 +75,8 @@
         transition: 0.2s ease;
         color: black;    
         flex-flow: column;
-        height: 100%;
-        width: 50%;
+        height: 90%;
+        width: 100%;
     }
 
     .nav-menu{
