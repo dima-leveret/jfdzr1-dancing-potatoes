@@ -1,15 +1,12 @@
-
-
 .premiera
 {
-    
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    margin: 150px auto;
+    margin: 50px auto 0px;
     background: url('/img/wave2-potatoes.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,7 +14,7 @@
 
 .premiera__container
 {
-    /* max-width: 1200px; */
+    max-width: 1200px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -41,6 +38,7 @@
     display: flex;
     flex-direction: column;
     width: 80%;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .premiera__container__form
@@ -52,7 +50,7 @@
     font-size: 25px;
     font-family: 'Lato', sans-serif;
     padding: 10px 0;
-    border-radius: 15px 15px 0 0;
+    border-radius: 10px 10px 0px 0px;
     width: 80%;
 }
 
@@ -62,6 +60,7 @@
     display: flex;
     flex-direction: column;
     margin: 0 0 10px;
+    
 }
 
 .inputBox__text
@@ -137,7 +136,6 @@ textarea.userInput
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
-
 
 
 

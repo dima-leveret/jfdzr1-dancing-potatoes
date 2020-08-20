@@ -1,11 +1,10 @@
 .infomacja
 {
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    margin: 50px auto;
 }
 
 .ioz
@@ -14,6 +13,7 @@
     text-transform: uppercase;
     font-size: 30px;
     font-family: 'Lato', sans-serif;
+    text-align: center;
 }
 
 .container-images

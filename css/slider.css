@@ -5,9 +5,10 @@ body{
 }
 
 .header{
-	height: 70vh;
+	height: 80vh;
 	overflow:hidden;
 	position: relative;
+	padding-top: 70px;
 }
 
 .header .slide{
@@ -26,38 +27,31 @@ body{
 .header .slide.active{
 	display: flex;
 }
-@keyframes slide{
-	0%{
-		transform:scale(1.1);
-	}
-	100%{
-		transform: scale(1);
-	}
-}
+
 .container{
-	max-width: 1170px;
-	margin: auto;
+	max-width: 700px;
+	width: 100%;
+	margin: 0px 100px;
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	
 }
 
 .header .container{
 	 flex-grow: 1;
 }
 .header .caption{
-	width:50%;
+	width:100%;
 	background-color: white;
 	opacity: 80%;
 	border-radius: 10px;
 }
+
 .header .caption h1{
 	font-size:42px;
 	color: black;
-	margin:0;
-	opacity: 100%;
+	margin:15px 30px;
 }
 .header .slide.active .caption h1{
 	opacity:0;
@@ -66,7 +60,7 @@ body{
 }
 .header .caption p{
 	font-size: 18px;
-	margin:15px 0 30px;
+	margin:15px 30px;
 	color: black;
 }
 .header .slide.active .caption p{
@@ -81,7 +75,8 @@ body{
  text-decoration: none;
  color: white;
  border: 4px solid transparent;
-
+ border-radius: 10px;
+ margin: 15px 30px;
 }
 
 .header .slide.active .caption a{
@@ -95,6 +90,7 @@ body{
 	color: black;
 	transition: 0.5s;
 	border: 4px #F1B71C solid;
+	border-radius: 10px;
    }
 
 @keyframes captionText{
@@ -114,13 +110,15 @@ body{
  height:40px;
  width: 40px;
  margin-top: -20px;
- color:#ffffff;
- background-color: #04738D;
+ color: black;
+ background-color: white;
  text-align: center;
- line-height: 40px;
- font-size:20px;
+ line-height: 20px;
+ font-size:40px;
  cursor:pointer;
  transition: all .5s ease;
+ border: 1px solid #04738D;
+ border-radius: 10px
 }
 .header .controls .prev:hover,
 .header .controls .next:hover{
@@ -158,17 +156,41 @@ body{
  background-color: #89C7CC;
 }
 
-/*responsive*/
 @media(max-width: 769px){
-	.controls{
-		display: none;
+
+	.container{
+		margin: 50px 0;
+	}
+
+	.header .indicator{
+		bottom:0px;
+	}
+
+	.header .indicator div{
+		margin: 0 5px;
 	}
 
 	.header .caption{
 		width:100%;
-		background-color: white;
-		opacity: 80%;
-		border-radius: 10px;
 		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.header .caption h1{
+		font-size: 6vw;
+		margin:10px 30px;
+	}
+	
+	.header .caption p{
+		font-size: 5vw;
+		margin:10px 30px;
+	}
+	
+	.header .caption a{
+	 padding:10px 30px;
+	 margin: 10px 30px;
 	}
 }
