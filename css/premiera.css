@@ -76,11 +76,12 @@
 {
     width: 100%;
     height: 40px;
+    padding: 10px;
     font-size: 15px;
     color: #575454;
     outline: none;
     border: none;
-    border-bottom: 3px solid #a5a5a5;
+    border: 3px solid #015968;
 }
 
 textarea.userInput
@@ -88,6 +89,7 @@ textarea.userInput
     width: auto;
     height: 100px; 
     padding: 10px;
+    font-family: 'Lato', sans-serif;
     resize: none;
 }
 
@@ -104,7 +106,6 @@ textarea.userInput
     margin-top: 30px;
     align-self: flex-end;
     cursor: pointer;
-
 }
 
 .premiera__container__buttom:hover
@@ -125,7 +126,7 @@ textarea.userInput
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    
+    margin-bottom: 20px;
 }
 
 .informacja
@@ -137,25 +138,6 @@ textarea.userInput
     font-weight: 400;
 }
 
-/* @media all and (max-width: 1000px)
-
-{
-    .premiera
-    {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .premiera__container
-    {
-        transform: none;
-    }
-
-    .premiera__container:hover
-    {
-        transform: none;
-    }
-} */
 
 
 
