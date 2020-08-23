@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/script.js"></script>
+    <script src="./js/popup.js"></script>
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/functions.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/popup.css">
+    <link rel="stylesheet" href="./css/info_o_zespole.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/premiera.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon_io/favicon-32x32.png">
+
+    <title>Wiosło</title>
+</head>
+
+<body>
+    <div class="blur">
+    <section class="opening-page">
+        <nav id="nav" class="nav">
+            <div class="nav__container">
+                <a href="#top"><img id="logo" class="logo" src="./images/logo_wioslo.png" alt="wioslo-logo-image"></a>
+                <div id="nav-menu" class="nav-menu">
+                    <a id="nav-menu-premiere" class="nav-menu-premiere" href="#premiera">Premiera</a>
+                    <a id="nav-menu-function" class="nav-menu-function" href="#functions">Funkcje aplikacji</a>
+                    <a id="nav-menu-info" class="nav-menu-info" href="#more-about-product-section__wrapper">Info</a>
+                    <a id="nav-menu-team" class="nav-menu-team" href="#team">Zespół</a>
+                    <a id="nav-menu-contact" class="nav-menu-contact" href="#contact">Kontakt</a>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+
+    <section id="header" class="header">
+        <div class="header__container">
+            <section class="header">
+                <div class="slider">
+                    <div class="slide active" style="background-image: url('./images/slider-img-1.jpg')">
+                        <div class="container">
+                            <div class="caption">
+                                <h1>Spływy kajakowe</h1>
+                                <p>Porównaj ceny wypożyczalni.</p>
+                                <a href="#premiera">Sprawdź ofertę</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('./images/slider-img-2.jpg')">
+                        <div class="container">
+                            <div class="caption">
+                                <h1>1 min</h1>
+                                <p>Dokładnie tyle zajmie rezerwacja.</p>
+                                <a href="#premiera">Rezerwuj</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('./images/slider-img-3.jpg')">
+                        <div class="container">
+                            <div class="caption">
+                                <h1>Impreza okolicznościowa?</h1>
+                                <p>Pomożemy Ci w organizacji !</p>
+                                <a href="#premiera">Kontakt</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('./images/slider-img-4.jpg')">
+                        <div class="container">
+                            <div class="caption">
+                                <h1>Bądź na bieżąco</h1>
+                                <p>Zapisz się na premierę i otrzymuj najlepsze oferty</p>
+                                <a href="#premiera">Zapisz się</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- controls  -->
+                <div class="controls">
+                    <div class="prev">&#8592</div>
+                    <div class="next">&#8594</div>
+                </div>
+
+                <!-- indicators -->
+                <div class="indicator">
+                </div>
+
+            </section>
+        </div>
+    </section>
+
+    <section id="functions" class="functions">
+        <div class="functions__container">
+            <h1 class="functions__title">CO POTRAFI WIOSŁO?</h1>
+            <div class="functions__list">
+                <div class="functions__list-contain">
+                    <figure class="functions-list-part"><img src="./images/place.svg">
+                        <figcaption>Znajdzie najbliższe wypożyczalnie</figcaption>
+                    </figure>
+                    <figure class="functions-list-part"><img src="./images/kayak.svg">
+                        <figcaption>Zarezerwuje Ci łódkę</figcaption>
+                    </figure>
+                    <figure class="functions-list-part"><img src="./images/search.svg">
+                        <figcaption>Podpowie Ci jak pływać</figcaption>
+                    </figure>
+                    <figure class="functions-list-part"><img src="./images/map.svg">
+                        <figcaption>Znajdzie drogę do bazy</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="more-about-product-section__wrapper" class="more-about-product-section__wrapper">
+        <h1 class="more-about-product-section__header">Jak to działa?</h1>
+
+        <div class="more-about-product-desc__wrapper">
+            <div class="more-about-product-desc-text__wrapper">
+                <img src="./assets/icons/place.png" alt="place icon" class="more-about-product-desc-image" />
+                <h2 class="more-about-product-desc-header"><span>Szukasz wypożyczalni?</span> <span>Pomożemy!</span>
+                </h2>
+                <p class="more-about-product-desc-paragraph">
+                    Biwakowanie przy ognisku Ci się znudziło? Szukasz wodnych atrakcji?
+                    U nas znajdziesz wszystkie wypożyczalnie sprzętów wodnych w Twojej
+                    okolicy. Nie czekaj, zarejestruj się!
+                </p>
+            </div>
+            <div class="more-about-product-desc-text__wrapper">
+                <img src="./assets/icons/kayak.png" alt="kayak icon" class="more-about-product-desc-image" />
+                <h2 class="more-about-product-desc-header"><span>Rezerwacja łódki</span> <span>w 1 minutę!</span></h2>
+                <p class="more-about-product-desc-paragraph">
+                    Nie wiesz na czym chcesz pływać? Albo wiesz doskonale, ale nie chcesz tracić czasu na zbędne
+                    formalności? Z nami zarezerwujesz wymarzony sprzęt szybciej niż zaparzy się kawa!
+                </p>
+            </div>
+            <div class="more-about-product-desc-text__wrapper">
+                <img src="./assets/icons/search.png" alt="search icon" class="more-about-product-desc-image" />
+                <h2 class="more-about-product-desc-header"><span>Nie umiesz pływać?</span> <span>Żaden problem!</span>
+                </h2>
+                <p class="more-about-product-desc-paragraph">
+                    To Twój pierwszy raz? Nie wiesz od czego zacząć? Powiemy Ci jak dobrze trzymać wiosło! Sprawdź nasze
+                    poradniki pływania pisane przez profesjonalnych trenerów.
+                </p>
+            </div>
+            <div class="more-about-product-desc-text__wrapper">
+                <img src="./assets/icons/map.png" alt="map icon" class="more-about-product-desc-image" />
+                <h2 class="more-about-product-desc-header"><span>Pokażemy Ci jak</span> <span>wrócić!</span></h2>
+                <p class="more-about-product-desc-paragraph">
+                    Nie jesteś mistrzem w orientacji w terenie? Z "Wiosłem" możesz zawsze czuć się bezpiecznie.
+                    Udostępnimy Ci mapy wód offline, które doprowadzą Cię do bazy.
+                </p>
+            </div>      
+        </div>
+
+        <img src="./assets/images/more-about-product-section-illustration.svg" alt="product foto"
+            class="more-about-product-image" />
+    </section>
+
+    <div id="team" class="infomacja">
+        <div class="ioz">
+            <h2>
+                informacje o zespole
+            </h2>
+
+        </div>
+        <section class="container-images">
+            <div class="img-box" style="background-image: url(img/Kamil.svg)">
+                <span class="bor-left-right"></span>
+                <span class="bor-top-bottom"></span>
+                <ul>
+                    <li><a href="https://www.facebook.com/kamil.jastrzembowski" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/mrockuu/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/jastrzembowski" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://jastrzembowski.github.io/" target="_blank"><i class="far fa-address-card"></i></a></li>
+                </ul>
+                <div class="text">
+                    <h2>
+                        Kamil Jastrzembowski
+                    </h2>
+                    <p>
+                        Jestem absolwentem wyższej Szkoły Turystyki i Hotelarstwa w Gdańsku, w którym obecnie też
+                        mieszkam. Aktualnie całą swoją uwagę koncentruję na rozwijaniu umiejętności w zakresie Front End
+                        Development.
+                    </p>
+
+                </div>
+            </div>
+            <!-- <div class="img-box" style="background-image: url(img/Natalia.svg)">
+                <span class="bor-left-right"></span>
+                <span class="bor-top-bottom"></span>
+                <ul>
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://natalia-kordacka.github.io/my_first_web_Natalia_Kordacka" target="_blank"><i class="far fa-address-card"></i></a></li>
+                </ul>
+                <div class="text">
+                    <h2>
+                        Natalia Kordacka
+                    </h2>
+                    <p>
+                        Urodziłam się w Gdyni i tu spędziłam dzieciństwo. Moim miastem akademickim został Poznań, gdzie
+                        studiowałam architekturę wnętrz. Z zamiłowania jestem ilustratorem.
+                    </p>
+
+                </div>
+            </div> -->
+            <div class="img-box" style="background-image: url(img/Jarosław.svg)">
+                <span class="bor-left-right"></span>
+                <span class="bor-top-bottom"></span>
+                <ul>
+                    <li><a href="https://www.facebook.com/jar.witowski" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/jaroslaw-witowski?tab=repositories" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="far fa-address-card"></i></a></li>
+                </ul>
+                <div class="text">
+                    <h2>
+                        Jaroslaw Witowski
+                    </h2>
+                    <p>
+                        Inżynier elektryk z pasją do programowania. Uwielbiam poznawać nowe technologie, tworzyć
+                        nietuzinkowe rozwiązania dla typowych problemów i przede wszystkim… lubię naleśniki.
+                    </p>
+
+                </div>
+            </div>
+            <div class="img-box" style="background-image: url(img/Dima.svg)">
+                <span class="bor-left-right"></span>
+                <span class="bor-top-bottom"></span>
+                <ul>
+                    <li><a href="https://www.facebook.com/dima.zaychenko.9" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/dima_leveret" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/dima-leveret" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://dima-leveret.github.io/zd1_portfolio-V1.0/omnie.html" target="_blank"><i class="far fa-address-card"></i></a></li>
+                </ul>
+                <div class="text">
+                    <h2>
+                        Dima Zaichenko
+                    </h2>
+                    <p>
+                        Urodziłem się w Ukrainie. Swoją pasję znalazłem w fitnesie. Do Polski przyjechałem żeby ukończyć
+                        magisterkę. Teraz jestem master-trenerem i prezenterem Polski w tej sferze ale lubie wyzwania i
+                        tym razem wybrałem Front-End-Development.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="premiera" class="premiera">
+        <div class="premiera__text">
+            <h2 class="title">
+                bądź pierwszy <br> zapisz się na premierę
+            </h2>
+        </div>
+
+        <div class="premiera__container blur">
+            <label class="premiera__container__form">Zapis na premierę</label>
+            <form class="premiera__container__box" onsubmit="return false">
+                <div class="premiera__container__inputBox">
+                    <label class="inputBox__text">Imię</label>
+                    <input type="text" class="userInput" id="user-name" value="" required>
+                </div>
+                <div class="premiera__container__inputBox">
+                    <label class="inputBox__text">Mail</label>
+                    <input type="email" class="userInput" required>
+                </div>
+                <div class="premiera__container__inputBox">
+                    <label class="inputBox__text">Komentarz</label>
+                    <textarea name="message" class="userInput"></textarea>
+                </div>
+                <button type="submit" class="premiera__container__buttom">
+                    <a  onclick="getName(); toggle()">WYŚLIJ</a>
+                </button>
+            </form>
+        </div>
+        <div class="premiera__text">
+            <h3 class="informacja">
+                Wysłany zostanie tylko jeden mail z informacją o premierze. Zapewniamy bezpieczeństwo danych.
+            </h3>
+        </div>
+    </div>
+  
+    <footer id="contact" class="footer">
+        <div class="footer-container">
+            <p class="footer-container__company__name">&#174 Dancing Potatoes Sp. z o.o.</p>
+            <p class="footer-container__contact_phone">Telefon: +48 123 123 123</p>
+            <a id="footer-container__regulations" class="footer-container__regulations" href="#top">Regulamin</a>
+            <a id="footer-container__privacy" class="footer-container__privacy" href="#top">Prywatność</a>
+        </div>
+    </footer>
+</div>
+<div id="popup" class="popup">
+    <div id="popup-images">
+    <img src="./images/logo_wioslo.png" alt="logo_wioslo" class="logo-popup">
+    <img src="./images/birds.jpg" alt="birds" class="birds-popup">
+    </div>
+    <h1>Cześć&nbsp;<p id="user"></p>!</h1>
+    <h2>Dziękujemy za rejestrację w premierze!</h2> 
+    <p>Czy chcesz zagrać w grę?</p>
+    <div class="popup-a__container">
+    <a href="#premiera" onclick="toggle()">Nie, dziękuję.</a>
+    <a href="http://www.dancing-potatoes.jfdzr1.is-academy.pl/game" onclick="toggle()" >Tak! Pewnie!</a>
+</div>
+</div>
+
+    <script src="./js/header-slider.js"></script>
+
+</body>
+
+</html>

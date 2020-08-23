@@ -1,0 +1,110 @@
+
+:root {
+    --background-color: #89C7CC;
+    --main-font-color: #000000;
+    --second-font-color: #ffffff;
+    --dark-blue-color: #04738D;
+    --yelow-color: #F1B71C;
+    --red-color: #D61F2A;
+    --brown-color: #560F0F;
+    --nav-menu-height: 70px;
+  }
+  
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-margin: var(--nav-menu-height);
+  }
+
+  body {
+      background-color: var(--second-font-color); 
+      font-family: 'Lato', sans-serif;
+      background-color: white;
+  }   
+
+
+.more-about-product-section__wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  justify-content: center;
+  margin: 50px 0px;
+}
+  .more-about-product-section__header {
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--red-color);
+    margin-bottom: 90px;
+    text-transform: uppercase;
+
+  }
+
+.more-about-product-desc__wrapper{
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-template-rows: repeat(2, 40%);
+  grid-gap: 20%;
+}
+
+
+.more-about-product-desc-text__wrapper {
+  display: flex;
+  flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+
+  .more-about-product-desc-image {
+    height: 60px;
+  }
+
+  .more-about-product-desc-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 30px;
+    color: var(--dark-blue-color);
+   
+    font-size: 24px;
+    font-weight: 400;
+  } 
+
+  .more-about-product-image{
+    width: 100vw;
+    margin-top: 50px;
+  }
+
+  .more-about-product-desc-paragraph {
+    line-height: 24px;
+    padding: 0px 30px;
+    text-align: justify;
+  }
+  
+  @media screen and (max-width: 769px) {
+    .more-about-product-desc__wrapper{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .more-about-product-desc-paragraph{
+      margin-bottom: 50px;
+      }
+
+    .more-about-product-desc-header{
+      margin: 25px 0px;
+    }
+  
+    .more-about-product-image{
+      width: 100vw;
+    }
+
+    .more-about-product-section__header{
+      margin-bottom: 50px;
+    }
+  }
