@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type = "text/javascript" src = "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js" ></script>
+    <script src="./js/jquery.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/popup.js"></script>
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/functions.css">
     <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/popup.css">
     <link rel="stylesheet" href="./css/info_o_zespole.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/premiera.css">
@@ -17,20 +21,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon_io/favicon-32x32.png">
 
+
     <title>Wiosło</title>
 </head>
 
 <body>
+    <div class="blur">
     <section class="opening-page">
         <nav id="nav" class="nav">
             <div class="nav__container">
                 <a href="#top"><img id="logo" class="logo" src="./images/logo_wioslo.png" alt="wioslo-logo-image"></a>
                 <div id="nav-menu" class="nav-menu">
-                    <a id="nav-menu-premiere" class="nav-menu-premiere" href="#premiera">Premiera</a>
-                    <a id="nav-menu-function" class="nav-menu-function" href="#functions">Funkcje aplikacji</a>
-                    <a id="nav-menu-info" class="nav-menu-info" href="#more-about-product-section__wrapper">Info</a>
-                    <a id="nav-menu-team" class="nav-menu-team" href="#team">Zespół</a>
-                    <a id="nav-menu-contact" class="nav-menu-contact" href="#contact">Kontakt</a>
+                    <a id="nav-menu-premiere" class="nav-menu-premiere font" href="#premiera">Premiera</a>
+                    <a id="nav-menu-function" class="nav-menu-function font" href="#functions">Funkcje aplikacji</a>
+                    <a id="nav-menu-info" class="nav-menu-info font" href="#more-about-product-section__wrapper">Info</a>
+                    <a id="nav-menu-team" class="nav-menu-team font" href="#team">Zespół</a>
+                    <a id="nav-menu-contact" class="nav-menu-contact font" href="#contact">Kontakt</a>
                 </div>
             </div>
         </nav>
@@ -172,9 +178,9 @@
                 <span class="bor-left-right"></span>
                 <span class="bor-top-bottom"></span>
                 <ul>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.facebook.com/kamil.jastrzembowski" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/mrockuu/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/jastrzembowski" target="_blank"><i class="fab fa-github"></i></a></li>
                     <li><a href="https://jastrzembowski.github.io/" target="_blank"><i class="far fa-address-card"></i></a></li>
                 </ul>
                 <div class="text">
@@ -260,12 +266,12 @@
             </h2>
         </div>
 
-        <div class="premiera__container">
+        <div class="premiera__container blur">
             <label class="premiera__container__form">Zapis na premierę</label>
-            <form class="premiera__container__box">
+            <form class="premiera__container__box" onsubmit="return false">
                 <div class="premiera__container__inputBox">
                     <label class="inputBox__text">Imię</label>
-                    <input type="text" class="userInput" required>
+                    <input type="text" class="userInput" id="user-name" value="" required>
                 </div>
                 <div class="premiera__container__inputBox">
                     <label class="inputBox__text">Mail</label>
@@ -276,7 +282,7 @@
                     <textarea name="message" class="userInput"></textarea>
                 </div>
                 <button type="submit" class="premiera__container__buttom">
-                    WYŚLIJ
+                    <a  onclick="getName(); toggle()">WYŚLIJ</a>
                 </button>
             </form>
         </div>
@@ -286,8 +292,7 @@
             </h3>
         </div>
     </div>
-
-
+  
     <footer id="contact" class="footer">
         <div class="footer-container">
             <p class="footer-container__company__name">&#174 Dancing Potatoes Sp. z o.o.</p>
@@ -296,6 +301,20 @@
             <a id="footer-container__privacy" class="footer-container__privacy" href="#top">Prywatność</a>
         </div>
     </footer>
+</div>
+<div id="popup" class="popup">
+    <div id="popup-images">
+    <img src="./images/logo_wioslo.png" alt="logo_wioslo" class="logo-popup">
+    <img src="./images/birds.jpg" alt="birds" class="birds-popup">
+    </div>
+    <h1>Cześć&nbsp;<p id="user"></p>!</h1>
+    <h2>Dziękujemy za rejestrację w premierze!</h2> 
+    <p>Czy chcesz zagrać w grę?</p>
+    <div class="popup-a__container">
+    <a href="#premiera" onclick="toggle()">Nie, dziękuję.</a>
+    <a href="http://www.dancing-potatoes.jfdzr1.is-academy.pl/game" onclick="toggle()" >Tak! Pewnie!</a>
+</div>
+</div>
 
     <script src="./js/header-slider.js"></script>
 
