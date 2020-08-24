@@ -8,7 +8,8 @@ $(document).scroll(function(){
     else {
      $('nav').removeClass('small'); // w przeciwnym wypadku usuwamy klase small
     }
-  
+    
+    
   });
   $(document).scroll(function(){
     var pot = $(window).scrollTop();
