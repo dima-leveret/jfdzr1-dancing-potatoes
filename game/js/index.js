@@ -8,8 +8,6 @@ let game = new Game(context);
 requestAnimationFrame(gameLoop);
 
 
-
-
 function gameLoop(){    
 
     game.update();

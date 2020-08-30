@@ -8,8 +8,8 @@ export default class Obstacles{
         this.obstructionNo = 3;
         this._positionY = -100;
         this.speed = 3;
-        this.lane = Math.floor(Math.random() * 3);
-        this.lanePosX = [150, 225, 300, 150];
+        this.lane = Math.floor(Math.random() * 5);
+        this.lanePosX = [75, 150, 225, 300, 375, 450, 75];
         this.obstructionWidth = 60;
         this.obstructionLength = 124;
     }   

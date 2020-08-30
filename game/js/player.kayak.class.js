@@ -46,13 +46,13 @@ export default class playerKayak{
     }
 
     moveLeft(){
-        this._positionX -= 75;   
-        if(this._positionX <= 150) this._positionX = 150;     
+        this._positionX -= 20;   
+        if(this._positionX <= 75) this._positionX = 75;     
     }
 
     moveRight(){
-        this._positionX += 75;
-        if(this._positionX >= 300) this._positionX = 300;
+        this._positionX += 20;
+        if(this._positionX >= 375) this._positionX = 375;
     }
 
     set speed(speed){
@@ -63,8 +63,6 @@ export default class playerKayak{
         }else{
             this._speed = speed;
         }
-
-        document.querySelector(".speedo-meter .speed").innerHTML = this._speed;
     }
 
     get speed(){

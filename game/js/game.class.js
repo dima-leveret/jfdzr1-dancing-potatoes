@@ -16,7 +16,7 @@ export default class Game{
         this.obstacle = [];      
         new Controller({river:this.river, playerKayak:this.playerKayak});
 
-        setInterval(()=>this.populateObstacles(), 1500);
+        setInterval(()=>this.populateObstacles(), 400);
 
         this._paused = false;
         this._gameOver = false;
@@ -51,16 +51,6 @@ export default class Game{
         document.onkeydown = null;
     }
 
-    // tryAgainbutton = document.querySelector('.try-again-button');
-    // tryAgainbutton.addEventListener('click', ()=>{
-    //     this.obstacle = [];
-    //     this.playerKayak.resetPosition();
-    //     this.playerKayak.speed = 10;
-    //     this.pause = false;
-    //     let screenTryAgain = document.querySelector(".try-again");
-    //     screenTryAgain.style.display = "none";
-    //     document.onkeydown = null;
-    // });
 
     update(){ 
 
