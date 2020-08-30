@@ -1,4 +1,3 @@
-
 import Controller from './controller.class.js';
 import playerKayak from './player.kayak.class.js';
 import Obstacles from './obstacles.class.js';
@@ -17,7 +16,7 @@ export default class Game{
         this.obstacle = [];      
         new Controller({river:this.river, playerKayak:this.playerKayak});
 
-        setInterval(()=>this.populateObstacles(), 5000);
+        setInterval(()=>this.populateObstacles(), 1500);
 
         this._paused = false;
         this._gameOver = false;
@@ -25,10 +24,9 @@ export default class Game{
 
     populateObstacles(){       
         if(this._paused) return; 
-        let obstacleObject = new Obstacles(this);  
-        let obstacleObject2 = new Obstacles(this);     
+
+        let obstacleObject = new Obstacles(this);      
         this.obstacle.push(obstacleObject);
-        this.obstacle.push(obstacleObject2);
     }
 
     set pause(pause){
@@ -44,7 +42,6 @@ export default class Game{
         if(e.keyCode !== 32){
             return;
         }
-
         this.obstacle = [];
         this.playerKayak.resetPosition();
         this.playerKayak.speed = 10;
@@ -53,6 +50,17 @@ export default class Game{
         screenTryAgain.style.display = "none";
         document.onkeydown = null;
     }
+
+    // tryAgainbutton = document.querySelector('.try-again-button');
+    // tryAgainbutton.addEventListener('click', ()=>{
+    //     this.obstacle = [];
+    //     this.playerKayak.resetPosition();
+    //     this.playerKayak.speed = 10;
+    //     this.pause = false;
+    //     let screenTryAgain = document.querySelector(".try-again");
+    //     screenTryAgain.style.display = "none";
+    //     document.onkeydown = null;
+    // });
 
     update(){ 
 
@@ -81,7 +89,7 @@ export default class Game{
         }
 
         this.playerKayak.update();
-       // this.obstacleCar.update();
+        // this.obstacle.update();
         this.obstacle.forEach(kayak => {
             kayak.update();
         });
@@ -91,8 +99,7 @@ export default class Game{
             this.pause = true;
             let screenTryAgain = document.querySelector(".try-again");
             screenTryAgain.style.display = "block";
-            document.onkeydown = e => this.tryAgain(e);
-            
+            document.onkeydown = (e) => this.tryAgain(e);       
         }
     }
 

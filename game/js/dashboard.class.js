@@ -42,7 +42,7 @@ export default class Dashboard{
         this.now = Date.now();
         let deltaTime = this.now - this.then;
 
-        if(deltaTime >= 1000){
+        if(deltaTime >= 1){
 
             this.meterPerSecond = this.game.playerKayak.speed * 1000 / (60 * 60);
 
