@@ -1,8 +1,8 @@
 class Gamer {
     constructor(){
         this.hp = 100;
-        this.sizeHeight = 150px;
-        this.sizeWidth = 150px;
+        this.sizeHeight = '150px';
+        this.sizeWidth = '150px';
         this.position = position;
     }
 
@@ -16,13 +16,10 @@ class Gamer {
 
 }
 
-
-
-
 class Obstacle {
     constructor(type, sizeX){
         this.type = type;
-        this.sizeY = 50px;
+        this.sizeY = '50px';
         this.sizeX = sizeX;
     }
 
@@ -32,7 +29,7 @@ class Obstacle {
 class PointsObject {
     constructor(type){
         this.type = type;
-        this.sizeHeight = 50px;
-        this.sizeWidth = 50px;
+        this.sizeHeight = '50px';
+        this.sizeWidth = '50px';
     }
 }

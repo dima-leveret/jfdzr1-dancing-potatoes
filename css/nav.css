@@ -98,4 +98,18 @@
 
 .languages{
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 30px;
+}
+
+#language{
+    margin: 0 20px;
+    padding: 0;
+}
+
+.flag-language{
+    width: 40px;
+    height: 30px;
+    border: #000000 solid 1px;
 }

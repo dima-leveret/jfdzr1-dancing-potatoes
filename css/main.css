@@ -38,7 +38,7 @@
     color: var(--red-color);
     margin-bottom: 90px;
     text-transform: uppercase;
-
+  
   }
 
 .more-about-product-desc__wrapper{
@@ -65,6 +65,7 @@ justify-content: center;
 
   .more-about-product-desc-header{
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
