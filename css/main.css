@@ -65,6 +65,7 @@ justify-content: center;
 
   .more-about-product-desc-header{
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
