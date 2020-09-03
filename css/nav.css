@@ -123,7 +123,7 @@
        
     }
     .nav.small{
-        margin-top: -48.5px;
+        margin-top: -48.5px;gi
     }
     .nav-menu a:hover {
         border-bottom: 2px solid black;
@@ -133,8 +133,8 @@
         align-self: flex-end;
         
     }
-.logo{
-    margin-left: -150px;
+    .logo{
+    margin-left: -180px;
 }
     #language{
         margin-top: -180px;
