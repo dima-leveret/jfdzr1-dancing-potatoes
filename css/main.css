@@ -109,3 +109,74 @@ justify-content: center;
       margin-bottom: 50px;
     }
   }
+
+  #button-up {
+    display: inline-block;
+    background-color: #F1B71C;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 20px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    transition: opacity .3s ease-in-out;
+    z-index: 1000;
+    opacity: 0.7;
+}
+  #button-up:hover {
+    cursor: pointer;
+    background-color: #560F0F;
+  }
+  #button-up:active {
+    background-color: #560F0F;
+  }
+  #button-up::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 50px;
+    color: #fff;
+  }
+  .show{
+    opacity: .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-in-out;
+  }
+
+  #cookies-message{ 
+    color: white; 
+    padding: 12px 10px; 
+    text-align: center; 
+    position: fixed; 
+    bottom:0px; 
+    left:0; 
+    right:0; 
+    background-color: rgba(0,0,0,0.6); 
+    z-index: 100000; 
+    box-shadow: 0 0 5px rgba(0,0,0,0.4); 
+    display: none;
+  }
+  #accept-cookies-checkbox{ 
+    background-color: #04738D; 
+    color: white; 
+    border: solid 1px #04738D; 
+    transition: all 0.5s; 
+    padding: 2px 6px; 
+    border-radius: 4px; 
+    display: inline-block; 
+    margin-left: 10px; 
+    text-decoration: none; 
+    cursor: pointer;
+  }
+  #accept-cookies-checkbox:hover{ 
+    background-color: transparent; 
+    border-color: white;
+  }
+#nav.active a{
+  background-color: yellow;
+}

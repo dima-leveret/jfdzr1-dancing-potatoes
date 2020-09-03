@@ -10,6 +10,7 @@
     background: url('/img/wave2-potatoes.svg');
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .premiera__container
@@ -126,6 +127,7 @@ textarea.userInput
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .informacja
@@ -136,6 +138,3 @@ textarea.userInput
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
-
-
-
