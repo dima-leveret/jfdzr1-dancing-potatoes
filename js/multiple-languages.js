@@ -72,8 +72,6 @@ const footerContainerContactPhoneEl = document.querySelector('.footer-container_
 const footerContainerRegulationsEl = document.querySelector('.footer-container__regulations');
 const footerContainerPrivacyEl = document.querySelector('.footer-container__privacy');
 
-
-
 link.forEach(el => {
     el.addEventListener('click', () => {
         langEl.querySelector('.active').classList.remove('active');
@@ -375,3 +373,4 @@ let translation = {
     }
     
 }
+
