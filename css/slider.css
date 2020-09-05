@@ -117,8 +117,8 @@ body{
  font-size:40px;
  cursor:pointer;
  transition: all .5s ease;
- border: 1px solid #04738D;
- border-radius: 10px
+ border-radius: 10px;
+ opacity: 0.7;
 }
 .header .controls .prev:hover,
 .header .controls .next:hover{
@@ -161,15 +161,21 @@ body{
 	.container{
 		margin: 50px 0;
 	}
-
+	.header .caption h1{
+		font-size:1em;
+	}
 	.header .indicator{
 		bottom:0px;
 	}
-
+	.header{
+		min-height: 400px;
+	}
 	.header .indicator div{
 		margin: 0 5px;
 	}
-
+	.slider{
+		min-height: 300px;
+	}
 	.header .caption{
 		width:100%;
 		text-align: center;
@@ -178,19 +184,30 @@ body{
 		justify-content: center;
 		align-items: center;
 	}
+	.butSlide{
+		width: 50%;
+	}
 
 	.header .caption h1{
 		font-size: 6vw;
-		margin:10px 30px;
+		margin: 10px 30px 5px;
 	}
 	
 	.header .caption p{
 		font-size: 5vw;
-		margin:10px 30px;
+		margin:5px 30px;
 	}
 	
 	.header .caption a{
-	 padding:10px 30px;
+	 padding:10px 10px;
 	 margin: 10px 30px;
+	 display: flex;
+	 justify-content: center;
+	
+	}
+	.butSlide a{
+		
+		font-size: 3em;
+	
 	}
 }

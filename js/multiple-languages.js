@@ -63,7 +63,7 @@ const premieraContainerFormEl = document.querySelector('.premiera__container__fo
 const iBnameEL = document.querySelector('.iBname');
 const iBmailEl = document.querySelector('.iBmail');
 const iBkomentEl = document.querySelector('.iBkoment');
-const premieraContainerButtomEl = document.querySelector('.premiera__container__buttom');
+const premieraContainerButtonEl = document.querySelector('.premiera__container__button');
 const informacjaEl = document.querySelector('.informacja');
 
 // footer
@@ -72,7 +72,13 @@ const footerContainerContactPhoneEl = document.querySelector('.footer-container_
 const footerContainerRegulationsEl = document.querySelector('.footer-container__regulations');
 const footerContainerPrivacyEl = document.querySelector('.footer-container__privacy');
 
+// popup
 
+const popupUserEl = document.querySelector(".popup-user")
+const popupThanksEl = document.querySelector(".popup-thanks")
+const popupQuestionEl = document.querySelector(".popup-question")
+const popupNoEl = document.querySelector(".popup-no")
+const popupYesEl = document.querySelector(".popup-yes")
 
 link.forEach(el => {
     el.addEventListener('click', () => {
@@ -143,7 +149,7 @@ link.forEach(el => {
         iBnameEL.innerHTML = translation[attr].iBname;
         iBmailEl.innerHTML = translation[attr].iBmail;
         iBkomentEl.innerHTML = translation[attr].iBkoment;
-        premieraContainerButtomEl.innerHTML = translation[attr].premieraContainerButtom;
+        premieraContainerButtonEl.innerHTML = translation[attr].premieraContainerButton;
         informacjaEl.innerHTML = translation[attr].informacja;
 
         // footer
@@ -151,6 +157,14 @@ link.forEach(el => {
         footerContainerContactPhoneEl.innerHTML = translation[attr].footerContainerContactPhone;
         footerContainerRegulationsEl.innerHTML = translation[attr].footerContainerRegulations;
         footerContainerPrivacyEl.innerHTML = translation[attr].footerContainerPrivacy;
+
+        //popup
+        popupUserEl.innerHTML = translation[attr].popupUser;
+        popupThanksEl.innerHTML = translation[attr].popupThanks;
+        popupQuestionEl.innerHTML = translation[attr].popupQuestion;
+        popupNoEl.innerHTML = translation[attr].popupNo;
+        popupYesEl.innerHTML = translation[attr].popupYes;
+
     });
 });
 
@@ -164,19 +178,19 @@ let translation = {
         'navMenuContact': 'Kontakt',
 
         // slider
-        'slide1': 'Spływy kajakowe',
-        'slide2': '1 min',
-        'slide3': 'Impreza okolicznościowa?',
+        'slide1': 'Kajak, łódka czy rower wodny?',
+        'slide2': 'Trzy kliknięcia...',
+        'slide3': 'Sprawdź naszą aplikację mobilną',
         'slide4': 'Bądź na bieżąco',
 
-        'textSlide1': 'Porównaj ceny wypożyczalni.',
-        'textSlide2': 'Dokładnie tyle zajmie rezerwacja.',
-        'textSlide3': 'Pomożemy Ci w organizacji !',
+        'textSlide1': 'Porównaj oferty pobliskich wypożyczalni',
+        'textSlide2': 'Dzielą Cię od dokonania rezerwacji.',
+        'textSlide3': 'I miej "Wiosło" zawsze przy sobie',
         'textSlide4': 'Zapisz się na premierę i otrzymuj najlepsze oferty',
 
         'buttonSlide1': 'Sprawdź ofertę',
-        'buttonSlide2': 'Rezerwuj',
-        'buttonSlide3': 'Kontakt',
+        'buttonSlide2': 'Sprawdź sam!',
+        'buttonSlide3': 'Sprawdź ją!',
         'buttonSlide4': 'Zapisz się',
 
         // app functions
@@ -188,7 +202,7 @@ let translation = {
         'appFunction4': 'Znajdzie drogę do bazy',
 
         // How it works?
-        'moreAboutProductSectionHeader': 'Jak to działa?',
+        'moreAboutProductSectionHeader': 'JAK TO DZIAŁA?',
 
         'mapdh1': 'Szukasz wypożyczalni? <br> Pomożemy!',
         'mapdh2': 'Rezerwacja łódki <br> w 1 minutę!',
@@ -218,7 +232,7 @@ let translation = {
         'iBname': 'Imię',
         'iBmail': 'Mail',
         'iBkoment': 'Komentarz',
-        'premieraContainerButtom': 'WYŚLIJ',
+        'premieraContainerButton': 'WYŚLIJ',
         'informacja': 'Wysłany zostanie tylko jeden mail z informacją o premierze. Zapewniamy bezpieczeństwo danych.',
 
         // footer
@@ -226,6 +240,13 @@ let translation = {
         'footerContainerContactPhone': 'Telefon: +48 123 123 123',
         'footerContainerRegulations': 'Regulamin',
         'footerContainerPrivacy': 'Prywatność',
+
+        //popup
+        'popupUser': 'Cześć&nbsp;<p id="user"></p>!',
+        'popupThanks': 'Dziękujemy za rejestrację w premierze!',
+        'popupQuestion': 'Czy chcesz zagrać w grę?',
+        'popupNo': 'Nie, dziękuję',
+        'popupYes': 'Tak! Pewnie!',
     },
 
     'russian': {
@@ -261,7 +282,7 @@ let translation = {
         'appFunction4': 'Найдет путь к базе',
 
         // How it works?
-        'moreAboutProductSectionHeader': 'Как это работает?',
+        'moreAboutProductSectionHeader': 'КАК ЭТО РАБОТАЕТ?',
 
         'mapdh1': 'Ищешь аренду? <br> Поможем!',
         'mapdh2': 'Бронирование лодок <br> за 1 минуту!',
@@ -291,7 +312,7 @@ let translation = {
         'iBname': 'Имя',
         'iBmail': 'Mail',
         'iBkoment': 'Комментарий',
-        'premieraContainerButtom': 'ОТПРАВИТЬ',
+        'premieraContainerButton': 'ОТПРАВИТЬ',
         'informacja': 'О премьере будет отправлено только одно письмо. Обеспечиваем безопасность данных.',
 
         // footer
@@ -299,6 +320,13 @@ let translation = {
         'footerContainerContactPhone': 'Телефон: +48 123 123 123',
         'footerContainerRegulations': 'Условия использования',
         'footerContainerPrivacy': 'Конфиденциальность',
+
+         //popup
+         'popupUser': 'Привет&nbsp;<p id="user"></p>!',
+         'popupThanks': 'Спасибо, что записались на премьеру!',
+         'popupQuestion': 'Хочешь сыграть в игру?',
+         'popupNo': 'Нет, спасибо',
+         'popupYes': 'Да, пожалуйста',
     },
 
     'english': {
@@ -334,10 +362,10 @@ let translation = {
         'appFunction4': 'Can find a way to the base',
 
         // How it works?
-        'moreAboutProductSectionHeader': 'How it works?',
+        'moreAboutProductSectionHeader': 'HOW DOES IT WORK?',
 
         'mapdh1': 'Are you looking for a rental company? <br> We will help!',
-        'mapdh2': 'Boat booking <br> in 1 minute!',
+        'mapdh2': 'Boat booking <br> in one minute!',
         'mapdh3': 'You can not swim? <br> No problem!',
         'mapdh4': 'We will show you <br> how to come back!',
 
@@ -364,7 +392,7 @@ let translation = {
         'iBname': 'Name',
         'iBmail': 'Mail',
         'iBkoment': 'Comment',
-        'premieraContainerButtom': 'SEND',
+        'premieraContainerButton': 'SEND',
         'informacja': 'Only one e-mail will be sent to inform about the premiere. We ensure data security.',
 
         // footer
@@ -372,6 +400,13 @@ let translation = {
         'footerContainerContactPhone': 'Phone: +48 123 123 123',
         'footerContainerRegulations': 'Regulations',
         'footerContainerPrivacy': 'Privacy',
+
+        //popup
+        'popupUser': 'Hello&nbsp;<p id="user"></p>!',
+        'popupThanks': 'Thank you for registering at the premiere',
+        'popupQuestion': 'Would you like to play a game?',
+        'popupNo': 'No, thank you',
+        'popupYes': 'Yes! Sure!',
     }
     
 }

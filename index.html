@@ -59,7 +59,7 @@
                                 <div class="caption">
                                 <h1 class="slide1">Kajak, łódka czy rower wodny?</h1>
                                 <p class="textSlide1">Porównaj oferty pobliskich wypożyczalni.</p>
-                                <a class="buttonSlide1" href="#premiera">Sprawdź ofertę</a>
+                                <a class="buttonSlide1 butSlide" href="#premiera">Sprawdź ofertę</a>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                                 <div class="caption">
                                 <h1 class="slide2">Trzy kliknięcia...</h1>
                                 <p class="textSlide2">Dzielą Cię od dokonania rezerwacji</p>
-                                <a class="buttonSlide2" href="#premiera">Sprawdź sam!</a>
+                                <a class="buttonSlide2 butSlide" href="#premiera">Sprawdź sam!</a>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                                 <div class="caption">
                                 <h1 class="slide3">Sprawdź naszą aplikację mobilną!</h1>
                                 <p class="textSlide3">I miej "Wiosło" zawsze przy sobie </p>
-                                <a class="buttonSlide3" href="#premiera">Sprawdż ją!</a>
+                                <a class="buttonSlide3 butSlide" href="#premiera">Sprawdż ją!</a>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                                 <div class="caption">
                                 <h1 class="slide4">Bądź na bieżąco</h1>
                                 <p class="textSlide4">Zapisz się na premierę i otrzymuj najlepsze oferty.</p>
-                                <a class="buttonSlide4" href="#premiera">Zapisz się</a>
+                                <a class="buttonSlide4 butSlide" href="#premiera">Zapisz się</a>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
         </section>
 
         <section id="more-about-product-section__wrapper" class="more-about-product-section__wrapper section">
-            <h1 class="more-about-product-section__header">Jak to działa?</h1>
+            <h1 class="more-about-product-section__header">JAK TO DZIAŁA?</h1>
 
             <div class="more-about-product-desc__wrapper">
                 <div class="more-about-product-desc-text__wrapper">
@@ -299,8 +299,8 @@
                     <label class="inputBox__text iBkoment">Komentarz</label>
                         <textarea name="message" class="userInput"></textarea>
                     </div>
-                    <button type="submit" class="premiera__container__buttom">
-                        <a onclick="getName(); toggle()">WYŚLIJ</a>
+                    <button type="submit" class="premiera__container__button" onclick="getName(); toggle()">
+                        <a >WYŚLIJ</a>
                     </button>
                 </form>
             </div>
@@ -324,12 +324,12 @@
             <img src="./images/logo_wioslo.png" alt="logo_wioslo" class="logo-popup">
             <img src="./images/birds.jpg" alt="birds" class="birds-popup">
         </div>
-        <h1>Cześć&nbsp;<p id="user"></p>!</h1>
-        <h2>Dziękujemy za rejestrację w premierze!</h2>
-        <p>Czy chcesz zagrać w grę?</p>
+        <h1 class="popup-user">Cześć&nbsp;<p id="user"></p>!</h1>
+        <h2 class="popup-thanks">Dziękujemy za rejestrację w premierze!</h2>
+        <p class="popup-question">Czy chcesz zagrać w grę?</p>
         <div class="popup-a__container">
-            <a href="#premiera" onclick="toggle()">Nie, dziękuję.</a>
-            <a href="http://www.dancing-potatoes.jfdzr1.is-academy.pl/game" onclick="toggle()">Tak! Pewnie!</a>
+            <a href="#premiera" onclick="toggle()" class="popup-no">Nie, dziękuję.</a>
+            <a href="http://www.dancing-potatoes.jfdzr1.is-academy.pl/game" onclick="toggle()" class="popup-yes">Tak! Pewnie!</a>
         </div>
     </div>
     <a id="button-up"></a>
