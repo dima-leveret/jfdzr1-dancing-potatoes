@@ -50,6 +50,12 @@
     transition: 0.5s;
   
 }
+.light{
+    color: white;
+}
+.nav-menu-contact.light {
+    color: white
+}
 .nav-menu a.small{
     font-size: 1px;
     transition: 0.5s;

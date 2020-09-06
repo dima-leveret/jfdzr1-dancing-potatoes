@@ -175,7 +175,7 @@ let translation = {
         'navMenuFunction': 'Funkcje aplikacji',
         'navMenuInfo': 'Info',
         'navMenuTeam': 'Zespół',
-        'navMenuContact': 'Kontakt',
+        'navMenuContact': 'Logowanie',
 
         // slider
         'slide1': 'Kajak, łódka czy rower wodny?',
@@ -226,7 +226,7 @@ let translation = {
         'aboutDima': 'Urodziłem się w Ukrainie. Swoją pasję znalazłem w fitnesie. Do Polski przyjechałem żeby ukończyć magisterkę. Teraz jestem master-trenerem i prezenterem Polski w tej sferze ale lubie wyzwania i tym razem wybrałem Front-End-Development.',
 
         // premiere form
-        'titlePremiere': 'bądź pierwszy <br> zapisz się na premierę',
+        'titlePremiere': 'Zapisz się na premierę',
 
         'premieraContainerForm': 'Zapis na premierę',
         'iBname': 'Imię',
@@ -255,7 +255,7 @@ let translation = {
         'navMenuFunction': 'Особенности приложения',
         'navMenuInfo': 'Информация',
         'navMenuTeam': 'Информация о команде',
-        'navMenuContact': 'Контакт',
+        'navMenuContact': 'Авторизоваться',
 
         // slider
         'slide1': 'Рафтинг на каяках',
@@ -306,7 +306,7 @@ let translation = {
         'aboutDima': 'Я родился в Украине. Свою страсть нашел в фитнесе. Приехал в Польшу, чтобы получить степень магистра. Сейчас я мастер-тренер в этой области, но мне нравятся вызовы, и на этот раз я выбрал Front-End-Development.',
 
         // premiere form
-        'titlePremiere': 'будь первым <br> запишись на премьеру',
+        'titlePremiere': 'запишись на премьеру',
 
         'premieraContainerForm': 'Регистрация на премьеру',
         'iBname': 'Имя',
@@ -335,7 +335,7 @@ let translation = {
         'navMenuFunction': 'Application features',
         'navMenuInfo': 'Information',
         'navMenuTeam': 'Team information',
-        'navMenuContact': 'Contact',
+        'navMenuContact': 'Login',
 
         // slider
         'slide1': 'Canoe trip',
@@ -386,7 +386,7 @@ let translation = {
         'aboutDima': 'I was born in Ukraine. I found my passion in fitness. I came to Poland to complete my master`s degree. Now I am a master trainer and Polish presenter in this area, but I like challenges and this time I chose Front-End-Development.',
 
         // premiere form
-        'titlePremiere': 'be the first <br> sign up for the premiere',
+        'titlePremiere': 'Sign up for the premiere',
 
         'premieraContainerForm': 'Registration for the premiere',
         'iBname': 'Name',

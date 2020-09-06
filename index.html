@@ -8,6 +8,7 @@
     <script src="./js/jquery.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/popup.js"></script>
+    <script src="./js/hightlight.js"></script>
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/functions.css">
@@ -33,13 +34,13 @@
                     <a href="#top"><img id="logo" class="logo" src="./images/logo_wioslo.png"
                             alt="wioslo-logo-image"></a>
                     <div id="nav-menu" class="nav-menu">
-                        <a id="nav-menu-premiere" class="nav-menu-premiere font active" href="#premiera">Premiera</a>
+                        <a id="nav-menu-premiere" class="nav-menu-premiere font " href="#premiera">Premiera</a>
                         <a id="nav-menu-function" class="nav-menu-function font " href="#functions">Funkcje
                             aplikacji</a>
                         <a id="nav-menu-info" class="nav-menu-info font"
                             href="#more-about-product-section__wrapper">Info</a>
                         <a id="nav-menu-team" class="nav-menu-team font" href="#team">Zespół</a>
-                        <a id="nav-menu-contact" class="nav-menu-contact font" href="#contact">Kontakt</a>
+                        <a id="nav-menu-contact" class="nav-menu-contact font" href="#contact">Logowanie</a>
                     </div>
                 <div class="languages">
                     <a href="#" id = "language" language = 'polish' class = 'active'> <img class="flag-language" src="/img/Flag_of_Poland.png" alt="Flag_of_Poland"></a>
@@ -94,8 +95,8 @@
 
                 <!-- controls  -->
                     <div class="controls">
-                        <div class="prev">&#8592</div>
-                        <div class="next">&#8594</div>
+                        <div class="prev">&#10094</div>
+                        <div class="next">&#10095</div>
                     </div>
 
                 <!-- indicators -->
@@ -108,7 +109,7 @@
 
         <section id="functions" class="functions section">
             <div class="functions__container">
-                <h1 class="functions__title">CO POTRAFI WIOSŁO?</h1>
+                <h1 class="functions__title"><img src="./images/paddle.png" class="paddle" alt="paddle">CO POTRAFI WIOSŁO?<img src="./images/paddle.png" class="paddle" alt="paddle"></h1>
                 <div class="functions__list">
                     <div class="functions__list-contain">
                         <figure class="functions-list-part"><img src="./images/place.svg">
@@ -129,7 +130,7 @@
         </section>
 
         <section id="more-about-product-section__wrapper" class="more-about-product-section__wrapper section">
-            <h1 class="more-about-product-section__header">JAK TO DZIAŁA?</h1>
+            <h1 class="more-about-product-section__header"><img src="./images/paddle.png" class="paddle" alt="paddle">JAK TO DZIAŁA?<img src="./images/paddle.png" class="paddle" alt="paddle"></h1>
 
             <div class="more-about-product-desc__wrapper">
                 <div class="more-about-product-desc-text__wrapper">
@@ -175,8 +176,8 @@
 
         <div id="team" class="infomacja">
             <div class="ioz">
-            <h2 class="infoAboutTeam">
-                    informacje o zespole
+            <h2 class="infoAboutTeam"><img src="./images/paddle.png" class="paddle" alt="paddle">
+                    informacje o zespole<img src="./images/paddle.png" class="paddle" alt="paddle">
                 </h2>
 
             </div>
@@ -280,11 +281,12 @@
         <div id="premiera" class="premiera section">
             <div class="premiera__text">
                 <h2 class="title">
-                    Zapisz się na premierę<br>
+                    ZAPISZ SIĘ NA PREMIERĘ
                 </h2>
             </div>
-
+            <div class="premiera__container-holder">
             <div class="premiera__container blur">
+                
                 <label class="premiera__container__form">Formularz kontaktowy</label>
                 <form class="premiera__container__box" onsubmit="return false">
                     <div class="premiera__container__inputBox">
@@ -295,20 +297,26 @@
                         <label class="inputBox__text iBmail">Adres e-mail</label>
                         <input type="email" class="userInput" required>
                     </div>
-                    <div class="premiera__container__inputBox">
+                    <!-- <div class="premiera__container__inputBox">
                     <label class="inputBox__text iBkoment">Komentarz</label>
                         <textarea name="message" class="userInput"></textarea>
-                    </div>
+                    </div> -->
                     <button type="submit" class="premiera__container__button" onclick="getName(); toggle()">
                         <a >WYŚLIJ</a>
                     </button>
                 </form>
             </div>
-            <div class="premiera__text">
+            <div class="premiera__info">
                 <h3 class="informacja">
-                    Wysłany zostanie tylko jeden mail z informacją o premierze. Zapewniamy bezpieczeństwo danych.
-                </h3>
+                    ZAPISZ SIĘ DO NASZEGO NEWSLETTERA
+                </H3>
+                <h4 class="info-text">
+                    I BĄDŹ PIERWSZYM KTÓRY DOWIE SIĘ O PREMIERZE NASZEJ APLIKACJI!
+            </h4>
+                <p class="info-p">
+                    *Dołączając akceptujesz Regulamin usługi, Politykę prywatności i Politykę antyspamową.</p>
             </div>
+        </div>
         </div>
         <footer id="contact" class="footer">
             <div class="footer-container">

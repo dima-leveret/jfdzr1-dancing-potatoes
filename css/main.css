@@ -34,10 +34,13 @@
 }
   .more-about-product-section__header {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     text-align: center;
     font-size: 45px;
     font-weight: 700;
-    color: #D61F2A;
+    color: #262626;
     margin-bottom: 90px;
     margin-top: -20px;
   }

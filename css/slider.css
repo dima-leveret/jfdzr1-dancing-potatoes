@@ -104,26 +104,31 @@ body{
 
 .header .controls .prev,
 .header .controls .next{
+ display: flex;
+ align-items: center;
  position: absolute;
  z-index:2;
  top:50%;
  height:40px;
- width: 40px;
- margin-top: -20px;
+ margin: -20px 25px auto 15px;
  color: black;
  background-color: white;
  text-align: center;
  line-height: 29px;
- font-size:40px;
+ font-size:20px;
  cursor:pointer;
- transition: all .5s ease;
- border-radius: 10px;
  opacity: 0.7;
+ width: 40px;
+ padding: 16px;
+ font-weight: bold;
+ transition: 0.6s ease;
+ border-radius: 5px;
+ justify-content: center;
 }
 .header .controls .prev:hover,
 .header .controls .next:hover{
-	background-color: #89C7CC;
-	color: #000000;
+	background-color: rgba(0,0,0,0.8);
+	color: white;
 }
 .header .controls .prev{
  left:0;
