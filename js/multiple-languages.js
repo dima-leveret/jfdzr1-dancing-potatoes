@@ -63,8 +63,10 @@ const premieraContainerFormEl = document.querySelector('.premiera__container__fo
 const iBnameEL = document.querySelector('.iBname');
 const iBmailEl = document.querySelector('.iBmail');
 const iBkomentEl = document.querySelector('.iBkoment');
-const premieraContainerButtonEl = document.querySelector('.premiera__container__button');
+const premieraContainerButtonEl = document.querySelector('.premiera__send');
 const informacjaEl = document.querySelector('.informacja');
+const infoTextEl = document.querySelector('.info-text');
+const infoPEl = document.querySelector('.info-p');
 
 // footer
 const footerContainerCompanyNameEl = document.querySelector('.footer-container__company__name');
@@ -111,7 +113,7 @@ link.forEach(el => {
         buttonSlide4El.textContent = translation[attr].buttonSlide4;
 
         // app functions
-        functionsTitleEl.textContent = translation[attr].functionsTitle;
+        functionsTitleEl.innerHTML = translation[attr].functionsTitle;
 
         appFunction1El.textContent = translation[attr].appFunction1;
         appFunction2El.textContent = translation[attr].appFunction2;
@@ -148,9 +150,11 @@ link.forEach(el => {
         premieraContainerFormEl.innerHTML = translation[attr].premieraContainerForm;
         iBnameEL.innerHTML = translation[attr].iBname;
         iBmailEl.innerHTML = translation[attr].iBmail;
-        iBkomentEl.innerHTML = translation[attr].iBkoment;
+        // iBkomentEl.innerHTML = translation[attr].iBkoment;
         premieraContainerButtonEl.innerHTML = translation[attr].premieraContainerButton;
         informacjaEl.innerHTML = translation[attr].informacja;
+        infoTextEl.innerHTML = translation[attr].infoText;
+        infoPEl.innerHTML = translation[attr].infoP;
 
         // footer
         footerContainerCompanyNameEl.innerHTML = translation[attr].footerContainerCompanyName;
@@ -194,7 +198,7 @@ let translation = {
         'buttonSlide4': 'Zapisz się',
 
         // app functions
-        'functionsTitle': 'CO POTRAFI WIOSŁO?',
+        'functionsTitle': '<img src="./images/paddle.png" class="paddle" alt="paddle">CO POTRAFI WIOSŁO?<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'appFunction1': 'Znajdzie najbliższe wypożyczalnie',
         'appFunction2': 'Zarezerwuje Ci łódkę',
@@ -202,7 +206,7 @@ let translation = {
         'appFunction4': 'Znajdzie drogę do bazy',
 
         // How it works?
-        'moreAboutProductSectionHeader': 'JAK TO DZIAŁA?',
+        'moreAboutProductSectionHeader': '<img src="./images/paddle.png" class="paddle" alt="paddle">JAK TO DZIAŁA?<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'mapdh1': 'Szukasz wypożyczalni? <br> Pomożemy!',
         'mapdh2': 'Rezerwacja łódki <br> w 1 minutę!',
@@ -215,7 +219,7 @@ let translation = {
         'mapdp4': 'Nie jesteś mistrzem w orientacji w terenie? Z "Wiosłem" możesz zawsze czuć się bezpiecznie. Udostępnimy Ci mapy wód offline, które doprowadzą Cię do bazy.',
 
         // information about team
-        'infoAboutTeam': 'informacje o zespole',
+        'infoAboutTeam': '<img src="./images/paddle.png" class="paddle" alt="paddle">informacje o zespole<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'nameKamil': 'Kamil Jastrzembowski',
         'nameJarek': 'Jaroslaw Witowski',
@@ -226,14 +230,16 @@ let translation = {
         'aboutDima': 'Urodziłem się w Ukrainie. Swoją pasję znalazłem w fitnesie. Do Polski przyjechałem żeby ukończyć magisterkę. Teraz jestem master-trenerem i prezenterem Polski w tej sferze ale lubie wyzwania i tym razem wybrałem Front-End-Development.',
 
         // premiere form
-        'titlePremiere': 'Zapisz się na premierę',
+        'titlePremiere': 'ZAPISZ SIĘ NA PREMIERĘ',
 
         'premieraContainerForm': 'Zapis na premierę',
         'iBname': 'Imię',
         'iBmail': 'Mail',
-        'iBkoment': 'Komentarz',
+        // 'iBkoment': 'Komentarz',
         'premieraContainerButton': 'WYŚLIJ',
-        'informacja': 'Wysłany zostanie tylko jeden mail z informacją o premierze. Zapewniamy bezpieczeństwo danych.',
+        'informacja': 'ZAPISZ SIĘ DO NASZEGO NEWSLETTERA',
+        'infoText' : 'I BĄDŹ PIERWSZYM KTÓRY DOWIE SIĘ O PREMIERZE NASZEJ APLIKACJI!',
+        'infoP' : '*Dołączając akceptujesz Regulamin usługi, Politykę prywatności i Politykę antyspamową',
 
         // footer
         'footerContainerCompanyName': '&#174 Dancing Potatoes Sp. z o.o.',
@@ -274,7 +280,7 @@ let translation = {
         'buttonSlide4': 'Запишись',
 
         // app functions
-        'functionsTitle': 'ЧТО МОЖЕТ ВЕСЛО?',
+        'functionsTitle': '<img src="./images/paddle.png" class="paddle" alt="paddle">ТО МОЖЕТ ВЕСЛО?<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'appFunction1': 'Найдет ближайшие аренды каяков',
         'appFunction2': 'Бронирует лодку',
@@ -282,7 +288,7 @@ let translation = {
         'appFunction4': 'Найдет путь к базе',
 
         // How it works?
-        'moreAboutProductSectionHeader': 'КАК ЭТО РАБОТАЕТ?',
+        'moreAboutProductSectionHeader': '<img src="./images/paddle.png" class="paddle" alt="paddle">КАК ЭТО РАБОТАЕТ?<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'mapdh1': 'Ищешь аренду? <br> Поможем!',
         'mapdh2': 'Бронирование лодок <br> за 1 минуту!',
@@ -295,7 +301,7 @@ let translation = {
         'mapdp4': 'Вы не мастер в области ориентирования? С "Веслом" вы всегда можете чувствовать себя в безопасности. Мы предоставим вам автономные водные карты, которые проведут вас на базу.',
 
         // information about team
-        'infoAboutTeam': 'информация о команде',
+        'infoAboutTeam': '<img src="./images/paddle.png" class="paddle" alt="paddle">информация о команде<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'nameKamil': 'Камиль Ястшембовски',
         'nameJarek': 'Ярослав Витовски',
@@ -311,9 +317,11 @@ let translation = {
         'premieraContainerForm': 'Регистрация на премьеру',
         'iBname': 'Имя',
         'iBmail': 'Mail',
-        'iBkoment': 'Комментарий',
+        // 'iBkoment': 'Комментарий',
         'premieraContainerButton': 'ОТПРАВИТЬ',
-        'informacja': 'О премьере будет отправлено только одно письмо. Обеспечиваем безопасность данных.',
+        'informacja': 'ПОДПИШИТЕСЬ НА НАШУ РАССЫЛКУ',
+        'infoText' : 'И БУДЬТЕ ЗНАТЬ ПЕРВЫМ О ЗАПУСКЕ НАШЕГО ПРИЛОЖЕНИЯ!',
+        'infoP' : '*Присоединяясь, вы принимаете Условия использования, Политику конфиденциальности и Политику защиты от спама.',
 
         // footer
         'footerContainerCompanyName': '&#174 Dancing Potatoes Sp. z o.o.',
@@ -354,7 +362,7 @@ let translation = {
         'buttonSlide4': 'Sign up',
 
         // app functions
-        'functionsTitle': 'WHAT CAN THE OAR DO?',
+        'functionsTitle': '<img src="./images/paddle.png" class="paddle" alt="paddle">WHAT CAN THE OAR DO?<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'appFunction1': 'It can find the nearest rentals',
         'appFunction2': 'It can book you a boat',
@@ -362,7 +370,7 @@ let translation = {
         'appFunction4': 'Can find a way to the base',
 
         // How it works?
-        'moreAboutProductSectionHeader': 'HOW DOES IT WORK?',
+        'moreAboutProductSectionHeader': '<img src="./images/paddle.png" class="paddle" alt="paddle">HOW DOES IT WORK?<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'mapdh1': 'Are you looking for a rental company? <br> We will help!',
         'mapdh2': 'Boat booking <br> in one minute!',
@@ -375,7 +383,7 @@ let translation = {
         'mapdp4': 'Are you not a master in field orientation? You can always feel safe with the Oar. We will provide you with offline water maps that will lead you to the base.',
 
         // information about team
-        'infoAboutTeam': 'information about the team',
+        'infoAboutTeam': '<img src="./images/paddle.png" class="paddle" alt="paddle">information about the team<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'nameKamil': 'Kamil Jastrzembowski',
         'nameJarek': 'Jaroslaw Witowski',
@@ -391,9 +399,12 @@ let translation = {
         'premieraContainerForm': 'Registration for the premiere',
         'iBname': 'Name',
         'iBmail': 'Mail',
-        'iBkoment': 'Comment',
+        // 'iBkoment': 'Comment',
         'premieraContainerButton': 'SEND',
-        'informacja': 'Only one e-mail will be sent to inform about the premiere. We ensure data security.',
+        'informacja': 'SING IN FOR OUR NEWSLETTER',
+        'infoText' : 'AND BE THE FIRST ONE KNOWING ABOUT PREMIERE OF OUR APP',
+        'infoP' : '*By joining, you accept the Terms of Service, Privacy Policy and Anti-Spam Policy',
+
 
         // footer
         'footerContainerCompanyName': '&#174 Dancing Potatoes Sp. z o.o.',

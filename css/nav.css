@@ -1,4 +1,8 @@
-.nav{
+ul{
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .nav{
   width: 100%;
   position: fixed;
   z-index: 3;
@@ -64,10 +68,10 @@
     height: 100%;
 }
 
-#nav-menu a:hover {
+/* #nav-menu a:hover {
     border-bottom: 2px solid black;
     transition: 0.2s ease;
-  }
+  } */
 
 .languages{
     display: flex;
@@ -134,9 +138,7 @@
     .nav.small{
         margin-top: -48.5px;
     }
-    .nav-menu a:hover {
-        border-bottom: 2px solid black;
-      }
+ 
     .languages{
         display: flex;
         align-self: flex-end;
@@ -186,4 +188,8 @@
     .footer{
         width: 350px;
     }
+}
+li.current a{
+    color: #04738D;
+    font-weight: bolder;
 }

@@ -9,6 +9,7 @@ body{
 	overflow:hidden;
 	position: relative;
 	padding-top: 70px;
+
 }
 
 .header .slide{
@@ -22,11 +23,16 @@ body{
 	z-index:1; 
 	display:none;
 	padding:0 70px;
-	animation: slide 2s ease;
+	animation: captionText .8s ease forwards;
+	animation-direction: alternate;
+	
 }
 .header .slide.active{
 	display: flex;
+	animation: captionText .5s ease forwards;
+	animation-direction: alternate;
 }
+
 
 .container{
 	max-width: 700px;
@@ -36,6 +42,7 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	
 }
 
 .header .container{
@@ -46,6 +53,7 @@ body{
 	background-color: white;
 	opacity: 80%;
 	border-radius: 10px;
+	
 }
 
 .header .caption h1{
@@ -57,6 +65,7 @@ body{
 	opacity:0;
 	animation: captionText .5s ease forwards;
 	animation-delay:1s;
+	
 }
 .header .caption p{
 	font-size: 18px;
@@ -95,10 +104,10 @@ body{
 
 @keyframes captionText{
 	0%{
-		opacity:0; transform: translateX(-100px);
+	 opacity:0; transform: translateX(+100%);
 	}
 	100%{
-	 opacity:1; transform: translateX(0px);	
+	 opacity:1; transform: translateX(0px);
 	}
 }
 

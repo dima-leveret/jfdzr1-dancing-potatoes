@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="./js/jquery.js"></script>
-    <script src="./js/script.js"></script>
+ 
     <script src="./js/popup.js"></script>
-    <script src="./js/hightlight.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/functions.css">
@@ -31,31 +30,29 @@
         <section class="opening-page section">
             <nav id="nav" class="nav">
                 <div class="nav__container ">
-                    <a href="#top"><img id="logo" class="logo" src="./images/logo_wioslo.png"
-                            alt="wioslo-logo-image"></a>
+                    <a href="#top"><img id="logo" class="logo" src="./images/logo_wioslo.png" alt="wioslo-logo-image"></a>
                     <div id="nav-menu" class="nav-menu">
-                        <a id="nav-menu-premiere" class="nav-menu-premiere font " href="#premiera">Premiera</a>
-                        <a id="nav-menu-function" class="nav-menu-function font " href="#functions">Funkcje
-                            aplikacji</a>
-                        <a id="nav-menu-info" class="nav-menu-info font"
-                            href="#more-about-product-section__wrapper">Info</a>
-                        <a id="nav-menu-team" class="nav-menu-team font" href="#team">Zespół</a>
-                        <a id="nav-menu-contact" class="nav-menu-contact font" href="#contact">Logowanie</a>
-                    </div>
+                    <ul class="menu nav-menu" id="menu">
+                    <li class="current"> <a id="nav-menu-contact" class="nav-menu-contact font hvr-underline-from-center" href="#header__container">Logowanie</a></li>
+                    <li><a id="nav-menu-function" class="nav-menu-function font hvr-underline-from-center" href="#functions__container">Funkcje aplikacji</a></li>
+                    <li><a id="nav-menu-info" class="nav-menu-info font hvr-underline-from-center" href="#more-about">Info</a></li>
+                    <li><a id="nav-menu-team" class="nav-menu-team font hvr-underline-from-center" href="#team">Zespół</a></li>
+                    <li><a id="nav-menu-premiere" class="nav-menu-premiere font hvr-underline-from-center" href="#premiera">Premiera</a></li>          
+                    </ul> </div>
                 <div class="languages">
-                    <a href="#" id = "language" language = 'polish' class = 'active'> <img class="flag-language" src="/img/Flag_of_Poland.png" alt="Flag_of_Poland"></a>
-                    <a href="#" id = "language" language = 'russian'> <img class="flag-language" src="/img/Flag_of_Russia.svg.png" alt="Flag_of_Russia"></a>
-                    <a href="#" id = "language" language = 'english'> <img class="flag-language" src="/img/Flag_of_the_United_Kingdom.svg.png" alt="Flag_of_the_United_Kingdom"></a>
+                    <a href="#" id = "language" language = 'polish' class = 'active'> <img class="flag-language hvr-grow" src="/img/Flag_of_Poland.png" alt="Flag_of_Poland"></a>
+                    <a href="#" id = "language" language = 'russian'> <img class="flag-language hvr-grow" src="/img/Flag_of_Russia.svg.png" alt="Flag_of_Russia"></a>
+                    <a href="#" id = "language" language = 'english'> <img class="flag-language hvr-grow" src="/img/Flag_of_the_United_Kingdom.svg.png" alt="Flag_of_the_United_Kingdom"></a>
                 </div>
             </nav>
         </section>
 
 
         <section id="header" class="header section">
-            <div class="header__container">
+            <div class="header__container" id="header__container">
                 <section class="header">
-                    <div class="slider">
-                        <div class="slide active" style="background-image: url('./images/slider-img-1.jpg')">
+                    <div class="slider carousel" data-ride="carousel" > 
+                        <div class="carousel slide active jeden" data-slide-to="0" data-target="#carousel-example-generic" style="background-image: url('./images/slider-img-1.jpg')" >
                             <div class="container">
                                 <div class="caption">
                                 <h1 class="slide1">Kajak, łódka czy rower wodny?</h1>
@@ -64,7 +61,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide" style="background-image: url('./images/slider-img-2.jpg')">
+                        <div class="slide dwa" data-slide-to="1" style="background-image: url('./images/slider-img-2.jpg')" data-target="#carousel-example-generic">
                             <div class="container">
                                 <div class="caption">
                                 <h1 class="slide2">Trzy kliknięcia...</h1>
@@ -73,7 +70,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide" style="background-image: url('./images/slider-img-3.jpg')">
+                        <div class="slide trzy" data-slide-to="2" style="background-image: url('./images/slider-img-3.jpg')" data-target="#carousel-example-generic">
                             <div class="container">
                                 <div class="caption">
                                 <h1 class="slide3">Sprawdź naszą aplikację mobilną!</h1>
@@ -82,7 +79,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide" style="background-image: url('./images/slider-img-4.jpg')">
+                        <div class="slide cztery" data-slide-to="3" style="background-image: url('./images/slider-img-4.jpg')" data-target="#carousel-example-generic">
                             <div class="container">
                                 <div class="caption">
                                 <h1 class="slide4">Bądź na bieżąco</h1>
@@ -91,15 +88,14 @@
                                 </div>
                             </div>
                         </div>
+ 
                     </div>
 
                 <!-- controls  -->
                     <div class="controls">
                         <div class="prev">&#10094</div>
-                        <div class="next">&#10095</div>
-                    </div>
-
-                <!-- indicators -->
+                        <div class="next">&#10095</div>  
+                       </div>
                     <div class="indicator">
                     </div>
 
@@ -108,20 +104,20 @@
         </section>
 
         <section id="functions" class="functions section">
-            <div class="functions__container">
-                <h1 class="functions__title"><img src="./images/paddle.png" class="paddle" alt="paddle">CO POTRAFI WIOSŁO?<img src="./images/paddle.png" class="paddle" alt="paddle"></h1>
-                <div class="functions__list">
+            <div class="functions__container" id="functions__container">
+                <h1 class="functions__title" data-aos="slide-right"  data-aos-duration="800"   data-aos-once="true"><img src="./images/paddle.png" class="paddle" alt="paddle">CO POTRAFI WIOSŁO?<img src="./images/paddle.png" class="paddle" alt="paddle"></h1>
+                <div class="functions__list" data-aos="slide-right"  data-aos-duration="800"   data-aos-once="true">
                     <div class="functions__list-contain">
-                        <figure class="functions-list-part"><img src="./images/place.svg">
+                        <figure class="functions-list-part hvr-pulse-grow" data-aos="fade-up"  data-aos-duration="1200"><img src="./images/place.svg">
                         <figcaption class="flp1">Znajdzie najbliższe wypożyczalnie</figcaption>
                         </figure>
-                        <figure class="functions-list-part"><img src="./images/kayak.svg">
+                        <figure class="functions-list-part hvr-pulse-grow" data-aos="fade-down"  data-aos-duration="1200"><img src="./images/kayak.svg">
                         <figcaption class="flp2">Zarezerwuje Ci łódkę</figcaption>
                         </figure>
-                        <figure class="functions-list-part"><img src="./images/search.svg">
+                        <figure class="functions-list-part hvr-pulse-grow" data-aos="fade-left"  data-aos-duration="1200"><img src="./images/search.svg">
                         <figcaption class="flp3">Podpowie Ci jak pływać</figcaption>
                         </figure>
-                        <figure class="functions-list-part"><img src="./images/map.svg">
+                        <figure class="functions-list-part hvr-pulse-grow" data-aos="fade-right"  data-aos-duration="1200"><img src="./images/map.svg">
                         <figcaption class="flp4">Znajdzie drogę do bazy</figcaption>
                         </figure>
                     </div>
@@ -129,10 +125,10 @@
             </div>
         </section>
 
-        <section id="more-about-product-section__wrapper" class="more-about-product-section__wrapper section">
+        <section id="more-about-product-section__wrapper" class="more-about-product-section__wrapper section" data-aos="slide-right"  data-aos-duration="800"   data-aos-once="true">
             <h1 class="more-about-product-section__header"><img src="./images/paddle.png" class="paddle" alt="paddle">JAK TO DZIAŁA?<img src="./images/paddle.png" class="paddle" alt="paddle"></h1>
 
-            <div class="more-about-product-desc__wrapper">
+            <div class="more-about-product-desc__wrapper" id="more-about">
                 <div class="more-about-product-desc-text__wrapper">
                     <img src="./assets/icons/place.png" alt="place icon" class="more-about-product-desc-image" />
                 <h2 class="more-about-product-desc-header mapdh1">Szukasz wypożyczalni? <br> Pomożemy!
@@ -171,10 +167,10 @@
             </div>
 
             <img src="./assets/images/more-about-product-section-illustration.svg" alt="product foto"
-                class="more-about-product-image" />
+                class="more-about-product-image" data-aos="slide-up"  data-aos-duration="800"   data-aos-once="true"/>
         </section>
 
-        <div id="team" class="infomacja">
+        <div id="team" class="infomacja" data-aos="slide-left"  data-aos-duration="800"   data-aos-once="true">
             <div class="ioz">
             <h2 class="infoAboutTeam"><img src="./images/paddle.png" class="paddle" alt="paddle">
                     informacje o zespole<img src="./images/paddle.png" class="paddle" alt="paddle">
@@ -278,7 +274,7 @@
             </section>
         </div>
 
-        <div id="premiera" class="premiera section">
+        <div id="premiera" class="premiera section" data-aos="slide-right"  data-aos-duration="800"   data-aos-once="true">
             <div class="premiera__text">
                 <h2 class="title">
                     ZAPISZ SIĘ NA PREMIERĘ
@@ -302,8 +298,8 @@
                         <textarea name="message" class="userInput"></textarea>
                     </div> -->
                     <button type="submit" class="premiera__container__button" onclick="getName(); toggle()">
-                        <a >WYŚLIJ</a>
-                    </button>
+                        <a class="premiera__send ">WYŚLIJ</a>
+                </button>
                 </form>
             </div>
             <div class="premiera__info">
@@ -350,7 +346,11 @@
     </div>
     <script src="./js/header-slider.js"></script>
     <script src="./js/multiple-languages.js"></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+       <script type="text/javascript" src="./js/hightlight.js"></script>
+       <script src="./js/jquery.js"></script>
 </body>
-
 </html>
