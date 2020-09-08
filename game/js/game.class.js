@@ -4,6 +4,7 @@ import Obstacles from './obstacles.class.js';
 import Points from './points.class.js';
 import River from './river.class.js';
 import { isCollide } from './utilities.js';
+import { objectsCollide } from './utilities.js';
 import Dashboard from './dashboard.class.js';
 
 export default class Game{
@@ -55,7 +56,6 @@ export default class Game{
     get pause(){
         return this._paused;
     }
-
 
     tryAgain(e){
 
@@ -115,6 +115,14 @@ export default class Game{
             screenTryAgain.style.display = "block";
             document.onkeydown = (e) => this.tryAgain(e);       
         }
+
+        if(isCollide(this.pointsTable, this.obstacle)){
+            
+            this.pause = true;
+            let screenTryAgain = document.querySelector(".try-again");
+            screenTryAgain.style.display = "block";
+            document.onkeydown = (e) => this.tryAgain(e);       
+        }
     }
 
     recordTime(){
@@ -122,8 +130,6 @@ export default class Game{
         if(localStorage.getItem("score") === null){
             localStorage.setItem("score", JSON.stringify([]));
         }
-
-        //console.log(localStorage.getItem("score"));
 
         let time = this.dashboard.elapsedTime;
 
