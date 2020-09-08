@@ -4,7 +4,7 @@ export default class Obstacles{
         this.context = this.game.context;
         this.obstruction = new Image;
         this.obstruction.src = "./images/obstacles.png";
-        // this.obstructionNo = Math.round(Math.random() * 4);
+        // this.obstructionNo = Math.round(Math.random() * 5);
         this.obstructionNo = 3;
         this._positionY = -100;
         this.speed = 3;

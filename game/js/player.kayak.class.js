@@ -46,12 +46,19 @@ export default class playerKayak{
     }
 
     moveLeft(){
-        this._positionX -= 20;   
+        
+        this._positionX -= 7;   
         if(this._positionX <= 75) this._positionX = 75;     
     }
 
     moveRight(){
-        this._positionX += 20;
+        this._positionX += 7;
+        if(this._positionX >= 375) this._positionX = 375;
+    }
+
+    moveWithMouse(x){
+        this._positionX = x;   
+        if(this._positionX <= 75) this._positionX = 75; 
         if(this._positionX >= 375) this._positionX = 375;
     }
 
