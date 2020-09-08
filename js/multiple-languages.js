@@ -72,11 +72,8 @@ const footerContainerContactPhoneEl = document.querySelector('.footer-container_
 const footerContainerRegulationsEl = document.querySelector('.footer-container__regulations');
 const footerContainerPrivacyEl = document.querySelector('.footer-container__privacy');
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 9c8d5f42ca1e4bbae0a20a1567a86fd91fe40fdc
 link.forEach(el => {
     el.addEventListener('click', () => {
         langEl.querySelector('.active').classList.remove('active');
@@ -377,9 +374,4 @@ let translation = {
         'footerContainerPrivacy': 'Privacy',
     }
     
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> 9c8d5f42ca1e4bbae0a20a1567a86fd91fe40fdc
