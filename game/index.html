@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_io/favicon-32x32.png">
+    <title>Wiosło - Game</title>
+    <script src="./js/index.js" defer type="module"></script>
+</head>
+<body>
+
+    <canvas id="canvas" width="512" height="850"></canvas>
+
+    <div id="scoreboard">
+        <div class="inner-board">
+            <div class="time-meter meter-box">
+                    <div class="label">TIME LAPSED:-</div>
+                    <div class="time">00:00:00</div>                    
+            </div>
+            <div class="distance-meter meter-box">  
+                <div class="distance">1 KMs</div>
+                <div class="label">LEFT</div>
+            </div>
+
+            <div class="messages">
+                <div class="try-again">Press SPACEBAR if You want to try again</div>
+                <div class="game-over">
+                    <div>Game Over</div>
+                    <div class="game-over-message">You have finished in</div>
+                    <div class="time-taken">00:00:00:00</div>
+                    <div class="game-over-message min-message">Record - 00:00:00:00</div>
+                    <button onclick="location.reload()">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
