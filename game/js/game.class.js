@@ -19,7 +19,7 @@ export default class Game{
         new Controller({river:this.river, playerKayak:this.playerKayak});
 
         setInterval(()=>this.populateObstacles(), 1000);
-        setInterval(()=>this.populatePoints(), 200);
+        setInterval(()=>this.populatePoints(), 700);
 
         this._paused = false;
         this._gameOver = false;

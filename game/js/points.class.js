@@ -4,8 +4,6 @@ export default class Points{
         this.context = this.game.context;
         this.points = new Image;
         this.points.src = "./images/playerKayak.png";
-        this.pointsNo = Math.round(Math.random() * 5);
-        // this.pointsNo = 3;
         this._positionY = -100;
         this.speed = 3;
         this.lane = Math.floor(Math.random() * 5);
@@ -33,7 +31,7 @@ export default class Points{
     update(){        
         this._positionY += (this.game.playerKayak.speed/5 + this.speed);
         this.context.drawImage(this.points, 
-                                this.pointsNo * this.pointsWidth, 
+                                0, 
                                 0, 
                                 this.pointsWidth, 
                                 this.pointsLength, 
