@@ -164,18 +164,18 @@ let translation = {
         'navMenuContact': 'Kontakt',
 
         // slider
-        'slide1': 'Spływy kajakowe',
-        'slide2': '1 min',
+        'slide1': 'Kajak, łódka czy rower wodny?',
+        'slide2': 'Trzy kliknięcia...',
         'slide3': 'Impreza okolicznościowa?',
         'slide4': 'Bądź na bieżąco',
 
-        'textSlide1': 'Porównaj ceny wypożyczalni.',
-        'textSlide2': 'Dokładnie tyle zajmie rezerwacja.',
+        'textSlide1': 'Porównaj oferty pobliskich wypożyczalni.',
+        'textSlide2': 'Dzielą Cię od dokonania rezerwacji',
         'textSlide3': 'Pomożemy Ci w organizacji !',
         'textSlide4': 'Zapisz się na premierę i otrzymuj najlepsze oferty',
 
         'buttonSlide1': 'Sprawdź ofertę',
-        'buttonSlide2': 'Rezerwuj',
+        'buttonSlide2': 'Sprawdź sam!',
         'buttonSlide3': 'Kontakt',
         'buttonSlide4': 'Zapisz się',
 
