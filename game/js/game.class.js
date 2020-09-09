@@ -4,7 +4,6 @@ import Obstacles from './obstacles.class.js';
 import Points from './points.class.js';
 import River from './river.class.js';
 import { isCollide } from './utilities.js';
-import { objectsCollide } from './utilities.js';
 import Dashboard from './dashboard.class.js';
 
 export default class Game{
@@ -17,22 +16,36 @@ export default class Game{
         this.raceDistance = 1;
         this.obstacle = [];    
         this.pointsTable = [];  
+        this.functionCount = 0;
+        this.score = document.querySelector('.score');
         new Controller({river:this.river, playerKayak:this.playerKayak});
 
-        setInterval(()=>this.populateObstacles(), 1000);
-        setInterval(()=>this.populatePoints(), 700);
+        setInterval(()=>this.populateObstaclesAndPoints(), 1000);
 
         this._paused = false;
         this._gameOver = false;
     }
 
-    populateObstacles(){       
+    populateObstaclesAndPoints(){       
         if(this._paused) return; 
+        let lane = Math.floor(Math.random() * 5);
+        let lane2 = Math.floor(Math.random() * 5);
+  
+        if(lane === lane2){
+            lane2++;
+        }
 
-        let obstacleObject = new Obstacles(this);      
+        let obstacleObject = new Obstacles(this, lane) ;      
         this.obstacle.push(obstacleObject);
-        this.pointsTable.push()
+
+        // if(this.functionCount%2===0){
+        let pointsObject = new Points(this, lane2);
+        this.pointsTable.push(pointsObject)
+        // }
+        this.functionCount++;
     }
+
+        
 
     set pause(pause){
         this._paused = pause;
@@ -40,13 +53,6 @@ export default class Game{
 
     get pause(){
         return this._paused;
-    }
-
-    populatePoints(){       
-        if(this._paused) return; 
-
-        let pointsObject = new Points(this);      
-        this.pointsTable.push(pointsObject);
     }
 
     set pause(pause){
@@ -70,6 +76,7 @@ export default class Game{
         let screenTryAgain = document.querySelector(".try-again");
         screenTryAgain.style.display = "none";
         document.onkeydown = null;
+        this.score.innerHTML = 0;  
     }
 
 
@@ -83,6 +90,7 @@ export default class Game{
 
         this.river.update();
         this.dashboard.update();
+
 
         if(this.dashboard.distanceRemaining <= 0){
             this._gameOver = true;
@@ -116,12 +124,9 @@ export default class Game{
             document.onkeydown = (e) => this.tryAgain(e);       
         }
 
-        if(isCollide(this.pointsTable, this.obstacle)){
-            
-            this.pause = true;
-            let screenTryAgain = document.querySelector(".try-again");
-            screenTryAgain.style.display = "block";
-            document.onkeydown = (e) => this.tryAgain(e);       
+        if(isCollide(this.playerKayak, this.pointsTable)){
+            this.pointsTable.splice(0, 1); 
+            this.score.value += 10;        
         }
     }
 

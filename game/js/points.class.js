@@ -1,12 +1,13 @@
 export default class Points{
-    constructor(game){
+    constructor(game, lane){
         this.game = game;
         this.context = this.game.context;
         this.points = new Image;
         this.points.src = "./images/playerKayak.png";
         this._positionY = -100;
         this.speed = 3;
-        this.lane = Math.floor(Math.random() * 5);
+        // this.lane = Math.floor(Math.random() * 5);
+        this.lane = lane;
         this.lanePosX = [75, 150, 225, 300, 375, 450, 75];
         this.pointsWidth = 60;
         this.pointsLength = 124;
@@ -41,7 +42,7 @@ export default class Points{
                                 this.pointsLength
                                );
 
-        if(this._positionY >= 1000){
+        if(this._positionY >= 1200){
             this.game.pointsTable.splice(this.game.pointsTable.indexOf(this), 1);
         }
     }

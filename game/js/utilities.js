@@ -1,12 +1,12 @@
-export function isCollide(playerKayak, obstacle){
+export function isCollide(playerKayak, object){
 
-    for(let i=0; i<obstacle.length; i++) {
+    for(let i=0; i<object.length; i++) {
 
-        let Obstacles = obstacle[i];
+        let Objects = object[i];
 
-        if(Obstacles.positionY > 525 && Obstacles.positionY < 775){           
+        if(Objects.positionY > 525 && Objects.positionY < 775){           
 
-            if(Math.abs(Obstacles.positionX - playerKayak.positionX) <= 40){
+            if(Math.abs(Objects.positionX - playerKayak.positionX) <= 40){
                 
                 return true;
             }
@@ -19,23 +19,3 @@ export function isCollide(playerKayak, obstacle){
 
 }
 
-export function objectsCollide(points, obstacle){
-
-    for(let i=0; i<obstacle.length; i++) {
-
-        let obstacle = obstacle[i];
-
-        if(obstacle.positionY >= points.positionY && obstacle.positionY <= points.positionY){           
-
-            if(Math.abs(obstacle.positionX - points.positionX) <= 60){
-                
-                return true;
-            }
-
-        }
-
-    }
-
-    return false;
-
-} 
