@@ -5,8 +5,10 @@ let context = canvas.getContext("2d");
 let startButton = document.querySelector(".start-button");
 
 let game = new Game(context);
-   
+game._paused = true;
+
 startButton.addEventListener('click', () =>{
+    game._paused = false;
     requestAnimationFrame(gameLoop);
 }, false);
 
@@ -15,3 +17,5 @@ function gameLoop(){
     game.update();
     requestAnimationFrame(gameLoop);
 }
+
+
