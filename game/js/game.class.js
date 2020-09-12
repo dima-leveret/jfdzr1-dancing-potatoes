@@ -21,7 +21,7 @@ export default class Game{
         this.scoreDisplay = document.querySelector('.score');
         new Controller({river:this.river, playerKayak:this.playerKayak});
 
-        setInterval(()=>this.populateObstaclesAndPoints(), 200);
+        setInterval(()=>this.populateObstaclesAndPoints(), 1000);
 
 
         this._paused = false;
@@ -45,9 +45,9 @@ export default class Game{
         let lane2 = lanesRotate[1];
         let lane3 = lanesRotate[2];
 
-        // let obstacleObject = new Obstacles(this, lane) ;    
-        // let obstacleObject2 = new Obstacles(this, lane2) ;   
-        // this.obstacle.push(obstacleObject, obstacleObject2);
+        let obstacleObject = new Obstacles(this, lane) ;    
+        let obstacleObject2 = new Obstacles(this, lane2) ;   
+        this.obstacle.push(obstacleObject, obstacleObject2);
 
         if(this.functionCount%2===0){
         let pointsObject = new Points(this, lane3);
@@ -136,7 +136,6 @@ export default class Game{
         }
 
         if(isCollide(this.playerKayak, this.pointsTable)){
-            // this.pointsTable.splice(this.pointsTable, 1);
             this.pointsTable.splice(0, 1);
             this.score += 10;
             this.scoreDisplay.innerHTML = this.score;  
