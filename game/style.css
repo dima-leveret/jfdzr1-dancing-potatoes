@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    background: green;
+}
+
+canvas {
+    background-color: black;
+    position: fixed;
+    width: 50%; 
+    height: 100vh;
+    background: green;
+    left: 25%;
+}
+
+#scoreboard {
+    width: 100%;
+    height:100%;
+    position: absolute;
+}
+
+#scoreboard .inner-board {
+    width:inherit;
+    height: inherit;
+    position: relative;
+}
+
+#scoreboard .inner-board .messages .try-again{
+    background-image:url('./images/try-again-screen.png');
+    width:inherit;
+    height: inherit;
+    display:none;
+} 
+
+
