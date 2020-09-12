@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_io/favicon-32x32.png">
     <link rel="stylesheet" href="/game/menu.css" type="text/css">
+    <link rel="stylesheet" href="/game/instrukja.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/game/menu go gry/main-menu.css" type="text/css">
     <title>Wiosło - Game</title>
@@ -64,12 +65,38 @@
 				<li class="dws-li hardBtn"><a href="#">HARD</a></li>
 			</div>
 			<li class="dws-li"><a href="#">Wyniki</a></li>
-			<li class="dws-li"><a href="#"></i>Instrukcja do gry</a></li>
+			<li class="dws-li" onclick = "pop2()"><a href="#"></i>Instrukcja do gry</a></li>
 			<li class="dws-li"><a href="#">Powrót do głównej strony</a></li>
 		</ul>
+    </div>
+
+    <div class="instrukja-container pop2">
+        <div class="instrukja-container__pages fade">
+            <!-- <div class="instrukja-container__numberPage">1/4</div> -->
+            <img src="/game/instrukja do gry/img/1.png" style="width: 100%" alt="">
+        </div>
+
+        <div class="instrukja-container__pages fade">
+            <!-- <div class="instrukja-container__numberPage">2/4</div> -->
+            <img src="/game/instrukja do gry/img/2.png" style="width: 100%" alt="">
+        </div>
+
+        <div class="instrukja-container__pages fade">
+            <!-- <div class="instrukja-container__numberPage">3/4</div> -->
+            <img src="/game/instrukja do gry/img/3.png" style="width: 100%" alt="">
+        </div>
+
+        <div class="instrukja-container__pages fade">
+            <!-- <div class="instrukja-container__numberPage">4/4</div> -->
+            <img src="/game/instrukja do gry/img/4.png" style="width: 100%" alt="">
+        </div>
+
+        <a class="prev" onclick="plusPage(-1)">&#10094</a>
+        <a class="next" onclick="plusPage(1)">&#10095</a>
     </div>
     
 </body>
 
 <script src="/game/main-menu.js"></script>
+<script src="/game/instrukja.js"></script>
 </html>

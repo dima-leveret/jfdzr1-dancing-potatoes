@@ -1,3 +1,11 @@
+function pop2(){
+    var blur = document.querySelector('.blur');
+    blur.classList.toggle('active')
+    var popup = document.querySelector('.pop2');
+    popup.classList.toggle('active')
+}
+
+
 let pageIndex = 1;
 showPages(pageIndex);
 
