@@ -1,12 +1,10 @@
-body{
- background-color: teal;
- font-family: 'Press Start 2P', cursive;
-}
+
 
 .dws-menu{
- background-color: white;
- margin-top: 100px;
+ /* background-color: white; */
+ margin-top: 10px;
  width: 100%;
+ font-family: 'Press Start 2P', cursive;
 }
 
 .dws-li {
@@ -89,12 +87,14 @@ li.dws-li a:hover{
     pointer-events: none;
     user-select: none;
     transition: 0.5s;
+    
 }
 
 .pop{
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
+    
 }
 
 .pop.active{
