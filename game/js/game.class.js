@@ -18,12 +18,11 @@ export default class Game{
         this.pointsTable = [];  
         this.functionCount = 0;
         this.score = 0;
+        this.timeOut = 1000;
         this.scoreDisplay = document.querySelector('.score');
         new Controller({river:this.river, playerKayak:this.playerKayak});
 
-        setInterval(()=>this.populateObstaclesAndPoints(), 1000);
-
-
+        setInterval(()=>{this.populateObstaclesAndPoints(), this.playerKayak.speed+=2, this.obstacle.speed+=2}, this.timeOut);
         this._paused = false;
         this._gameOver = false;
     }
@@ -56,17 +55,6 @@ export default class Game{
         this.functionCount++;
     }
 
-
-        
-
-    set pause(pause){
-        this._paused = pause;
-    }
-
-    get pause(){
-        return this._paused;
-    }
-
     set pause(pause){
         this._paused = pause;
     }
@@ -88,22 +76,20 @@ export default class Game{
         let screenTryAgain = document.querySelector(".try-again");
         screenTryAgain.style.display = "none";
         document.onkeydown = null;
-        this.score.innerHTML = 0;  
+        this.score = 0 ; 
+        this.scoreDisplay.innerHTML = this.score;  
     }
 
 
     update(){ 
-
         if(this._gameOver) return;
 
         this.dashboard.updateTime();
-
+    
         if(this._paused) return;
 
         this.river.update();
         this.dashboard.update();
-
-
         if(this.dashboard.distanceRemaining <= 0){
             this._gameOver = true;
             this.pause = true;
@@ -128,19 +114,25 @@ export default class Game{
         });
 
         if(isCollide(this.playerKayak, this.obstacle)){
-            
             this.pause = true;
             let screenTryAgain = document.querySelector(".try-again");
             screenTryAgain.style.display = "block";
-            document.onkeydown = (e) => this.tryAgain(e);       
+            document.onkeydown = (e) => this.tryAgain(e);
+            this.dashboard.elapsedTime = 0;       
         }
 
         if(isCollide(this.playerKayak, this.pointsTable)){
-            this.pointsTable.splice(0, 1);
+            this.pointsTable.splice(this.pointsTable, 1);      
             this.score += 10;
             this.scoreDisplay.innerHTML = this.score;  
         }
-    }
+
+        if (document.hidden) {
+            this.pause = true;
+            this.pointsTable.splice(1,1);
+            this.obstacle.splice(1,1);
+        }
+    } 
 
     recordTime(){
 
@@ -161,13 +153,10 @@ export default class Game{
     getMinTimeTaken(){
         let scores = JSON.parse(localStorage.getItem("score"));
 
-        console.log(scores);
         let min = scores.reduce((previousItem, currentItem) => {
             return previousItem < currentItem ? previousItem : currentItem;
         });
 
-        console.log(min);
         return min;
     }
-
 }

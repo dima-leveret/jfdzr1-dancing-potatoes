@@ -6,7 +6,6 @@ export default class Points{
         this.points.src = "./images/playerKayak.png";
         this._positionY = -100;
         this.speed = 3;
-        // this.lane = Math.floor(Math.random() * 5);
         this.lane = lane;
         this.lanePosX = [75, 150, 225, 300, 375, 450, 75];
         this.pointsWidth = 60;

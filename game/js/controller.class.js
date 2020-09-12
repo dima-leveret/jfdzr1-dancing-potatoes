@@ -27,6 +27,7 @@ export default class Controller {
                 case 40: // down arrow key
                     this.playerKayak.speed -= 5;
                     break;
+ 
                 default:
                     break;
             }

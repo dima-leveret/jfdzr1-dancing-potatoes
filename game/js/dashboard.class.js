@@ -33,7 +33,7 @@ export default class Dashboard{
         let mili = Math.floor(miliseconds/100);
         mili = mili < 10 ? '0' + mili : mili;
 
-        this.elapsedTime = `${hours}:${minutes}:${seconds}:${mili}`;
+        this.elapsedTime = `${minutes}:${seconds}:${mili}`;
 
         this.timeMeter.innerHTML = `TIME ELAPSED: ${this.elapsedTime}`;
 
@@ -44,7 +44,7 @@ export default class Dashboard{
         this.now = Date.now();
         let deltaTime = this.now - this.then;
 
-        if(deltaTime >= 1000){
+        if(deltaTime >= 300){
 
             this.meterPerSecond = this.game.playerKayak.speed * 1000 / (60 * 60);
 
@@ -58,9 +58,5 @@ export default class Dashboard{
 
         }
     }
-
-    // difficultyChoice(){
-    //     if(this.)
-    // }
 
 }
