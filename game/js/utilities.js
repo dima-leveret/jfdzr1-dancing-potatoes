@@ -7,10 +7,9 @@ export function isCollide(playerKayak, object){
         if(Objects.positionY > 525 && Objects.positionY < 775){           
 
             if(Math.abs(Objects.positionX - playerKayak.positionX) <= 40){
-                
                 return true;
             }
-
+ 
         }
 
     }
@@ -18,4 +17,5 @@ export function isCollide(playerKayak, object){
     return false;
 
 }
+
 

@@ -41,8 +41,7 @@ export default class Points{
                                 this.pointsWidth, 
                                 this.pointsLength
                                );
-
-        if(this._positionY >= 1200){
+        if(this._positionY >= 1000){
             this.game.pointsTable.splice(this.game.pointsTable.indexOf(this), 1);
         }
     }

@@ -5,6 +5,8 @@ export default class Dashboard{
 
         this.timeMeter = document.querySelector(".time-meter");
         this.distanceMeter = document.querySelector(".distance");
+        this.easyDifficulty = document.querySelector(".easy-difficulty");
+        this.hardDifficulty = document.querySelector(".hard-difficulty");
 
         this.startTime = this.then = Date.now();
         
@@ -56,5 +58,9 @@ export default class Dashboard{
 
         }
     }
+
+    // difficultyChoice(){
+    //     if(this.)
+    // }
 
 }

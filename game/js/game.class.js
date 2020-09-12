@@ -17,33 +17,45 @@ export default class Game{
         this.obstacle = [];    
         this.pointsTable = [];  
         this.functionCount = 0;
-        this.score = document.querySelector('.score');
+        this.score = 0;
+        this.scoreDisplay = document.querySelector('.score');
         new Controller({river:this.river, playerKayak:this.playerKayak});
 
-        setInterval(()=>this.populateObstaclesAndPoints(), 1000);
+        setInterval(()=>this.populateObstaclesAndPoints(), 200);
+
 
         this._paused = false;
         this._gameOver = false;
     }
 
+    
+
     populateObstaclesAndPoints(){       
         if(this._paused) return; 
-        let lane = Math.floor(Math.random() * 5);
-        let lane2 = Math.floor(Math.random() * 5);
-  
-        if(lane === lane2){
-            lane2++;
-        }
+        let lanesRotate = [0,1,2,3,4];
+        
+        for(let i = lanesRotate.length-1; i > 0; i--){
+            const j = Math.floor(Math.random() * i);
+            const temp = lanesRotate[i]
+            lanesRotate[i] = lanesRotate[j]
+            lanesRotate[j] = temp
+          }
 
-        let obstacleObject = new Obstacles(this, lane) ;      
-        this.obstacle.push(obstacleObject);
+        let lane = lanesRotate[0];
+        let lane2 = lanesRotate[1];
+        let lane3 = lanesRotate[2];
 
-        // if(this.functionCount%2===0){
-        let pointsObject = new Points(this, lane2);
+        // let obstacleObject = new Obstacles(this, lane) ;    
+        // let obstacleObject2 = new Obstacles(this, lane2) ;   
+        // this.obstacle.push(obstacleObject, obstacleObject2);
+
+        if(this.functionCount%2===0){
+        let pointsObject = new Points(this, lane3);
         this.pointsTable.push(pointsObject)
-        // }
+        }
         this.functionCount++;
     }
+
 
         
 
@@ -108,7 +120,6 @@ export default class Game{
         }
 
         this.playerKayak.update();
-        // this.obstacle.update();
         this.obstacle.forEach(kayak => {
             kayak.update();
         });
@@ -125,8 +136,10 @@ export default class Game{
         }
 
         if(isCollide(this.playerKayak, this.pointsTable)){
-            this.pointsTable.splice(0, 1); 
-            this.score.value += 10;        
+            // this.pointsTable.splice(this.pointsTable, 1);
+            this.pointsTable.splice(0, 1);
+            this.score += 10;
+            this.scoreDisplay.innerHTML = this.score;  
         }
     }
 
