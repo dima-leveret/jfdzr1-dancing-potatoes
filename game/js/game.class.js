@@ -22,7 +22,7 @@ export default class Game {
         this.scoreDisplay = document.querySelector('.score');
         new Controller({ river: this.river, playerKayak: this.playerKayak });
 
-        setInterval(() => {
+    setInterval(() => {
             this.populateObstaclesAndPoints();
             this.speedRise();
         }, this.objectSpawnRate);
@@ -159,7 +159,7 @@ export default class Game {
     }
 
     speedRise() {
-        this.playerKayak.speed += 2;
+        this.playerKayak.speed += 1;
         this.obstacle.speed += 2;
     }
 }

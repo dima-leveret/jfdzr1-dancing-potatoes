@@ -11,9 +11,10 @@ export default class River {
         this.river3.src = './images/river3.png';
     }
 
+
     update() {
         if (this.yOffset >= 0) this.yOffset = -350;
-        this.context.drawImage(this.river2, 0, this.yOffset);
+        this.context.drawImage(this.river2,  0, this.yOffset);
         this.context.drawImage(this.river2, 0, this.yOffset + 350);
         this.context.drawImage(this.river2, 0, this.yOffset + 700);
         this.context.drawImage(this.river2, 0, this.yOffset + 1050);
