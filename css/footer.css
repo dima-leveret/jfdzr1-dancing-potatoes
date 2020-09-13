@@ -1,8 +1,5 @@
 .footer{
- 
     border: 2px solid #04738D;
-    height: 2%;
-    min-height: 40px;
 }
 
 .footer-container{
@@ -10,32 +7,25 @@
     justify-content: space-evenly;
     align-items: center;
     text-decoration: none;
-
+    margin:15px auto;
     height: 100%;
 }
-.footer-container p{
-    text-decoration: none;
-    color: black;
-    margin: 0;
-    padding: 10px
 
-}
 .footer-container a{
     text-decoration: none;
-    color: black;
+    height: 90%;
     margin: 0;
-    padding: 10px;
-
+    padding: 0;
 }
 
+.footer-container a:hover{
+    border-bottom: 4px solid black;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
 
 .footer-container a:visited{
-    color: #063E4F;
-}
-.footer-container a:hover{
-    color: black;
-    font-weight: bolder;
-    transition: 0.2s ease;
+    color: inherit;
 }
 
 

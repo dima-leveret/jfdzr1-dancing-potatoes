@@ -1,0 +1,116 @@
+
+.dws-menu{
+ /* background-color: white; */
+ width: 100%;
+ font-family: 'Press Start 2P', cursive;
+}
+
+.dws-li {
+    border: #000 solid;
+    margin: 10px 5px;
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
+}
+
+ul.dws-ul{
+ display: flex;
+ padding: 0;
+ flex-direction: column;
+ align-items: center;
+}
+
+li.dws-li{
+ list-style: none;
+ padding: 10px;
+}
+
+li.dws-li a{
+ text-decoration: none;
+ font-size: 18px;
+ color: #000;
+ position: relative;
+ padding: 5px;
+ font-family: 'Press Start 2P', cursive;
+}
+
+li.dws-li a i{
+ margin-right: 10px;
+}
+
+li.dws-li a::before{
+ content: '';
+ width: 0;
+ height: 3px;
+ background-color: #33bdf1;
+ position: absolute;
+ top: 90%;
+ left: 0;
+ transition: .5s;
+ mix-blend-mode: multiply;
+}
+startBtn, hardBtn, easyBtn{
+    text-decoration: none;
+    background-color: lawngreen;
+
+}
+li.dws-ul a::after{
+ content: '';
+ width: 0;
+ height: 3px;
+ background-color: #ff2117;
+ position: absolute;
+ top: 90%;
+ right: 0;
+ transition: .5s;
+ mix-blend-mode: multiply;
+}
+
+li.dws-ul:hover{
+ background-color: #e5eae8;
+}
+
+li.dws-ul:hover::before{
+ width: 50%;
+ transform: translateX(100%);
+}
+
+li.dws-ul:hover a::after{
+ width: 50%;
+ transform: translateX(-100%);
+}
+
+li.dws-li a:hover{
+ color: #e62117;
+}
+
+.start{
+    display: flex;
+}
+
+.blur.active{
+    filter: blur(15px);
+    pointer-events: none;
+    user-select: none;
+    transition: 0.5s;
+    
+}
+.inner-board{
+    display: flex;
+    width: 300px;
+    height: 100px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.pop{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+
+.pop.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 50%;
+} */

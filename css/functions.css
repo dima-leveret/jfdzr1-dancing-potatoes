@@ -49,10 +49,7 @@
     font-weight: 700;
     font-size: 45px;
     margin-bottom: 30px;
-    color: #262626;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    color: black;
 }
 figcaption{
     display: flex;

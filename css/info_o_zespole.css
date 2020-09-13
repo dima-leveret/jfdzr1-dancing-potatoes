@@ -185,11 +185,7 @@
     transform: translateY(-220%);
     transition: 0.5s;   
 }
-.infoAboutTeam{
-    display: flex;
-    align-items: flex-end;
-    color: #262626;
-}
+
 
 @media all and (max-width: 760px)
 {

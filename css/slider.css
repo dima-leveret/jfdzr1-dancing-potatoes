@@ -9,7 +9,6 @@ body{
 	overflow:hidden;
 	position: relative;
 	padding-top: 70px;
-
 }
 
 .header .slide{
@@ -23,16 +22,11 @@ body{
 	z-index:1; 
 	display:none;
 	padding:0 70px;
-	animation: captionText .8s ease forwards;
-	animation-direction: alternate;
-	
+	animation: slide 2s ease;
 }
 .header .slide.active{
 	display: flex;
-	animation: captionText .5s ease forwards;
-	animation-direction: alternate;
 }
-
 
 .container{
 	max-width: 700px;
@@ -42,7 +36,6 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	
 }
 
 .header .container{
@@ -53,7 +46,6 @@ body{
 	background-color: white;
 	opacity: 80%;
 	border-radius: 10px;
-	
 }
 
 .header .caption h1{
@@ -65,7 +57,6 @@ body{
 	opacity:0;
 	animation: captionText .5s ease forwards;
 	animation-delay:1s;
-	
 }
 .header .caption p{
 	font-size: 18px;
@@ -104,40 +95,35 @@ body{
 
 @keyframes captionText{
 	0%{
-	 opacity:0; transform: translateX(+100%);
+		opacity:0; transform: translateX(-100px);
 	}
 	100%{
-	 opacity:1; transform: translateX(0px);
+	 opacity:1; transform: translateX(0px);	
 	}
 }
 
 .header .controls .prev,
 .header .controls .next{
- display: flex;
- align-items: center;
  position: absolute;
  z-index:2;
  top:50%;
  height:40px;
- margin: -20px 25px auto 15px;
+ width: 40px;
+ margin-top: -20px;
  color: black;
  background-color: white;
  text-align: center;
- line-height: 29px;
- font-size:20px;
+ line-height: 20px;
+ font-size:40px;
  cursor:pointer;
- opacity: 0.7;
- width: 40px;
- padding: 16px;
- font-weight: bold;
- transition: 0.6s ease;
- border-radius: 5px;
- justify-content: center;
+ transition: all .5s ease;
+ border: 1px solid #04738D;
+ border-radius: 10px
 }
 .header .controls .prev:hover,
 .header .controls .next:hover{
-	background-color: rgba(0,0,0,0.8);
-	color: white;
+	background-color: #89C7CC;
+	color: #000000;
 }
 .header .controls .prev{
  left:0;
@@ -175,21 +161,15 @@ body{
 	.container{
 		margin: 50px 0;
 	}
-	.header .caption h1{
-		font-size:1em;
-	}
+
 	.header .indicator{
 		bottom:0px;
 	}
-	.header{
-		min-height: 400px;
-	}
+
 	.header .indicator div{
 		margin: 0 5px;
 	}
-	.slider{
-		min-height: 300px;
-	}
+
 	.header .caption{
 		width:100%;
 		text-align: center;
@@ -198,30 +178,19 @@ body{
 		justify-content: center;
 		align-items: center;
 	}
-	.butSlide{
-		width: 50%;
-	}
 
 	.header .caption h1{
 		font-size: 6vw;
-		margin: 10px 30px 5px;
+		margin:10px 30px;
 	}
 	
 	.header .caption p{
 		font-size: 5vw;
-		margin:5px 30px;
+		margin:10px 30px;
 	}
 	
 	.header .caption a{
-	 padding:10px 10px;
+	 padding:10px 30px;
 	 margin: 10px 30px;
-	 display: flex;
-	 justify-content: center;
-	
-	}
-	.butSlide a{
-		
-		font-size: 3em;
-	
 	}
 }
