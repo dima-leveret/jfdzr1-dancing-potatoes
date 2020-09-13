@@ -6,6 +6,7 @@ export default class Dashboard{
         this.timeMeter = document.querySelector(".time-meter");
         this.distanceMeter = document.querySelector(".distance");
 
+
         this.startTime = this.then = Date.now();
         
         this.distanceTraveled = 0;
@@ -33,6 +34,7 @@ export default class Dashboard{
 
         this.elapsedTime = `${hours}:${minutes}:${seconds}:${mili}`;
 
+
         this.timeMeter.innerHTML = `TIME ELAPSED: ${this.elapsedTime}`;
 
     }
@@ -43,6 +45,7 @@ export default class Dashboard{
         let deltaTime = this.now - this.then;
 
         if(deltaTime >= 1000){
+
 
             this.meterPerSecond = this.game.playerKayak.speed * 1000 / (60 * 60);
 

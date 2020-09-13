@@ -63,8 +63,10 @@ const premieraContainerFormEl = document.querySelector('.premiera__container__fo
 const iBnameEL = document.querySelector('.iBname');
 const iBmailEl = document.querySelector('.iBmail');
 const iBkomentEl = document.querySelector('.iBkoment');
-const premieraContainerButtomEl = document.querySelector('.premiera__container__buttom');
+const premieraContainerButtonEl = document.querySelector('.premiera__send');
 const informacjaEl = document.querySelector('.informacja');
+const infoTextEl = document.querySelector('.info-text');
+const infoPEl = document.querySelector('.info-p');
 
 // footer
 const footerContainerCompanyNameEl = document.querySelector('.footer-container__company__name');
@@ -72,33 +74,35 @@ const footerContainerContactPhoneEl = document.querySelector('.footer-container_
 const footerContainerRegulationsEl = document.querySelector('.footer-container__regulations');
 const footerContainerPrivacyEl = document.querySelector('.footer-container__privacy');
 
+
 var translation = {
+
     'polish': {
         // navigation
         'navMenuPremiere': 'Premiera',
         'navMenuFunction': 'Funkcje aplikacji',
         'navMenuInfo': 'Info',
         'navMenuTeam': 'Zespół',
-        'navMenuContact': 'Kontakt',
+        'navMenuContact': 'Logowanie',
 
         // slider
-        'slide1': 'Spływy kajakowe',
-        'slide2': '1 min',
-        'slide3': 'Impreza okolicznościowa?',
+        'slide1': 'Kajak, łódka czy rower wodny?',
+        'slide2': 'Trzy kliknięcia...',
+        'slide3': 'Sprawdź naszą aplikację mobilną',
         'slide4': 'Bądź na bieżąco',
 
-        'textSlide1': 'Porównaj ceny wypożyczalni.',
-        'textSlide2': 'Dokładnie tyle zajmie rezerwacja.',
-        'textSlide3': 'Pomożemy Ci w organizacji !',
+        'textSlide1': 'Porównaj oferty pobliskich wypożyczalni',
+        'textSlide2': 'Dzielą Cię od dokonania rezerwacji.',
+        'textSlide3': 'I miej "Wiosło" zawsze przy sobie',
         'textSlide4': 'Zapisz się na premierę i otrzymuj najlepsze oferty',
 
         'buttonSlide1': 'Sprawdź ofertę',
-        'buttonSlide2': 'Rezerwuj',
-        'buttonSlide3': 'Kontakt',
+        'buttonSlide2': 'Sprawdź sam!',
+        'buttonSlide3': 'Sprawdź ją!',
         'buttonSlide4': 'Zapisz się',
 
         // app functions
-        'functionsTitle': 'CO POTRAFI WIOSŁO?',
+        'functionsTitle': '<img src="./images/paddle.png" class="paddle" alt="paddle">CO POTRAFI WIOSŁO?<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'appFunction1': 'Znajdzie najbliższe wypożyczalnie',
         'appFunction2': 'Zarezerwuje Ci łódkę',
@@ -106,7 +110,7 @@ var translation = {
         'appFunction4': 'Znajdzie drogę do bazy',
 
         // How it works?
-        'moreAboutProductSectionHeader': 'Jak to działa?',
+        'moreAboutProductSectionHeader': '<img src="./images/paddle.png" class="paddle" alt="paddle">JAK TO DZIAŁA?<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'mapdh1': 'Szukasz wypożyczalni? <br> Pomożemy!',
         'mapdh2': 'Rezerwacja łódki <br> w 1 minutę!',
@@ -119,7 +123,7 @@ var translation = {
         'mapdp4': 'Nie jesteś mistrzem w orientacji w terenie? Z "Wiosłem" możesz zawsze czuć się bezpiecznie. Udostępnimy Ci mapy wód offline, które doprowadzą Cię do bazy.',
 
         // information about team
-        'infoAboutTeam': 'informacje o zespole',
+        'infoAboutTeam': '<img src="./images/paddle.png" class="paddle" alt="paddle">informacje o zespole<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'nameKamil': 'Kamil Jastrzembowski',
         'nameJarek': 'Jaroslaw Witowski',
@@ -130,20 +134,29 @@ var translation = {
         'aboutDima': 'Urodziłem się w Ukrainie. Swoją pasję znalazłem w fitnesie. Do Polski przyjechałem żeby ukończyć magisterkę. Teraz jestem master-trenerem i prezenterem Polski w tej sferze ale lubie wyzwania i tym razem wybrałem Front-End-Development.',
 
         // premiere form
-        'titlePremiere': 'bądź pierwszy <br> zapisz się na premierę',
+        'titlePremiere': 'ZAPISZ SIĘ NA PREMIERĘ',
 
         'premieraContainerForm': 'Zapis na premierę',
         'iBname': 'Imię',
         'iBmail': 'Mail',
-        'iBkoment': 'Komentarz',
-        'premieraContainerButtom': 'WYŚLIJ',
-        'informacja': 'Wysłany zostanie tylko jeden mail z informacją o premierze. Zapewniamy bezpieczeństwo danych.',
+        // 'iBkoment': 'Komentarz',
+        'premieraContainerButton': 'WYŚLIJ',
+        'informacja': 'ZAPISZ SIĘ DO NASZEGO NEWSLETTERA',
+        'infoText' : 'I BĄDŹ PIERWSZYM KTÓRY DOWIE SIĘ O PREMIERZE NASZEJ APLIKACJI!',
+        'infoP' : '*Dołączając akceptujesz Regulamin usługi, Politykę prywatności i Politykę antyspamową',
 
         // footer
         'footerContainerCompanyName': '&#174 Dancing Potatoes Sp. z o.o.',
         'footerContainerContactPhone': 'Telefon: +48 123 123 123',
         'footerContainerRegulations': 'Regulamin',
         'footerContainerPrivacy': 'Prywatność',
+
+        //popup
+        'popupUser': 'Cześć&nbsp;<p id="user"></p>!',
+        'popupThanks': 'Dziękujemy za rejestrację w premierze!',
+        'popupQuestion': 'Czy chcesz zagrać w grę?',
+        'popupNo': 'Nie, dziękuję',
+        'popupYes': 'Tak! Pewnie!',
     },
 
     'russian': {
@@ -152,7 +165,7 @@ var translation = {
         'navMenuFunction': 'Особенности приложения',
         'navMenuInfo': 'Информация',
         'navMenuTeam': 'Информация о команде',
-        'navMenuContact': 'Контакт',
+        'navMenuContact': 'Авторизоваться',
 
         // slider
         'slide1': 'Рафтинг на каяках',
@@ -171,7 +184,7 @@ var translation = {
         'buttonSlide4': 'Запишись',
 
         // app functions
-        'functionsTitle': 'ЧТО МОЖЕТ ВЕСЛО?',
+        'functionsTitle': '<img src="./images/paddle.png" class="paddle" alt="paddle">ТО МОЖЕТ ВЕСЛО?<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'appFunction1': 'Найдет ближайшие аренды каяков',
         'appFunction2': 'Бронирует лодку',
@@ -179,7 +192,7 @@ var translation = {
         'appFunction4': 'Найдет путь к базе',
 
         // How it works?
-        'moreAboutProductSectionHeader': 'Как это работает?',
+        'moreAboutProductSectionHeader': '<img src="./images/paddle.png" class="paddle" alt="paddle">КАК ЭТО РАБОТАЕТ?<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'mapdh1': 'Ищешь аренду? <br> Поможем!',
         'mapdh2': 'Бронирование лодок <br> за 1 минуту!',
@@ -192,7 +205,7 @@ var translation = {
         'mapdp4': 'Вы не мастер в области ориентирования? С "Веслом" вы всегда можете чувствовать себя в безопасности. Мы предоставим вам автономные водные карты, которые проведут вас на базу.',
 
         // information about team
-        'infoAboutTeam': 'информация о команде',
+        'infoAboutTeam': '<img src="./images/paddle.png" class="paddle" alt="paddle">информация о команде<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'nameKamil': 'Камиль Ястшембовски',
         'nameJarek': 'Ярослав Витовски',
@@ -203,20 +216,29 @@ var translation = {
         'aboutDima': 'Я родился в Украине. Свою страсть нашел в фитнесе. Приехал в Польшу, чтобы получить степень магистра. Сейчас я мастер-тренер в этой области, но мне нравятся вызовы, и на этот раз я выбрал Front-End-Development.',
 
         // premiere form
-        'titlePremiere': 'будь первым <br> запишись на премьеру',
+        'titlePremiere': 'запишись на премьеру',
 
         'premieraContainerForm': 'Регистрация на премьеру',
         'iBname': 'Имя',
         'iBmail': 'Mail',
-        'iBkoment': 'Комментарий',
-        'premieraContainerButtom': 'ОТПРАВИТЬ',
-        'informacja': 'О премьере будет отправлено только одно письмо. Обеспечиваем безопасность данных.',
+        // 'iBkoment': 'Комментарий',
+        'premieraContainerButton': 'ОТПРАВИТЬ',
+        'informacja': 'ПОДПИШИТЕСЬ НА НАШУ РАССЫЛКУ',
+        'infoText' : 'И БУДЬТЕ ЗНАТЬ ПЕРВЫМ О ЗАПУСКЕ НАШЕГО ПРИЛОЖЕНИЯ!',
+        'infoP' : '*Присоединяясь, вы принимаете Условия использования, Политику конфиденциальности и Политику защиты от спама.',
 
         // footer
         'footerContainerCompanyName': '&#174 Dancing Potatoes Sp. z o.o.',
         'footerContainerContactPhone': 'Телефон: +48 123 123 123',
         'footerContainerRegulations': 'Условия использования',
         'footerContainerPrivacy': 'Конфиденциальность',
+
+         //popup
+         'popupUser': 'Привет&nbsp;<p id="user"></p>!',
+         'popupThanks': 'Спасибо, что записались на премьеру!',
+         'popupQuestion': 'Хочешь сыграть в игру?',
+         'popupNo': 'Нет, спасибо',
+         'popupYes': 'Да, пожалуйста',
     },
 
     'english': {
@@ -225,7 +247,7 @@ var translation = {
         'navMenuFunction': 'Application features',
         'navMenuInfo': 'Information',
         'navMenuTeam': 'Team information',
-        'navMenuContact': 'Contact',
+        'navMenuContact': 'Login',
 
         // slider
         'slide1': 'Canoe trip',
@@ -244,7 +266,7 @@ var translation = {
         'buttonSlide4': 'Sign up',
 
         // app functions
-        'functionsTitle': 'WHAT CAN THE OAR DO?',
+        'functionsTitle': '<img src="./images/paddle.png" class="paddle" alt="paddle">WHAT CAN THE OAR DO?<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'appFunction1': 'It can find the nearest rentals',
         'appFunction2': 'It can book you a boat',
@@ -252,10 +274,10 @@ var translation = {
         'appFunction4': 'Can find a way to the base',
 
         // How it works?
-        'moreAboutProductSectionHeader': 'How it works?',
+        'moreAboutProductSectionHeader': '<img src="./images/paddle.png" class="paddle" alt="paddle">HOW DOES IT WORK?<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'mapdh1': 'Are you looking for a rental company? <br> We will help!',
-        'mapdh2': 'Boat booking <br> in 1 minute!',
+        'mapdh2': 'Boat booking <br> in one minute!',
         'mapdh3': 'You can not swim? <br> No problem!',
         'mapdh4': 'We will show you <br> how to come back!',
 
@@ -265,7 +287,7 @@ var translation = {
         'mapdp4': 'Are you not a master in field orientation? You can always feel safe with the Oar. We will provide you with offline water maps that will lead you to the base.',
 
         // information about team
-        'infoAboutTeam': 'information about the team',
+        'infoAboutTeam': '<img src="./images/paddle.png" class="paddle" alt="paddle">information about the team<img src="./images/paddle.png" class="paddle" alt="paddle">',
 
         'nameKamil': 'Kamil Jastrzembowski',
         'nameJarek': 'Jaroslaw Witowski',
@@ -276,20 +298,30 @@ var translation = {
         'aboutDima': 'I was born in Ukraine. I found my passion in fitness. I came to Poland to complete my master`s degree. Now I am a master trainer and Polish presenter in this area, but I like challenges and this time I chose Front-End-Development.',
 
         // premiere form
-        'titlePremiere': 'be the first <br> sign up for the premiere',
+        'titlePremiere': 'Sign up for the premiere',
 
         'premieraContainerForm': 'Registration for the premiere',
         'iBname': 'Name',
         'iBmail': 'Mail',
-        'iBkoment': 'Comment',
-        'premieraContainerButtom': 'SEND',
-        'informacja': 'Only one e-mail will be sent to inform about the premiere. We ensure data security.',
+        // 'iBkoment': 'Comment',
+        'premieraContainerButton': 'SEND',
+        'informacja': 'SING IN FOR OUR NEWSLETTER',
+        'infoText' : 'AND BE THE FIRST ONE KNOWING ABOUT PREMIERE OF OUR APP',
+        'infoP' : '*By joining, you accept the Terms of Service, Privacy Policy and Anti-Spam Policy',
+
 
         // footer
         'footerContainerCompanyName': '&#174 Dancing Potatoes Sp. z o.o.',
         'footerContainerContactPhone': 'Phone: +48 123 123 123',
         'footerContainerRegulations': 'Regulations',
         'footerContainerPrivacy': 'Privacy',
+
+        //popup
+        'popupUser': 'Hello&nbsp;<p id="user"></p>!',
+        'popupThanks': 'Thank you for registering at the premiere',
+        'popupQuestion': 'Would you like to play a game?',
+        'popupNo': 'No, thank you',
+        'popupYes': 'Yes! Sure!',
     }
     
 }

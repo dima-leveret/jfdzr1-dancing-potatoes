@@ -1,5 +1,3 @@
-
-
 .blur.active{
     filter: blur(15px);
     pointer-events: none;
@@ -33,7 +31,7 @@
 .popup a{
     justify-content: center;
     position: relative;
-    width: 30%;
+    width: 34%;
     padding: 5px 20px;
     display: flex;
     margin: 20px;

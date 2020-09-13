@@ -8,7 +8,6 @@ export default class River{
     }
 
     update(){
-        //console.log(yOffset);
         if(this.yOffset >= 0) this.yOffset = -512;           
         this.context.drawImage(this.river, 0, this.yOffset);
         this.context.drawImage(this.river, 0, this.yOffset+512);

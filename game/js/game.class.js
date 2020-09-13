@@ -6,6 +6,7 @@ import River from './river.class.js';
 import { isCollide } from './utilities.js';
 import Dashboard from './dashboard.class.js';
 
+
 export default class Game{
 
     constructor(context){
@@ -16,10 +17,12 @@ export default class Game{
         this.raceDistance = 1;
         this.obstacle = [];    
         this.pointsTable = [];  
+
         new Controller({river:this.river, playerKayak:this.playerKayak});
 
         setInterval(()=>this.populateObstacles(), 1000);
         setInterval(()=>this.populatePoints(), 200);
+
 
         this._paused = false;
         this._gameOver = false;
@@ -46,6 +49,7 @@ export default class Game{
 
         let pointsObject = new Points(this);      
         this.pointsTable.push(pointsObject);
+
     }
 
     set pause(pause){
@@ -55,7 +59,6 @@ export default class Game{
     get pause(){
         return this._paused;
     }
-
 
     tryAgain(e){
 
@@ -100,13 +103,13 @@ export default class Game{
         }
 
         this.playerKayak.update();
-        // this.obstacle.update();
         this.obstacle.forEach(kayak => {
             kayak.update();
         });
         this.pointsTable.forEach(kayak => {
             kayak.update();
         });
+
 
         if(isCollide(this.playerKayak, this.obstacle)){
             
@@ -117,13 +120,12 @@ export default class Game{
         }
     }
 
+
     recordTime(){
 
         if(localStorage.getItem("score") === null){
             localStorage.setItem("score", JSON.stringify([]));
         }
-
-        //console.log(localStorage.getItem("score"));
 
         let time = this.dashboard.elapsedTime;
 
@@ -138,13 +140,12 @@ export default class Game{
     getMinTimeTaken(){
         let scores = JSON.parse(localStorage.getItem("score"));
 
-        console.log(scores);
         let min = scores.reduce((previousItem, currentItem) => {
             return previousItem < currentItem ? previousItem : currentItem;
         });
 
-        console.log(min);
         return min;
     }
+
 
 }

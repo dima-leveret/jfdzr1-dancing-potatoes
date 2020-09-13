@@ -1,3 +1,4 @@
+
 export function isCollide(playerKayak, obstacle){
 
     for(let i=0; i<obstacle.length; i++) {
@@ -11,10 +12,13 @@ export function isCollide(playerKayak, obstacle){
                 return true;
             }
 
+
         }
 
     }
 
     return false;
 
+
 } // end of isCollide function
+

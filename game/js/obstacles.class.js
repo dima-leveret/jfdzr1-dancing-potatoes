@@ -1,5 +1,7 @@
 export default class Obstacles{
+
     constructor(game){
+
         this.game = game;
         this.context = this.game.context;
         this.obstruction = new Image;
@@ -8,6 +10,7 @@ export default class Obstacles{
         this.obstructionNo = 3;
         this._positionY = -100;
         this.speed = 3;
+
         this.lane = Math.floor(Math.random() * 5);
         this.lanePosX = [75, 150, 225, 300, 375, 450, 75];
         this.obstructionWidth = 60;
