@@ -1,83 +1,81 @@
-export default class playerKayak{
-    constructor(game){
-        this.game = game;  
+export default class playerKayak {
+    constructor(game) {
+        this.game = game;
         this.context = this.game.context;
-        this._positionX = 225;
-        this._positionY = 650;
+        this._positionX = 400;
+        this._positionY = 850;
         this._speed = 10;
-        this.maxSpeed = 60;  
+        this.maxSpeed = 60;
         this.kayakWidth = 60;
-        this.kayakLength = 124;      
-        this.init();        
+        this.kayakLength = 124;
+        this.init();
     }
 
-    init(){
+    init() {
         this.kayak = new Image;
         this.kayak.src = "./images/playerKayak.png";
     }
 
-    get width(){
+    get width() {
         return this.kayakWidth;
     }
 
-    get length(){
+    get length() {
         return this.kayakLength;
     }
 
-    get positionX(){
+    get positionX() {
         return this._positionX;
     }
 
-    set positionX(positionX){
+    set positionX(positionX) {
         this._positionX = positionX
-    }    
+    }
 
-    get positionY(){
+    get positionY() {
         return this._positionY;
     }
 
-    set positionY(positionY){
+    set positionY(positionY) {
         this._positionY = positionY
     }
 
-    resetPosition(){
-        this._positionX = 225;
-        this._positionY = 650;
+    resetPosition() {
+        this._positionX = 400;
+        this._positionY = 850;
     }
 
-    moveLeft(){
-        
-        this._positionX -= 7;   
-        if(this._positionX <= 75) this._positionX = 75;     
+    moveLeft() {
+        this._positionX -= 7;
+        if (this._positionX <= 255) this._positionX = 255;
     }
 
-    moveRight(){
+    moveRight() {
         this._positionX += 7;
-        if(this._positionX >= 375) this._positionX = 375;
+        if (this._positionX >= 640) this._positionX = 640;
     }
 
-    moveWithMouse(x){
-        this._positionX = x;   
-        if(this._positionX <= 75) this._positionX = 75; 
-        if(this._positionX >= 375) this._positionX = 375;
+    moveWithMouse(x) {
+        this._positionX = x;
+        if (this._positionX <= 260) this._positionX = 260;
+        if (this._positionX >= 640 - this.kayak.width) this._positionX = 640 - this.kayak.width;
     }
 
-    set speed(speed){
-        if(speed >= this.maxSpeed){
+    set speed(speed) {
+        if (speed >= this.maxSpeed) {
             this._speed = this.maxSpeed;
-        }else if(speed <= 0){
+        } else if (speed <= 0) {
             this._speed = 0;
-        }else{
+        } else {
             this._speed = speed;
         }
     }
 
-    get speed(){
+    get speed() {
         return this._speed;
     }
 
-    update(){        
+    update() {
         this.context.drawImage(this.kayak, this._positionX, this._positionY);
     }
-    
 }

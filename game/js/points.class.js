@@ -1,5 +1,5 @@
-export default class Points{
-    constructor(game, lane){
+export default class Points {
+    constructor(game, lane) {
         this.game = game;
         this.context = this.game.context;
         this.points = new Image;
@@ -7,40 +7,40 @@ export default class Points{
         this._positionY = -100;
         this.speed = 3;
         this.lane = lane;
-        this.lanePosX = [75, 150, 225, 300, 375, 450, 75];
+        this.lanePosX = [255, 331, 407, 483, 559, 635, 255];
         this.pointsWidth = 60;
         this.pointsLength = 124;
-    }   
+    }
 
-    get width(){
+    get width() {
         return this.pointsWidth;
     }
 
-    get length(){
+    get length() {
         return this.pointsLength;
     }
 
-    get positionX(){
+    get positionX() {
         return this.lanePosX[this.lane];
     }
 
-    get positionY(){
+    get positionY() {
         return this._positionY;
     }
 
-    update(){        
-        this._positionY += (this.game.playerKayak.speed/5 + this.speed);
-        this.context.drawImage(this.points, 
-                                0, 
-                                0, 
-                                this.pointsWidth, 
-                                this.pointsLength, 
-                                this.lanePosX[this.lane], 
-                                this._positionY, 
-                                this.pointsWidth, 
-                                this.pointsLength
-                               );
-        if(this._positionY >= 1000){
+    update() {
+        this._positionY += (this.game.playerKayak.speed / 5 + this.speed);
+        this.context.drawImage(this.points,
+            0,
+            0,
+            this.pointsWidth,
+            this.pointsLength,
+            this.lanePosX[this.lane],
+            this._positionY,
+            this.pointsWidth,
+            this.pointsLength
+        );
+        if (this._positionY >= 1000) {
             this.game.pointsTable.splice(this.game.pointsTable.indexOf(this), 1);
         }
     }

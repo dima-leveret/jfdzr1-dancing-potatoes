@@ -3,21 +3,21 @@ export default class Controller {
     constructor(options) {
         this.river = options.river;
         this.playerKayak = options.playerKayak;
+        this.controler = document.querySelector('#canvas');
         this.init();
     }
 
     init() {
         document.addEventListener('mousemove', (e) => {
-            let x = e.clientX;
+            let x = e.clientX / 2;
             this.playerKayak.moveWithMouse(x);
         });
-
 
         document.addEventListener("keydown", (e) => {
             switch (e.keyCode) {
                 case 37: // left arrow key
                     this.playerKayak.moveLeft();
-                break;
+                    break;
                 case 38: // up arrow key
                     this.playerKayak.speed += 1;
                     break;
@@ -27,7 +27,6 @@ export default class Controller {
                 case 40: // down arrow key
                     this.playerKayak.speed -= 5;
                     break;
- 
                 default:
                     break;
             }

@@ -6,67 +6,66 @@ import River from './river.class.js';
 import { isCollide } from './utilities.js';
 import Dashboard from './dashboard.class.js';
 
-export default class Game{
+export default class Game {
 
-    constructor(context, objectSpawnRate){
-        this.context = context;    
+    constructor(context, objectSpawnRate) {
+        this.context = context;
         this.playerKayak = new playerKayak(this);
         this.river = new River(this);
         this.dashboard = new Dashboard(this);
         this.raceDistance = 1;
-        this.obstacle = [];    
-        this.pointsTable = [];  
+        this.obstacle = [];
+        this.pointsTable = [];
         this.spawnDivider = 0;
         this.score = 0;
         this.objectSpawnRate = objectSpawnRate;
         this.scoreDisplay = document.querySelector('.score');
-        new Controller({river:this.river, playerKayak:this.playerKayak});
+        new Controller({ river: this.river, playerKayak: this.playerKayak });
 
-            setInterval(() => { 
-                this.populateObstaclesAndPoints();
-                this.speedRise();
-            } , this.objectSpawnRate);
-                this._paused = false;
-                this._gameOver = false;
-            }    
+        setInterval(() => {
+            this.populateObstaclesAndPoints();
+            this.speedRise();
+        }, this.objectSpawnRate);
+        this._paused = false;
+        this._gameOver = false;
+    }
 
-    populateObstaclesAndPoints(){       
-        if(this._paused) return; 
-        let lanesRotate = [0,1,2,3,4];
-        
-        for(let i = lanesRotate.length-1; i > 0; i--){
+    populateObstaclesAndPoints() {
+        if (this._paused) return;
+        let lanesRotate = [0, 1, 2, 3, 4];
+        for (let i = lanesRotate.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * i);
             const temp = lanesRotate[i]
             lanesRotate[i] = lanesRotate[j]
             lanesRotate[j] = temp
-          }
+        }
 
         let lane = lanesRotate[0];
         let lane2 = lanesRotate[1];
         let lane3 = lanesRotate[2];
 
-        let obstacleObject = new Obstacles(this, lane) ;    
-        let obstacleObject2 = new Obstacles(this, lane2) ;   
+        let obstacleObject = new Obstacles(this, lane);
+        let obstacleObject2 = new Obstacles(this, lane2);
         this.obstacle.push(obstacleObject, obstacleObject2);
 
-        if(this.spawnDivider%2===0){
-        let pointsObject = new Points(this, lane3);
-        this.pointsTable.push(pointsObject)
+        if (this.spawnDivider % 2 === 0) {
+            let pointsObject = new Points(this, lane3);
+            this.pointsTable.push(pointsObject)
         }
         this.spawnDivider++;
     }
 
-    set pause(pause){
+    set pause(pause) {
         this._paused = pause;
     }
 
-    get pause(){
+    get pause() {
         return this._paused;
     }
 
-    tryAgain(e){
+    tryAgain(e) {
 
-        if(e.keyCode !== 32){
+        if (e.keyCode !== 32) {
             return;
         }
         this.obstacle = [];
@@ -77,21 +76,19 @@ export default class Game{
         let screenTryAgain = document.querySelector(".try-again");
         screenTryAgain.style.display = "none";
         document.onkeydown = null;
-        this.score = 0 ; 
-        this.scoreDisplay.innerHTML = this.score;  
+        this.score = 0;
+        this.scoreDisplay.innerHTML = this.score;
     }
 
-
-    update(){ 
-        if(this._gameOver) return;
+    update() {
+        if (this._gameOver) return;
 
         this.dashboard.updateTime();
-    
-        if(this._paused) return;
+        if (this._paused) return;
 
         this.river.update();
         this.dashboard.update();
-        if(this.dashboard.distanceRemaining <= 0){
+        if (this.dashboard.distanceRemaining <= 0) {
             this._gameOver = true;
             this.pause = true;
             let screenGameOver = document.querySelector(".game-over");
@@ -114,30 +111,30 @@ export default class Game{
             kayak.update();
         });
 
-        if(isCollide(this.playerKayak, this.obstacle)){
+        if (isCollide(this.playerKayak, this.obstacle)) {
             this.pause = true;
             let screenTryAgain = document.querySelector(".try-again");
             screenTryAgain.style.display = "block";
             document.onkeydown = (e) => this.tryAgain(e);
-            this.dashboard.elapsedTime = 0;       
+            this.dashboard.elapsedTime = 0;
         }
 
-        if(isCollide(this.playerKayak, this.pointsTable)){
-            this.pointsTable.splice(this.pointsTable, 1);      
+        if (isCollide(this.playerKayak, this.pointsTable)) {
+            this.pointsTable.splice(this.pointsTable, 1);
             this.score += 10;
-            this.scoreDisplay.innerHTML = this.score;  
+            this.scoreDisplay.innerHTML = this.score;
         }
 
         if (document.hidden) {
             this.pause = true;
-            this.pointsTable.splice(1,1);
-            this.obstacle.splice(1,1);
+            this.pointsTable.splice(1, 1);
+            this.obstacle.splice(1, 1);
         }
-    } 
+    }
 
-    recordTime(){
+    recordTime() {
 
-        if(localStorage.getItem("score") === null){
+        if (localStorage.getItem("score") === null) {
             localStorage.setItem("score", JSON.stringify([]));
         }
 
@@ -151,7 +148,7 @@ export default class Game{
 
     }
 
-    getMinTimeTaken(){
+    getMinTimeTaken() {
         let scores = JSON.parse(localStorage.getItem("score"));
 
         let min = scores.reduce((previousItem, currentItem) => {
@@ -161,9 +158,8 @@ export default class Game{
         return min;
     }
 
-    speedRise(){
+    speedRise() {
         this.playerKayak.speed += 2;
         this.obstacle.speed += 2;
-        console.log(this.playerKayak.speed);
     }
 }

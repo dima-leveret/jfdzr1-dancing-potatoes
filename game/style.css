@@ -15,12 +15,13 @@ canvas {
     height: 100vh;
     /* background: green; */
     left: 25%;
+    top: 0%;
 }
 
 #scoreboard {
     width: 100%;
     height:100%;
-    position: absolute;
+    position: fixed;
 }
 
 #scoreboard .inner-board {
