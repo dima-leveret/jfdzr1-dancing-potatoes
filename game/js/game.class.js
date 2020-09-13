@@ -8,7 +8,7 @@ import Dashboard from './dashboard.class.js';
 
 export default class Game{
 
-    constructor(context){
+    constructor(context, objectSpawnRate){
         this.context = context;    
         this.playerKayak = new playerKayak(this);
         this.river = new River(this);
@@ -16,18 +16,19 @@ export default class Game{
         this.raceDistance = 1;
         this.obstacle = [];    
         this.pointsTable = [];  
-        this.functionCount = 0;
+        this.spawnDivider = 0;
         this.score = 0;
-        this.timeOut = 1000;
+        this.objectSpawnRate = objectSpawnRate;
         this.scoreDisplay = document.querySelector('.score');
         new Controller({river:this.river, playerKayak:this.playerKayak});
 
-        setInterval(()=>{this.populateObstaclesAndPoints(), this.playerKayak.speed+=2, this.obstacle.speed+=2}, this.timeOut);
-        this._paused = false;
-        this._gameOver = false;
-    }
-
-    
+            setInterval(() => { 
+                this.populateObstaclesAndPoints();
+                this.speedRise();
+            } , this.objectSpawnRate);
+                this._paused = false;
+                this._gameOver = false;
+            }    
 
     populateObstaclesAndPoints(){       
         if(this._paused) return; 
@@ -48,11 +49,11 @@ export default class Game{
         let obstacleObject2 = new Obstacles(this, lane2) ;   
         this.obstacle.push(obstacleObject, obstacleObject2);
 
-        if(this.functionCount%2===0){
+        if(this.spawnDivider%2===0){
         let pointsObject = new Points(this, lane3);
         this.pointsTable.push(pointsObject)
         }
-        this.functionCount++;
+        this.spawnDivider++;
     }
 
     set pause(pause){
@@ -158,5 +159,11 @@ export default class Game{
         });
 
         return min;
+    }
+
+    speedRise(){
+        this.playerKayak.speed += 2;
+        this.obstacle.speed += 2;
+        console.log(this.playerKayak.speed);
     }
 }
