@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="./js/jquery.js"></script>
-    <script src="./js/script.js"></script>
+ 
     <script src="./js/popup.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/functions.css">
@@ -30,69 +30,72 @@
         <section class="opening-page section">
             <nav id="nav" class="nav">
                 <div class="nav__container ">
-                    <a href="#top"><img id="logo" class="logo" src="./images/logo_wioslo.png"
-                            alt="wioslo-logo-image"></a>
+                    <a href="#top"><img id="logo" class="logo" src="./images/logo_wioslo.png" alt="wioslo-logo-image"></a>
                     <div id="nav-menu" class="nav-menu">
-                        <a id="nav-menu-premiere" class="nav-menu-premiere font active" href="#premiera">Premiera</a>
-                        <a id="nav-menu-function" class="nav-menu-function font " href="#functions">Funkcje
-                            aplikacji</a>
-                        <a id="nav-menu-info" class="nav-menu-info font"
-                            href="#more-about-product-section__wrapper">Info</a>
-                        <a id="nav-menu-team" class="nav-menu-team font" href="#team">Zespół</a>
-                        <a id="nav-menu-contact" class="nav-menu-contact font" href="#contact">Kontakt</a>
-                    </div>
-
+                    <ul class="menu nav-menu" id="menu">
+                    <li class="current"> <a id="nav-menu-contact" class="nav-menu-contact font hvr-underline-from-center" href="#header__container">Logowanie</a></li>
+                    <li><a id="nav-menu-function" class="nav-menu-function font hvr-underline-from-center" href="#functions__container">Funkcje aplikacji</a></li>
+                    <li><a id="nav-menu-info" class="nav-menu-info font hvr-underline-from-center" href="#more-about">Info</a></li>
+                    <li><a id="nav-menu-team" class="nav-menu-team font hvr-underline-from-center" href="#team">Zespół</a></li>
+                    <li><a id="nav-menu-premiere" class="nav-menu-premiere font hvr-underline-from-center" href="#premiera">Premiera</a></li>          
+                    </ul> </div>
+                <div class="languages">
+                    <a href="#" id = "language" language = 'polish' class = 'active'> <img class="flag-language hvr-grow" src="/img/Flag_of_Poland.png" alt="Flag_of_Poland"></a>
+                    <a href="#" id = "language" language = 'russian'> <img class="flag-language hvr-grow" src="/img/Flag_of_Russia.svg.png" alt="Flag_of_Russia"></a>
+                    <a href="#" id = "language" language = 'english'> <img class="flag-language hvr-grow" src="/img/Flag_of_the_United_Kingdom.svg.png" alt="Flag_of_the_United_Kingdom"></a>
                 </div>
             </nav>
         </section>
 
 
         <section id="header" class="header section">
-            <div class="header__container">
+            <div class="header__container" id="header__container">
                 <section class="header">
-                    <div class="slider">
-                        <div class="slide active" style="background-image: url('./images/slider-img-1.jpg')">
+                    <div class="slider carousel" data-ride="carousel" > 
+                        <div class="carousel slide active jeden" data-slide-to="0" data-target="#carousel-example-generic" style="background-image: url('./images/slider-img-1.jpg')" >
                             <div class="container">
                                 <div class="caption">
-                                    <h1>Spływy kajakowe</h1>
-                                    <p>Porównaj ceny wypożyczalni.</p>
-                                    <a href="#premiera">Sprawdź ofertę</a>
+                                <h1 class="slide1">Kajak, łódka czy rower wodny?</h1>
+                                <p class="textSlide1">Porównaj oferty pobliskich wypożyczalni.</p>
+                                <a class="buttonSlide1 butSlide" href="#premiera">Sprawdź ofertę</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="slide" style="background-image: url('./images/slider-img-2.jpg')">
+                        <div class="slide dwa" data-slide-to="1" style="background-image: url('./images/slider-img-2.jpg')" data-target="#carousel-example-generic">
                             <div class="container">
                                 <div class="caption">
-                                    <h1>1 min</h1>
-                                    <p>Dokładnie tyle zajmie rezerwacja.</p>
-                                    <a href="#premiera">Rezerwuj</a>
+                                <h1 class="slide2">Trzy kliknięcia...</h1>
+                                <p class="textSlide2">Dzielą Cię od dokonania rezerwacji</p>
+                                <a class="buttonSlide2 butSlide" href="#premiera">Sprawdź sam!</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="slide" style="background-image: url('./images/slider-img-3.jpg')">
+                        <div class="slide trzy" data-slide-to="2" style="background-image: url('./images/slider-img-3.jpg')" data-target="#carousel-example-generic">
                             <div class="container">
                                 <div class="caption">
-                                    <h1>Impreza okolicznościowa?</h1>
-                                    <p>Pomożemy Ci w organizacji !</p>
-                                    <a href="#premiera">Kontakt</a>
+                                <h1 class="slide3">Sprawdź naszą aplikację!</h1>
+                                <p class="textSlide3">I miej "Wiosło" zawsze przy sobie </p>
+                                <a class="buttonSlide3 butSlide" href="#premiera">Sprawdż ją!</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="slide" style="background-image: url('./images/slider-img-4.jpg')">
+                        <div class="slide cztery" data-slide-to="3" style="background-image: url('./images/slider-img-4.jpg')" data-target="#carousel-example-generic">
                             <div class="container">
                                 <div class="caption">
-                                    <h1>Bądź na bieżąco</h1>
-                                    <p>Zapisz się na premierę i otrzymuj najlepsze oferty</p>
-                                    <a href="#premiera">Zapisz się</a>
+                                <h1 class="slide4">Bądź na bieżąco</h1>
+                                <p class="textSlide4">Zapisz się na premierę i otrzymuj najlepsze oferty.</p>
+                                <a class="buttonSlide4 butSlide" href="#premiera">Zapisz się</a>
                                 </div>
                             </div>
                         </div>
+ 
                     </div>
 
+                <!-- controls  -->
                     <div class="controls">
-                        <div class="prev">&#8592</div>
-                        <div class="next">&#8594</div>
-                    </div>
+                        <div class="prev">&#10094</div>
+                        <div class="next">&#10095</div>  
+                       </div>
                     <div class="indicator">
                     </div>
 
@@ -101,36 +104,36 @@
         </section>
 
         <section id="functions" class="functions section">
-            <div class="functions__container">
-                <h1 class="functions__title">CO POTRAFI WIOSŁO?</h1>
-                <div class="functions__list">
+            <div class="functions__container" id="functions__container">
+                <h1 class="functions__title" data-aos="slide-right"  data-aos-duration="800"   data-aos-once="true"><img src="./images/paddle.png" class="paddle" alt="paddle">CO POTRAFI WIOSŁO?<img src="./images/paddle.png" class="paddle" alt="paddle"></h1>
+                <div class="functions__list" data-aos="slide-right"  data-aos-duration="800"   data-aos-once="true">
                     <div class="functions__list-contain">
-                        <figure class="functions-list-part"><img src="./images/place.svg">
-                            <figcaption>Znajdzie najbliższe wypożyczalnie</figcaption>
+                        <figure class="functions-list-part hvr-pulse-grow" data-aos="fade-up"  data-aos-duration="1200"><img src="./images/place.svg">
+                        <figcaption class="flp1">Znajdzie najbliższe wypożyczalnie</figcaption>
                         </figure>
-                        <figure class="functions-list-part"><img src="./images/kayak.svg">
-                            <figcaption>Zarezerwuje Ci łódkę</figcaption>
+                        <figure class="functions-list-part hvr-pulse-grow" data-aos="fade-down"  data-aos-duration="1200"><img src="./images/kayak.svg">
+                        <figcaption class="flp2">Zarezerwuje Ci łódkę</figcaption>
                         </figure>
-                        <figure class="functions-list-part"><img src="./images/search.svg">
-                            <figcaption>Podpowie Ci jak pływać</figcaption>
+                        <figure class="functions-list-part hvr-pulse-grow" data-aos="fade-left"  data-aos-duration="1200"><img src="./images/search.svg">
+                        <figcaption class="flp3">Podpowie Ci jak pływać</figcaption>
                         </figure>
-                        <figure class="functions-list-part"><img src="./images/map.svg">
-                            <figcaption>Znajdzie drogę do bazy</figcaption>
+                        <figure class="functions-list-part hvr-pulse-grow" data-aos="fade-right"  data-aos-duration="1200"><img src="./images/map.svg">
+                        <figcaption class="flp4">Znajdzie drogę do bazy</figcaption>
                         </figure>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="more-about-product-section__wrapper" class="more-about-product-section__wrapper section">
-            <h1 class="more-about-product-section__header">Jak to działa?</h1>
+        <section id="more-about-product-section__wrapper" class="more-about-product-section__wrapper section" data-aos="slide-right"  data-aos-duration="800"   data-aos-once="true">
+            <h1 class="more-about-product-section__header"><img src="./images/paddle.png" class="paddle" alt="paddle">JAK TO DZIAŁA?<img src="./images/paddle.png" class="paddle" alt="paddle"></h1>
 
-            <div class="more-about-product-desc__wrapper">
+            <div class="more-about-product-desc__wrapper" id="more-about">
                 <div class="more-about-product-desc-text__wrapper">
                     <img src="./assets/icons/place.png" alt="place icon" class="more-about-product-desc-image" />
-                    <h2 class="more-about-product-desc-header"><span>Szukasz wypożyczalni?</span> <span>Pomożemy!</span>
+                <h2 class="more-about-product-desc-header mapdh1">Szukasz wypożyczalni? <br> Pomożemy!
                     </h2>
-                    <p class="more-about-product-desc-paragraph">
+                <p class="more-about-product-desc-paragraph mapdp1">
                         Biwakowanie przy ognisku Ci się znudziło? Szukasz wodnych atrakcji?
                         U nas znajdziesz wszystkie wypożyczalnie sprzętów wodnych w Twojej
                         okolicy. Nie czekaj, zarejestruj się!
@@ -138,28 +141,25 @@
                 </div>
                 <div class="more-about-product-desc-text__wrapper">
                     <img src="./assets/icons/kayak.png" alt="kayak icon" class="more-about-product-desc-image" />
-                    <h2 class="more-about-product-desc-header"><span>Rezerwacja łódki</span> <span>w 1 minutę!</span>
-                    </h2>
-                    <p class="more-about-product-desc-paragraph">
+                <h2 class="more-about-product-desc-header mapdh2">Rezerwacja łódki <br> w 1 minutę!</h2>
+                <p class="more-about-product-desc-paragraph mapdp2">
                         Nie wiesz na czym chcesz pływać? Albo wiesz doskonale, ale nie chcesz tracić czasu na zbędne
                         formalności? Z nami zarezerwujesz wymarzony sprzęt szybciej niż zaparzy się kawa!
                     </p>
                 </div>
                 <div class="more-about-product-desc-text__wrapper">
                     <img src="./assets/icons/search.png" alt="search icon" class="more-about-product-desc-image" />
-                    <h2 class="more-about-product-desc-header"><span>Nie umiesz pływać?</span> <span>Żaden
-                            problem!</span>
+                <h2 class="more-about-product-desc-header mapdh3">Nie umiesz pływać? <br> Żaden problem!
                     </h2>
-                    <p class="more-about-product-desc-paragraph">
-                        To Twój pierwszy raz? Nie wiesz od czego zacząć? Powiemy Ci jak dobrze trzymać wiosło! Sprawdź
-                        nasze
+                <p class="more-about-product-desc-paragraph mapdp3">
+                    To Twój pierwszy raz? Nie wiesz od czego zacząć? Powiemy Ci jak dobrze trzymać wiosło! Sprawdź nasze
                         poradniki pływania pisane przez profesjonalnych trenerów.
                     </p>
                 </div>
                 <div class="more-about-product-desc-text__wrapper">
                     <img src="./assets/icons/map.png" alt="map icon" class="more-about-product-desc-image" />
-                    <h2 class="more-about-product-desc-header"><span>Pokażemy Ci jak</span> <span>wrócić!</span></h2>
-                    <p class="more-about-product-desc-paragraph">
+                <h2 class="more-about-product-desc-header mapdh4">Pokażemy Ci <br> jak wrócić!</h2>
+                <p class="more-about-product-desc-paragraph mapdp4">
                         Nie jesteś mistrzem w orientacji w terenie? Z "Wiosłem" możesz zawsze czuć się bezpiecznie.
                         Udostępnimy Ci mapy wód offline, które doprowadzą Cię do bazy.
                     </p>
@@ -167,13 +167,13 @@
             </div>
 
             <img src="./assets/images/more-about-product-section-illustration.svg" alt="product foto"
-                class="more-about-product-image" />
+                class="more-about-product-image" data-aos="slide-up"  data-aos-duration="800"   data-aos-once="true"/>
         </section>
 
-        <div id="team" class="infomacja">
+        <div id="team" class="infomacja" data-aos="slide-left"  data-aos-duration="800"   data-aos-once="true">
             <div class="ioz">
-                <h2>
-                    informacje o zespole
+            <h2 class="infoAboutTeam"><img src="./images/paddle.png" class="paddle" alt="paddle">
+                    informacje o zespole<img src="./images/paddle.png" class="paddle" alt="paddle">
                 </h2>
 
             </div>
@@ -192,10 +192,10 @@
                                     class="far fa-address-card"></i></a></li>
                     </ul>
                     <div class="text">
-                        <h2>
+                    <h2 class="nameKamil">
                             Kamil Jastrzembowski
                         </h2>
-                        <p>
+                    <p class="aboutKamil">
                             Jestem absolwentem wyższej Szkoły Turystyki i Hotelarstwa w Gdańsku, w którym obecnie też
                             mieszkam. Aktualnie całą swoją uwagę koncentruję na rozwijaniu umiejętności w zakresie Front
                             End
@@ -236,10 +236,10 @@
                         <li><a href="#" target="_blank"><i class="far fa-address-card"></i></a></li>
                     </ul>
                     <div class="text">
-                        <h2>
+                    <h2 class="nameJarek">
                             Jaroslaw Witowski
                         </h2>
-                        <p>
+                    <p class="aboutJarek">
                             Inżynier elektryk z pasją do programowania. Uwielbiam poznawać nowe technologie, tworzyć
                             nietuzinkowe rozwiązania dla typowych problemów i przede wszystkim… lubię naleśniki.
                         </p>
@@ -260,14 +260,12 @@
                                     class="far fa-address-card"></i></a></li>
                     </ul>
                     <div class="text">
-                        <h2>
+                    <h2 class="nameDima">
                             Dima Zaichenko
                         </h2>
-                        <p>
-                            Urodziłem się w Ukrainie. Swoją pasję znalazłem w fitnesie. Do Polski przyjechałem żeby
-                            ukończyć
-                            magisterkę. Teraz jestem master-trenerem i prezenterem Polski w tej sferze ale lubie
-                            wyzwania i
+                    <p class="aboutDima">
+                        Urodziłem się w Ukrainie. Swoją pasję znalazłem w fitnesie. Do Polski przyjechałem żeby ukończyć
+                        magisterkę. Teraz jestem master-trenerem i prezenterem Polski w tej sferze ale lubie wyzwania i
                             tym razem wybrałem Front-End-Development.
                         </p>
 
@@ -276,40 +274,47 @@
             </section>
         </div>
 
-        <div id="premiera" class="premiera section">
+        <div id="premiera" class="premiera section" data-aos="slide-right"  data-aos-duration="800"   data-aos-once="true">
             <div class="premiera__text">
                 <h2 class="title">
-                    bądź pierwszy <br> zapisz się na premierę
+                    ZAPISZ SIĘ NA PREMIERĘ
                 </h2>
             </div>
-
+            <div class="premiera__container-holder">
             <div class="premiera__container blur">
-                <label class="premiera__container__form">Zapis na premierę</label>
+                
+                <label class="premiera__container__form">Formularz kontaktowy</label>
                 <form class="premiera__container__box" onsubmit="return false">
                     <div class="premiera__container__inputBox">
-                        <label class="inputBox__text">Imię</label>
+                        <label class="inputBox__text iBname">Imię</label>
                         <input type="text" class="userInput" id="user-name" value="" required>
                     </div>
                     <div class="premiera__container__inputBox">
-                        <label class="inputBox__text">Mail</label>
+                        <label class="inputBox__text iBmail">Adres e-mail</label>
                         <input type="email" class="userInput" required>
                     </div>
-                    <div class="premiera__container__inputBox">
-                        <label class="inputBox__text">Komentarz</label>
+                    <!-- <div class="premiera__container__inputBox">
+                    <label class="inputBox__text iBkoment">Komentarz</label>
                         <textarea name="message" class="userInput"></textarea>
-                    </div>
-                    <button type="submit" class="premiera__container__buttom">
-                        <a onclick="getName(); toggle()">WYŚLIJ</a>
-                    </button>
+                    </div> -->
+                    <button type="submit" class="premiera__container__button" onclick="getName(); toggle()">
+                        <a class="premiera__send ">WYŚLIJ</a>
+                </button>
                 </form>
             </div>
-            <div class="premiera__text">
+            <div class="premiera__info">
                 <h3 class="informacja">
-                    Wysłany zostanie tylko jeden mail z informacją o premierze. Zapewniamy bezpieczeństwo danych.
-                </h3>
+                    ZAPISZ SIĘ NA PREMIERĘ NASZEJ APLIKACJI
+                </H3>
+                <h4 class="info-text">
+                    I BĄDŹ PIERWSZYM KTÓRY DOWIE SIĘ O NIEJ DOWIE!
+            </h4>
+                <p class="info-p">
+                    *Zapewniamy bezpieczeństwo danych personalnych. Użyjemy ich tylko do wysłania jedengo maila :)<br>
+                    *Dołączając akceptujesz Regulamin usługi, Politykę prywatności i Politykę antyspamową.</p>
             </div>
         </div>
-
+        </div>
         <footer id="contact" class="footer">
             <div class="footer-container">
                 <p class="footer-container__company__name">&#174 Dancing Potatoes Sp. z o.o.</p>
@@ -324,12 +329,12 @@
             <img src="./images/logo_wioslo.png" alt="logo_wioslo" class="logo-popup">
             <img src="./images/birds.jpg" alt="birds" class="birds-popup">
         </div>
-        <h1>Cześć&nbsp;<p id="user"></p>!</h1>
-        <h2>Dziękujemy za rejestrację w premierze!</h2>
-        <p>Czy chcesz zagrać w grę?</p>
+        <h1 class="popup-user">Cześć&nbsp;<p id="user"></p>!</h1>
+        <h2 class="popup-thanks">Dziękujemy za rejestrację w premierze!</h2>
+        <p class="popup-question">Czy chcesz zagrać w grę?</p>
         <div class="popup-a__container">
-            <a href="#premiera" onclick="toggle()">Nie, dziękuję.</a>
-            <a href="http://www.dancing-potatoes.jfdzr1.is-academy.pl/game" onclick="toggle()">Tak! Pewnie!</a>
+            <a href="#premiera" onclick="toggle()" class="popup-no">Nie, dziękuję.</a>
+            <a href="http://www.dancing-potatoes.jfdzr1.is-academy.pl/game" onclick="toggle()" class="popup-yes">Tak! Pewnie!</a>
         </div>
     </div>
     <a id="button-up"></a>
@@ -341,7 +346,12 @@
         </div>
     </div>
     <script src="./js/header-slider.js"></script>
-
+    <script src="./js/multiple-languages.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+       <script type="text/javascript" src="./js/hightlight.js"></script>
+       <script src="./js/jquery.js"></script>
 </body>
-
 </html>

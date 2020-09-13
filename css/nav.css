@@ -1,4 +1,8 @@
-.nav{
+ul{
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .nav{
   width: 100%;
   position: fixed;
   z-index: 3;
@@ -15,7 +19,7 @@
     border: 2px var(--dark-blue-color) solid;
 }
 .nav__container a{
-    margin: 0 100px;
+    margin: 0 15px 0 30px;
     height: 100%;
 }
 
@@ -31,38 +35,67 @@
     height: 50px;
     margin-bottom: -70px;
 }
-
+.nav.small a{
+    font-size: 14px;
+}
 .nav-menu a{
-    font-size: 20px;
-    border-radius: 10px;
+    font-size: 18px;
+
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     color: black;  
     margin: 0;
     padding: 0;
-    width: 10%;
     height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+  
 }
-.font.small{
-    font-size: 12px;
-    font-weight: lighter;
+.light{
+    color: white;
+}
+.nav-menu-contact.light {
+    color: white
+}
+.nav-menu a.small{
+    font-size: 1px;
     transition: 0.5s;
 }
 .logo{
     height: 100%;
 }
 
-#nav-menu a:hover {
-    border-bottom: 4px solid black;
+/* #nav-menu a:hover {
+    border-bottom: 2px solid black;
     transition: 0.2s ease;
-  }
+  } */
 
+.languages{
+    display: flex;
 
+    align-items: center;
+  
+}
+  
+#language{
+    display: flex;
+    margin: 0 10px;
+    padding: 0;
+}
+    
+.flag-language{
+    width: 40px;
+    height: 30px;
+    border: #000000 solid 1px;
+}
+@media (max-width: 999px){
+    .nav-menu a{
+        font-size: 15px;
+}
+}
 @media (max-width: 769px){
 
     .nav__container{
@@ -76,7 +109,7 @@
 
     .nav-menu a{
         text-align: center;
-        font-size: 12px;
+        font-size: 10px;
         border-radius: 3px;
         font-family: 'Montserrat', sans-serif;
         text-decoration: none;
@@ -93,19 +126,70 @@
         justify-content: space-evenly;
         align-items: center;
         font-family: Montserrat;
-        width: 100vw;
+        width: 100.5%;
         border: 2px solid #04738D;
         background: white;
         height: 50px;
     }
-
-    #nav-menu a:hover {
-        border-bottom: 2px solid black;
-      }
-      .nav.small{
-        height: 0px;
-        margin-bottom: -28px;
-        border: none;
+    .nav.small a{
+        font-size: 8px;
+       
     }
-    
+    .nav.small{
+        margin-top: -48.5px;
+    }
+ 
+    .languages{
+        display: flex;
+        align-self: flex-end;
+        
+    }
+    .more-about-product-image{
+        width: 100%;
+    }
+.logo{
+    margin-left: -150px;
+}
+    #language{
+        margin-top: -180px;
+    }
+}
+@media (max-width: 550px){
+    .nav-menu{
+        width: 101%;
+    }
+}
+@media (max-width: 350px){
+    .more-about-product-section__header{
+        font-size:35px
+    }
+    body{
+        width: 100%;
+    }
+    .header{
+        width: 350px;
+    }
+   .header
+    .functions__container{
+        width: 350px;
+    }
+    .more-about-product-section__wrapper{
+        width: 350px;
+    }
+    #team{
+        width: 350px;
+    }
+    .functions__container{
+        width: 350px;
+    }
+    #premiera{
+        width: 350px;
+    }
+    .footer{
+        width: 350px;
+    }
+}
+li.current a{
+    color: #04738D;
+    font-weight: bolder;
 }

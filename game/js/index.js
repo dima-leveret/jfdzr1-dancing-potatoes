@@ -5,6 +5,7 @@ startButton.disabled = true;
 let easy = document.querySelector(".easy-difficulty");
 let hard = document.querySelector(".hard-difficulty");
 let difficultyLevel = 0;
+let BGmusic = document.getElementById('BGmusic');
 
 easy.addEventListener('click', () => {
     difficultyLevel = 1200;
@@ -22,6 +23,7 @@ hard.addEventListener('click', () => {
 
 startButton.addEventListener('click', () => {
     gameStart(difficultyLevel);
+    BGmusic.play();
 });
 
 function gameStart(difficultyLevel) {
@@ -30,6 +32,7 @@ function gameStart(difficultyLevel) {
 
     let game = new Game(context, difficultyLevel);
     requestAnimationFrame(gameLoop);
+    
 
     function gameLoop() {
         startButton.disabled = true;

@@ -6,6 +6,9 @@ import River from './river.class.js';
 import { isCollide } from './utilities.js';
 import Dashboard from './dashboard.class.js';
 
+const SoundError = document.getElementById('error');
+const SoundPoint = document.getElementById('point');
+
 export default class Game {
 
     constructor(context, objectSpawnRate) {
@@ -110,18 +113,31 @@ export default class Game {
         this.pointsTable.forEach(kayak => {
             kayak.update();
         });
-
-        if (isCollide(this.playerKayak, this.obstacle)) {
+        let ErrorSound = true;
+        if(isCollide(this.playerKayak, this.obstacle)){
+            if (ErrorSound) {
+                SoundError.pause();
+                SoundError.currentTime = 0;
+                SoundError.play();
+                ErrorSound = false;
+            }    
             this.pause = true;
             let screenTryAgain = document.querySelector(".try-again");
             screenTryAgain.style.display = "block";
             document.onkeydown = (e) => this.tryAgain(e);
             this.dashboard.elapsedTime = 0;
         }
+        let PointSound = true;
 
         if (isCollide(this.playerKayak, this.pointsTable)) {
             this.pointsTable.splice(this.pointsTable, 1);
             this.score += 10;
+            if (PointSound) {
+                SoundPoint.pause();
+                SoundPoint.currentTime = 0;
+                SoundPoint.play();
+                PointSound = false;
+            }  
             this.scoreDisplay.innerHTML = this.score;
         }
 
