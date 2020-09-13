@@ -6,8 +6,6 @@ import River from './river.class.js';
 import { isCollide } from './utilities.js';
 import Dashboard from './dashboard.class.js';
 
-var SoundError = document.getElementById('error');
-var SoundPoint = document.getElementById('point');
 
 export default class Game{
 
@@ -19,43 +17,39 @@ export default class Game{
         this.raceDistance = 1;
         this.obstacle = [];    
         this.pointsTable = [];  
-        this.functionCount = 0;
-        this.score = 0;
-        this.timeOut = 1000;
-        this.scoreDisplay = document.querySelector('.score');
+
         new Controller({river:this.river, playerKayak:this.playerKayak});
 
-        setInterval(()=>{this.populateObstaclesAndPoints(), this.playerKayak.speed+=2, this.obstacle.speed+=2}, this.timeOut);
+        setInterval(()=>this.populateObstacles(), 1000);
+        setInterval(()=>this.populatePoints(), 200);
+
+
         this._paused = false;
         this._gameOver = false;
     }
 
-    
-
-    populateObstaclesAndPoints(){       
+    populateObstacles(){       
         if(this._paused) return; 
-        let lanesRotate = [0,1,2,3,4];
-        
-        for(let i = lanesRotate.length-1; i > 0; i--){
-            const j = Math.floor(Math.random() * i);
-            const temp = lanesRotate[i]
-            lanesRotate[i] = lanesRotate[j]
-            lanesRotate[j] = temp
-          }
 
-        let lane = lanesRotate[0];
-        let lane2 = lanesRotate[1];
-        let lane3 = lanesRotate[2];
+        let obstacleObject = new Obstacles(this);      
+        this.obstacle.push(obstacleObject);
+        this.pointsTable.push()
+    }
 
-        let obstacleObject = new Obstacles(this, lane) ;    
-        let obstacleObject2 = new Obstacles(this, lane2) ;   
-        this.obstacle.push(obstacleObject, obstacleObject2);
+    set pause(pause){
+        this._paused = pause;
+    }
 
-        if(this.functionCount%2===0){
-        let pointsObject = new Points(this, lane3);
-        this.pointsTable.push(pointsObject)
-        }
-        this.functionCount++;
+    get pause(){
+        return this._paused;
+    }
+
+    populatePoints(){       
+        if(this._paused) return; 
+
+        let pointsObject = new Points(this);      
+        this.pointsTable.push(pointsObject);
+
     }
 
     set pause(pause){
@@ -79,20 +73,20 @@ export default class Game{
         let screenTryAgain = document.querySelector(".try-again");
         screenTryAgain.style.display = "none";
         document.onkeydown = null;
-        this.score = 0 ; 
-        this.scoreDisplay.innerHTML = this.score;  
     }
 
 
     update(){ 
+
         if(this._gameOver) return;
 
         this.dashboard.updateTime();
-    
+
         if(this._paused) return;
 
         this.river.update();
         this.dashboard.update();
+
         if(this.dashboard.distanceRemaining <= 0){
             this._gameOver = true;
             this.pause = true;
@@ -115,42 +109,17 @@ export default class Game{
         this.pointsTable.forEach(kayak => {
             kayak.update();
         });
-        var ErrorSound = true;
+
+
         if(isCollide(this.playerKayak, this.obstacle)){
-            if (ErrorSound) {
-                SoundError.pause();
-                SoundError.currentTime = 0;
-                SoundError.play();
-                ErrorSound = false;
-            }    
+            
             this.pause = true;
             let screenTryAgain = document.querySelector(".try-again");
             screenTryAgain.style.display = "block";
-            document.onkeydown = (e) => this.tryAgain(e);
-            this.dashboard.elapsedTime = 0;
-     
+            document.onkeydown = (e) => this.tryAgain(e);       
         }
-        var PointSound = true;
+    }
 
-        if(isCollide(this.playerKayak, this.pointsTable)){
-            this.pointsTable.splice(this.pointsTable, 1);      
-            this.score += 10;
-            if (PointSound) {
-                SoundPoint.pause();
-                SoundPoint.currentTime = 0;
-                SoundPoint.play();
-                PointSound = false;
-            }      
-            this.scoreDisplay.innerHTML = this.score;  
-            
-        }
-
-        if (document.hidden) {
-            this.pause = true;
-            this.pointsTable.splice(1,1);
-            this.obstacle.splice(1,1);
-        }
-    } 
 
     recordTime(){
 
@@ -177,4 +146,6 @@ export default class Game{
 
         return min;
     }
+
+
 }

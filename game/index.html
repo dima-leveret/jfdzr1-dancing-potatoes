@@ -6,10 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_io/favicon-32x32.png">
+
+    <link rel="stylesheet" href="/game/css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <title>Wiosło - Game</title>
     <script src="./js/index.js" defer type="module"></script>
 </head>
 <body>
+
+
+    <header>
+        <div class="dws-menu">
+            <ul class="dws-ul">
+                <div class="start_pause">
+                    <li class="dws-li"><a href="#">START</a></li>
+                    <li class="dws-li"><a href="#">PAUSE</a></li>
+                </div>
+                <li class="dws-li"><a href="#">Wyniki</a></li>
+                <li class="dws-li"><a href="#"></i>Instrukcja do gry</a></li>
+                <li class="dws-li"><a href="#">Powrót do głównej strony</a></li>
+            </ul>
+        </div>
+    </header>
 
     <canvas id="canvas" width="512" height="850"></canvas>
 
@@ -22,7 +41,8 @@
             <div class="distance-meter meter-box">  
                 <div class="distance">1 KMs</div>
                 <div class="label">LEFT</div>
-                <div class="score">0</div>
+
+
             </div>
 
             <div class="messages">
@@ -32,16 +52,15 @@
                     <div class="game-over-message">You have finished in</div>
                     <div class="time-taken">00:00:00:00</div>
                     <div class="game-over-message min-message">Record - 00:00:00:00</div>
-                    <button onclick="location.reload()">Menu</button>
-                    <button class="easy-difficulty">Easy</button>
-                    <button class="hard-difficulty">Hard</button>
-                    <button class="start-button">Start</button>
+
+                    <button onclick="location.reload()">Try Again</button>
+
                 </div>
             </div>
         </div>
     </div>
-    <audio src="./music/error.mp3" id="error"></audio>
-    <audio src="./music/point.mp3" id="point"></audio>
-    <audio src="./music/Stokrotka polna - Gdzie strumyk plynie z wolna.mp3" id="BGmusic"></audio>
+
+    
+
 </body>
 </html>
