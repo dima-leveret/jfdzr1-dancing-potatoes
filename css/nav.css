@@ -154,42 +154,21 @@ ul{
         margin-top: -180px;
     }
 }
-@media (max-width: 550px){
-    .nav-menu{
-        width: 101%;
-    }
+
+.languages{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 30px;
 }
-@media (max-width: 350px){
-    .more-about-product-section__header{
-        font-size:35px
-    }
-    body{
-        width: 100%;
-    }
-    .header{
-        width: 350px;
-    }
-   .header
-    .functions__container{
-        width: 350px;
-    }
-    .more-about-product-section__wrapper{
-        width: 350px;
-    }
-    #team{
-        width: 350px;
-    }
-    .functions__container{
-        width: 350px;
-    }
-    #premiera{
-        width: 350px;
-    }
-    .footer{
-        width: 350px;
-    }
+
+#language{
+    margin: 0 20px;
+    padding: 0;
 }
-li.current a{
-    color: #04738D;
-    font-weight: bolder;
+
+.flag-language{
+    width: 40px;
+    height: 30px;
+    border: #000000 solid 1px;
 }

@@ -74,105 +74,9 @@ const footerContainerContactPhoneEl = document.querySelector('.footer-container_
 const footerContainerRegulationsEl = document.querySelector('.footer-container__regulations');
 const footerContainerPrivacyEl = document.querySelector('.footer-container__privacy');
 
-// popup
 
-const popupUserEl = document.querySelector(".popup-user")
-const popupThanksEl = document.querySelector(".popup-thanks")
-const popupQuestionEl = document.querySelector(".popup-question")
-const popupNoEl = document.querySelector(".popup-no")
-const popupYesEl = document.querySelector(".popup-yes")
+var translation = {
 
-link.forEach(el => {
-    el.addEventListener('click', () => {
-        langEl.querySelector('.active').classList.remove('active');
-        el.classList.add('active');
-
-        const attr = el.getAttribute('language');
-
-        // navigation
-        navMenuPremiereEl.textContent = translation[attr].navMenuPremiere;
-        navMenuFunctionEl.textContent = translation[attr].navMenuFunction;
-        navMenuInfoEl.textContent = translation[attr].navMenuInfo;
-        navMenuTeamEl.textContent = translation[attr].navMenuTeam;
-        navMenuContactEl.textContent = translation[attr].navMenuContact;
-
-        // slider
-        slide1El.textContent = translation[attr].slide1;
-        slide2El.textContent = translation[attr].slide2;
-        slide3El.textContent = translation[attr].slide3;
-        slide4El.textContent = translation[attr].slide4;
-
-        textSlide1EL.textContent = translation[attr].textSlide1;
-        textSlide2EL.textContent = translation[attr].textSlide2;
-        textSlide3EL.textContent = translation[attr].textSlide3;
-        textSlide4EL.textContent = translation[attr].textSlide4;
-
-        buttonSlide1El.textContent = translation[attr].buttonSlide1;
-        buttonSlide2El.textContent = translation[attr].buttonSlide2;
-        buttonSlide3El.textContent = translation[attr].buttonSlide3;
-        buttonSlide4El.textContent = translation[attr].buttonSlide4;
-
-        // app functions
-        functionsTitleEl.innerHTML = translation[attr].functionsTitle;
-
-        appFunction1El.textContent = translation[attr].appFunction1;
-        appFunction2El.textContent = translation[attr].appFunction2;
-        appFunction3El.textContent = translation[attr].appFunction3;
-        appFunction4El.textContent = translation[attr].appFunction4;
-
-        // How it works?
-        moreAboutProductSectionHeaderEl.innerHTML = translation[attr].moreAboutProductSectionHeader;
-
-        mapdh1El.innerHTML = translation[attr].mapdh1;
-        mapdh2El.innerHTML = translation[attr].mapdh2;
-        mapdh3El.innerHTML = translation[attr].mapdh3;
-        mapdh4El.innerHTML = translation[attr].mapdh4;
-
-        mapdp1El.innerHTML = translation[attr].mapdp1;
-        mapdp2El.innerHTML = translation[attr].mapdp2;
-        mapdp3El.innerHTML = translation[attr].mapdp3;
-        mapdp4El.innerHTML = translation[attr].mapdp4;
-
-        // information about team
-        infoAboutTeamEl.innerHTML = translation[attr].infoAboutTeam;
-
-        nameKamilEl.innerHTML = translation[attr].nameKamil;
-        nameJarekEl.innerHTML = translation[attr].nameJarek;
-        nameDimaEl.innerHTML = translation[attr].nameDima;
-
-        aboutKamilEl.innerHTML = translation[attr].aboutKamil;
-        aboutJarekEl.innerHTML = translation[attr].aboutJarek;
-        aboutDimaEl.innerHTML = translation[attr].aboutDima;
-
-        // premiere form
-        titlePremiereEl.innerHTML = translation[attr].titlePremiere;
-
-        premieraContainerFormEl.innerHTML = translation[attr].premieraContainerForm;
-        iBnameEL.innerHTML = translation[attr].iBname;
-        iBmailEl.innerHTML = translation[attr].iBmail;
-        // iBkomentEl.innerHTML = translation[attr].iBkoment;
-        premieraContainerButtonEl.innerHTML = translation[attr].premieraContainerButton;
-        informacjaEl.innerHTML = translation[attr].informacja;
-        infoTextEl.innerHTML = translation[attr].infoText;
-        infoPEl.innerHTML = translation[attr].infoP;
-
-        // footer
-        footerContainerCompanyNameEl.innerHTML = translation[attr].footerContainerCompanyName;
-        footerContainerContactPhoneEl.innerHTML = translation[attr].footerContainerContactPhone;
-        footerContainerRegulationsEl.innerHTML = translation[attr].footerContainerRegulations;
-        footerContainerPrivacyEl.innerHTML = translation[attr].footerContainerPrivacy;
-
-        //popup
-        popupUserEl.innerHTML = translation[attr].popupUser;
-        popupThanksEl.innerHTML = translation[attr].popupThanks;
-        popupQuestionEl.innerHTML = translation[attr].popupQuestion;
-        popupNoEl.innerHTML = translation[attr].popupNo;
-        popupYesEl.innerHTML = translation[attr].popupYes;
-
-    });
-});
-
-let translation = {
     'polish': {
         // navigation
         'navMenuPremiere': 'Premiera',
@@ -421,3 +325,96 @@ let translation = {
     }
     
 }
+
+const markLanguage = (attr) => {
+    console.log('mark lang', attr);
+    // navigation
+    navMenuPremiereEl.textContent = translation[attr].navMenuPremiere;
+    navMenuFunctionEl.textContent = translation[attr].navMenuFunction;
+    navMenuInfoEl.textContent = translation[attr].navMenuInfo;
+    navMenuTeamEl.textContent = translation[attr].navMenuTeam;
+    navMenuContactEl.textContent = translation[attr].navMenuContact;
+
+    // slider
+    slide1El.textContent = translation[attr].slide1;
+    slide2El.textContent = translation[attr].slide2;
+    slide3El.textContent = translation[attr].slide3;
+    slide4El.textContent = translation[attr].slide4;
+
+    textSlide1EL.textContent = translation[attr].textSlide1;
+    textSlide2EL.textContent = translation[attr].textSlide2;
+    textSlide3EL.textContent = translation[attr].textSlide3;
+    textSlide4EL.textContent = translation[attr].textSlide4;
+
+    buttonSlide1El.textContent = translation[attr].buttonSlide1;
+    buttonSlide2El.textContent = translation[attr].buttonSlide2;
+    buttonSlide3El.textContent = translation[attr].buttonSlide3;
+    buttonSlide4El.textContent = translation[attr].buttonSlide4;
+
+    // app functions
+    functionsTitleEl.textContent = translation[attr].functionsTitle;
+
+    appFunction1El.textContent = translation[attr].appFunction1;
+    appFunction2El.textContent = translation[attr].appFunction2;
+    appFunction3El.textContent = translation[attr].appFunction3;
+    appFunction4El.textContent = translation[attr].appFunction4;
+
+    // How it works?
+    moreAboutProductSectionHeaderEl.innerHTML = translation[attr].moreAboutProductSectionHeader;
+
+    mapdh1El.innerHTML = translation[attr].mapdh1;
+    mapdh2El.innerHTML = translation[attr].mapdh2;
+    mapdh3El.innerHTML = translation[attr].mapdh3;
+    mapdh4El.innerHTML = translation[attr].mapdh4;
+
+    mapdp1El.innerHTML = translation[attr].mapdp1;
+    mapdp2El.innerHTML = translation[attr].mapdp2;
+    mapdp3El.innerHTML = translation[attr].mapdp3;
+    mapdp4El.innerHTML = translation[attr].mapdp4;
+
+    // information about team
+    infoAboutTeamEl.innerHTML = translation[attr].infoAboutTeam;
+
+    nameKamilEl.innerHTML = translation[attr].nameKamil;
+    nameJarekEl.innerHTML = translation[attr].nameJarek;
+    nameDimaEl.innerHTML = translation[attr].nameDima;
+
+    aboutKamilEl.innerHTML = translation[attr].aboutKamil;
+    aboutJarekEl.innerHTML = translation[attr].aboutJarek;
+    aboutDimaEl.innerHTML = translation[attr].aboutDima;
+
+    // premiere form
+    titlePremiereEl.innerHTML = translation[attr].titlePremiere;
+
+    premieraContainerFormEl.innerHTML = translation[attr].premieraContainerForm;
+    iBnameEL.innerHTML = translation[attr].iBname;
+    iBmailEl.innerHTML = translation[attr].iBmail;
+    iBkomentEl.innerHTML = translation[attr].iBkoment;
+    premieraContainerButtomEl.innerHTML = translation[attr].premieraContainerButtom;
+    informacjaEl.innerHTML = translation[attr].informacja;
+
+    // footer
+    footerContainerCompanyNameEl.innerHTML = translation[attr].footerContainerCompanyName;
+    footerContainerContactPhoneEl.innerHTML = translation[attr].footerContainerContactPhone;
+    footerContainerRegulationsEl.innerHTML = translation[attr].footerContainerRegulations;
+    footerContainerPrivacyEl.innerHTML = translation[attr].footerContainerPrivacy;
+}
+
+link.forEach(el => {
+    el.addEventListener('click', () => {
+        langEl.querySelector('.active').classList.remove('active');
+        el.classList.add('active');
+
+        const attr = el.getAttribute('language');
+        window.localStorage.setItem('language', attr);
+        markLanguage(attr);
+        
+    });
+});
+
+const selectedLanguage = window.localStorage.getItem('language');
+if (selectedLanguage) {
+    markLanguage(selectedLanguage);
+}
+
+
