@@ -1,0 +1,28 @@
+let pageIndex = 1;
+showPages(pageIndex);
+
+function plusPage(n) {
+    showPages(pageIndex += n);
+};
+
+function currentPage(n) {
+    showPages(pageIndex = n);
+};
+
+function showPages(n) {
+    let pages = document.getElementsByClassName("instrukja-container__pages");
+
+    if (n > pages.length) {
+        pageIndex = 1;
+    }
+
+    if (n < 1) {
+        pageIndex = pages.length;
+    }
+
+    for (let i = 0; i < pages.length; i++){
+        pages[i].style.display = "none";
+    }
+
+    pages[pageIndex-1].style.display = "block";
+}

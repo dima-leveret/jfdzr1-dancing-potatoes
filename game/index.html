@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_io/favicon-32x32.png">
+    <link rel="stylesheet" href="/game/menu.css" type="text/css">
+    <link rel="stylesheet" href="/game/instrukja.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/game/menu go gry/main-menu.css" type="text/css">
+    <title>Wiosło - Game</title>
+    <script src="./js/index.js" defer type="module"></script>
+</head>
+<body>
+    <div class="blur">
+    <header>
+        <div class="dws-menu">
+            <ul class="dws-ul">
+                <li class="dws-li"><a href="#">PAUSE</a></li>
+                <li class="dws-li" onclick = "pop()"><a href="#"></i>MENU</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <canvas id="canvas" width="900" height="1050"></canvas>
+    
+    <div id="scoreboard">
+        <div class="inner-board">
+            <div class="time-meter meter-box">
+                    <div class="label">TIME LAPSED:-</div>
+                    <div class="time">00:00:00</div>                    
+            </div>
+            <div class="distance-meter meter-box">  
+                <div class="distance">1 KMs</div>
+                <div class="label">LEFT</div>
+                <div class="score">0</div>
+            </div>
+
+            <div class="messages">
+                <div class="try-again">Press SPACEBAR if You want to try again</div>
+                <div class="game-over">
+                    <div>Game Over</div>
+                    <div class="game-over-message">You have finished in</div>
+                    <div class="time-taken">00:00:00:00</div>
+                    <div class="game-over-message min-message">Record - 00:00:00:00</div>
+                    <button onclick="location.reload()">Menu</button>
+                        <button  class="easy-difficulty">Easy</button>
+                        <button  class="hard-difficulty">Hard</button>
+      
+                    <button class="start-button">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="dws-menu pop">
+		<ul class="dws-ul">
+			<div class="start">
+				<li class="dws-li easyBtn"><a href="#">EASY</a></li>
+				<li class="dws-li startBtn"><a href="#">START</a></li>
+				<li class="dws-li hardBtn"><a href="#">HARD</a></li>
+			</div>
+			<li class="dws-li"><a href="#">Wyniki</a></li>
+			<li class="dws-li" onclick = "pop2()"><a href="#"></i>Instrukcja do gry</a></li>
+			<li class="dws-li"><a href="#">Powrót do głównej strony</a></li>
+		</ul>
+    </div>
+
+    <div class="instrukja-container pop2">
+        <div class="instrukja-container__pages fade">
+            <!-- <div class="instrukja-container__numberPage">1/4</div> -->
+            <img src="/game/instrukja do gry/img/1.png" style="width: 100%" alt="">
+        </div>
+
+        <div class="instrukja-container__pages fade">
+            <!-- <div class="instrukja-container__numberPage">2/4</div> -->
+            <img src="/game/instrukja do gry/img/2.png" style="width: 100%" alt="">
+        </div>
+
+        <div class="instrukja-container__pages fade">
+            <!-- <div class="instrukja-container__numberPage">3/4</div> -->
+            <img src="/game/instrukja do gry/img/3.png" style="width: 100%" alt="">
+        </div>
+
+        <div class="instrukja-container__pages fade">
+            <!-- <div class="instrukja-container__numberPage">4/4</div> -->
+            <img src="/game/instrukja do gry/img/4.png" style="width: 100%" alt="">
+        </div>
+
+        <a class="prev" onclick="plusPage(-1)">&#10094</a>
+        <a class="next" onclick="plusPage(1)">&#10095</a>
+    </div>
+    
+</body>
+
+<script src="/game/main-menu.js"></script>
+<script src="/game/instrukja.js"></script>
+    <audio src="./music/error.mp3" id="error"></audio>
+    <audio src="./music/point.mp3" id="point"></audio>
+    <audio src="./music/Stokrotka polna - Gdzie strumyk plynie z wolna.mp3" id="BGmusic"></audio>
+</body>
+</html>
