@@ -40,9 +40,9 @@
                     <li><a id="nav-menu-premiere" class="nav-menu-premiere font hvr-underline-from-center" href="#premiera">Premiera</a></li>          
                     </ul> </div>
                 <div class="languages">
-                    <a href="#" id = "language" language = 'polish' class = 'active'> <img class="flag-language hvr-grow" src="./img/Flag_of_Poland.png" alt="Flag_of_Poland"></a>
-                    <a href="#" id = "language" language = 'russian'> <img class="flag-language hvr-grow" src="./img/Flag_of_Russia.svg.png" alt="Flag_of_Russia"></a>
-                    <a href="#" id = "language" language = 'english'> <img class="flag-language hvr-grow" src="./img/Flag_of_the_United_Kingdom.svg.png" alt="Flag_of_the_United_Kingdom"></a>
+                    <a href="#" id = "language" language = 'polish' class = 'active'> <img class="flag-language hvr-grow" src="/img/Flag_of_Poland.png" alt="Flag_of_Poland"></a>
+                    <a href="#" id = "language" language = 'russian'> <img class="flag-language hvr-grow" src="/img/Flag_of_Russia.svg.png" alt="Flag_of_Russia"></a>
+                    <a href="#" id = "language" language = 'english'> <img class="flag-language hvr-grow" src="/img/Flag_of_the_United_Kingdom.svg.png" alt="Flag_of_the_United_Kingdom"></a>
                 </div>
             </nav>
         </section>
@@ -73,7 +73,7 @@
                         <div class="slide trzy" data-slide-to="2" style="background-image: url('./images/slider-img-3.jpg')" data-target="#carousel-example-generic">
                             <div class="container">
                                 <div class="caption">
-                                <h1 class="slide3">Sprawdź naszą aplikację!</h1>
+                                <h1 class="slide3">Sprawdź naszą aplikację mobilną!</h1>
                                 <p class="textSlide3">I miej "Wiosło" zawsze przy sobie </p>
                                 <a class="buttonSlide3 butSlide" href="#premiera">Sprawdż ją!</a>
                                 </div>
@@ -293,6 +293,10 @@
                         <label class="inputBox__text iBmail">Adres e-mail</label>
                         <input type="email" class="userInput" required>
                     </div>
+                    <!-- <div class="premiera__container__inputBox">
+                    <label class="inputBox__text iBkoment">Komentarz</label>
+                        <textarea name="message" class="userInput"></textarea>
+                    </div> -->
                     <button type="submit" class="premiera__container__button" onclick="getName(); toggle()">
                         <a class="premiera__send ">WYŚLIJ</a>
                 </button>
@@ -300,13 +304,12 @@
             </div>
             <div class="premiera__info">
                 <h3 class="informacja">
-                    ZAPISZ SIĘ NA PREMIERĘ NASZEJ APLIKACJI
+                    ZAPISZ SIĘ DO NASZEGO NEWSLETTERA
                 </H3>
                 <h4 class="info-text">
-                    I BĄDŹ PIERWSZYM KTÓRY DOWIE SIĘ O NIEJ DOWIE!
+                    I BĄDŹ PIERWSZYM KTÓRY DOWIE SIĘ O PREMIERZE NASZEJ APLIKACJI!
             </h4>
                 <p class="info-p">
-                    *Zapewniamy bezpieczeństwo danych personalnych. Użyjemy ich tylko do wysłania jedengo maila :)<br>
                     *Dołączając akceptujesz Regulamin usługi, Politykę prywatności i Politykę antyspamową.</p>
             </div>
         </div>
@@ -330,7 +333,7 @@
         <p class="popup-question">Czy chcesz zagrać w grę?</p>
         <div class="popup-a__container">
             <a href="#premiera" onclick="toggle()" class="popup-no">Nie, dziękuję.</a>
-            <a href="http://www.dancing-potatoes.jfdzr1.is-academy.pl/game" onclick="toggle()" class="popup-yes">Tak! Pewnie!</a>
+            <a href="./game/index.html" onclick="toggle()" class="popup-yes">Tak! Pewnie!</a>
         </div>
     </div>
     <a id="button-up"></a>
