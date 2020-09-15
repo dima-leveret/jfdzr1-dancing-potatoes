@@ -329,35 +329,35 @@ var translation = {
 const markLanguage = (attr) => {
     console.log('mark lang', attr);
     // navigation
-    navMenuPremiereEl.textContent = translation[attr].navMenuPremiere;
-    navMenuFunctionEl.textContent = translation[attr].navMenuFunction;
-    navMenuInfoEl.textContent = translation[attr].navMenuInfo;
-    navMenuTeamEl.textContent = translation[attr].navMenuTeam;
-    navMenuContactEl.textContent = translation[attr].navMenuContact;
+    navMenuPremiereEl.innerHTML = translation[attr].navMenuPremiere;
+    navMenuFunctionEl.innerHTML = translation[attr].navMenuFunction;
+    navMenuInfoEl.innerHTML = translation[attr].navMenuInfo;
+    navMenuTeamEl.innerHTML = translation[attr].navMenuTeam;
+    navMenuContactEl.innerHTML = translation[attr].navMenuContact;
 
     // slider
-    slide1El.textContent = translation[attr].slide1;
-    slide2El.textContent = translation[attr].slide2;
-    slide3El.textContent = translation[attr].slide3;
-    slide4El.textContent = translation[attr].slide4;
+    slide1El.innerHTML = translation[attr].slide1;
+    slide2El.innerHTML = translation[attr].slide2;
+    slide3El.innerHTML = translation[attr].slide3;
+    slide4El.innerHTML = translation[attr].slide4;
 
-    textSlide1EL.textContent = translation[attr].textSlide1;
-    textSlide2EL.textContent = translation[attr].textSlide2;
-    textSlide3EL.textContent = translation[attr].textSlide3;
-    textSlide4EL.textContent = translation[attr].textSlide4;
+    textSlide1EL.innerHTML = translation[attr].textSlide1;
+    textSlide2EL.innerHTML = translation[attr].textSlide2;
+    textSlide3EL.innerHTML = translation[attr].textSlide3;
+    textSlide4EL.innerHTML = translation[attr].textSlide4;
 
-    buttonSlide1El.textContent = translation[attr].buttonSlide1;
-    buttonSlide2El.textContent = translation[attr].buttonSlide2;
-    buttonSlide3El.textContent = translation[attr].buttonSlide3;
-    buttonSlide4El.textContent = translation[attr].buttonSlide4;
+    buttonSlide1El.innerHTML = translation[attr].buttonSlide1;
+    buttonSlide2El.innerHTML = translation[attr].buttonSlide2;
+    buttonSlide3El.innerHTML = translation[attr].buttonSlide3;
+    buttonSlide4El.innerHTML = translation[attr].buttonSlide4;
 
     // app functions
-    functionsTitleEl.textContent = translation[attr].functionsTitle;
+    functionsTitleEl.innerHTML = translation[attr].functionsTitle;
 
-    appFunction1El.textContent = translation[attr].appFunction1;
-    appFunction2El.textContent = translation[attr].appFunction2;
-    appFunction3El.textContent = translation[attr].appFunction3;
-    appFunction4El.textContent = translation[attr].appFunction4;
+    appFunction1El.innerHTML = translation[attr].appFunction1;
+    appFunction2El.innerHTML = translation[attr].appFunction2;
+    appFunction3El.innerHTML = translation[attr].appFunction3;
+    appFunction4El.innerHTML = translation[attr].appFunction4;
 
     // How it works?
     moreAboutProductSectionHeaderEl.innerHTML = translation[attr].moreAboutProductSectionHeader;
