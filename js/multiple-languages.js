@@ -1,6 +1,9 @@
 const langEl = document.querySelector('.languages');
 const link = document.querySelectorAll('#language');
 
+//html lang
+const htmlLangEl = document.querySelector('html');
+
 // navigation
 const navMenuPremiereEl = document.querySelector('.nav-menu-premiere');
 const navMenuFunctionEl = document.querySelector('.nav-menu-function');
@@ -62,7 +65,7 @@ const titlePremiereEl = document.querySelector('.title');
 const premieraContainerFormEl = document.querySelector('.premiera__container__form');
 const iBnameEL = document.querySelector('.iBname');
 const iBmailEl = document.querySelector('.iBmail');
-const iBkomentEl = document.querySelector('.iBkoment');
+// const iBkomentEl = document.querySelector('.iBkoment');
 const premieraContainerButtonEl = document.querySelector('.premiera__send');
 const informacjaEl = document.querySelector('.informacja');
 const infoTextEl = document.querySelector('.info-text');
@@ -78,6 +81,9 @@ const footerContainerPrivacyEl = document.querySelector('.footer-container__priv
 var translation = {
 
     'polish': {
+        //html lang
+        'htmlLang': 'pl',
+
         // navigation
         'navMenuPremiere': 'Premiera',
         'navMenuFunction': 'Funkcje aplikacji',
@@ -160,6 +166,9 @@ var translation = {
     },
 
     'russian': {
+        //html lang
+        'htmlLang': 'ru',
+
         // navigation
         'navMenuPremiere': 'Премьера',
         'navMenuFunction': 'Особенности приложения',
@@ -242,6 +251,9 @@ var translation = {
     },
 
     'english': {
+        //html lang
+        'htmlLang': 'en',
+
         // navigation
         'navMenuPremiere': 'Premiere',
         'navMenuFunction': 'Application features',
@@ -328,6 +340,9 @@ var translation = {
 
 const markLanguage = (attr) => {
     console.log('mark lang', attr);
+    //html lang
+    htmlLangEl.lang = translation[attr].htmlLang
+
     // navigation
     navMenuPremiereEl.innerHTML = translation[attr].navMenuPremiere;
     navMenuFunctionEl.innerHTML = translation[attr].navMenuFunction;
@@ -389,8 +404,8 @@ const markLanguage = (attr) => {
     premieraContainerFormEl.innerHTML = translation[attr].premieraContainerForm;
     iBnameEL.innerHTML = translation[attr].iBname;
     iBmailEl.innerHTML = translation[attr].iBmail;
-    iBkomentEl.innerHTML = translation[attr].iBkoment;
-    premieraContainerButtomEl.innerHTML = translation[attr].premieraContainerButtom;
+    // iBkomentEl.innerHTML = translation[attr].iBkoment;
+    premieraContainerButtonEl.innerHTML = translation[attr].premieraContainerButton;
     informacjaEl.innerHTML = translation[attr].informacja;
 
     // footer
