@@ -143,7 +143,6 @@ textarea.userInput
     display: flex;
     flex-flow: column;
     background-color: rgba(256, 256, 256, 0.7);
-    text-align: right;
     margin: 15px;
     padding-top: 45px;
     padding-bottom: 30px;
